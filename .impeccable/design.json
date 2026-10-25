@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-24T23:55:00Z",
+  "title": "Design System: Badeifer",
+  "extensions": {
+    "colorMeta": {
+      "keep-gold": { "role": "primary", "displayName": "Keep Gold", "tonalRamp": ["#3d2a06", "#5c3f0a", "#7a4405", "#a8781e", "#c99a35", "#e8b64c", "#f2cf83", "#faeac4"] },
+      "lantern-teal": { "role": "secondary", "displayName": "Lantern Teal", "tonalRamp": ["#0c3328", "#124a3b", "#1d6b55", "#2f8f73", "#4fb496", "#74d6bb", "#a3e6d3", "#d4f5eb"] },
+      "midnight-indigo": { "role": "neutral", "displayName": "Midnight Indigo", "tonalRamp": ["#0b0d1e", "#141833", "#1c2148", "#2f3668", "#3a4280", "#5a62a0", "#a9aecf", "#e3e5f2"] },
+      "day-sandstone": { "role": "neutral", "displayName": "Day Sandstone", "tonalRamp": ["#2a2140", "#5b4630", "#8f7448", "#b89a63", "#cdb582", "#e2cea4", "#ecdcb9", "#f7efdd"] }
+    },
+    "shadows": [
+      { "name": "edge-bezel", "value": "0 0 0 1px #2a2a30, 0 30px 60px -30px rgba(0,0,0,.6)", "purpose": "Only the Xeneon Edge drawing casts a shadow." },
+      { "name": "pixel-frame", "value": "0 -4px 0 0 var(--pc), 0 4px 0 0 var(--pc), -4px 0 0 0 var(--pc), 4px 0 0 0 var(--pc)", "purpose": "Notched pixel border on media, buttons and badges (2px on badges)." }
+    ],
+    "motion": [
+      { "name": "edge-swipe", "value": "0.35s cubic-bezier(.2,.7,.2,1)", "purpose": "A new Edge page slides in 3% from the swipe side. Off under reduced motion." }
+    ],
+    "breakpoints": [
+      { "name": "stack", "value": "860px" },
+      { "name": "phone", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The main action: get, buy or sponsor.",
+      "html": "<a class=\"ds-btn ds-primary\" href=\"#\">Get it on Elgato Marketplace</a>",
+      "css": ".ds-btn { display: inline-flex; margin: 4px; padding: 10px 18px; font: 700 1rem 'Atkinson Hyperlegible Next', system-ui, sans-serif; text-decoration: none; color: #e8b64c; box-shadow: 0 -4px 0 0 #e8b64c, 0 4px 0 0 #e8b64c, -4px 0 0 0 #e8b64c, 4px 0 0 0 #e8b64c; } .ds-primary { background: #e8b64c; color: #1a1530; } .ds-btn:hover { filter: brightness(1.08); } .ds-btn:focus-visible { outline: 3px solid #e8b64c; outline-offset: 6px; } .ds-btn:active { transform: translateY(2px); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "Secondary actions such as Follow on GitHub.",
+      "html": "<a class=\"ds-ghost\" href=\"#\">Follow on GitHub</a>",
+      "css": ".ds-ghost { display: inline-flex; margin: 4px; padding: 10px 18px; font: 700 1rem 'Atkinson Hyperlegible Next', system-ui, sans-serif; text-decoration: none; color: #e8b64c; box-shadow: 0 -4px 0 0 #e8b64c, 0 4px 0 0 #e8b64c, -4px 0 0 0 #e8b64c, 4px 0 0 0 #e8b64c; } .ds-ghost:hover { color: #f2cf83; } .ds-ghost:focus-visible { outline: 3px solid #e8b64c; outline-offset: 6px; }"
+    },
+    {
+      "name": "Off Button",
+      "kind": "button",
+      "refersTo": "button-off",
+      "description": "A link whose page does not exist yet.",
+      "html": "<span class=\"ds-off\" aria-disabled=\"true\">Sponsor on GitHub <small>opening soon</small></span>",
+      "css": ".ds-off { display: inline-flex; gap: 8px; align-items: baseline; margin: 4px; padding: 10px 18px; font: 600 1rem 'Atkinson Hyperlegible Next', system-ui, sans-serif; color: #a9aecf; box-shadow: 0 -4px 0 0 #2f3668, 0 4px 0 0 #2f3668, -4px 0 0 0 #2f3668, 4px 0 0 0 #2f3668; } .ds-off small { font-weight: 400; font-size: .8rem; }"
+    },
+    {
+      "name": "Status Badge",
+      "kind": "chip",
+      "refersTo": "badge-soon",
+      "description": "Project status under its title.",
+      "html": "<span class=\"ds-badge\">Coming soon</span>",
+      "css": ".ds-badge { display: inline-block; margin: 2px; padding: 1px 8px; font: 600 .8rem 'Atkinson Hyperlegible Next', system-ui, sans-serif; color: #e8b64c; box-shadow: 0 -2px 0 0 #e8b64c, 0 2px 0 0 #e8b64c, -2px 0 0 0 #e8b64c, 2px 0 0 0 #e8b64c; }"
+    },
+    {
+      "name": "Project Item",
+      "kind": "card",
+      "description": "A shelf entry: framed render, title, kind and status, tagline, link. No card box.",
+      "html": "<article class=\"ds-item\"><div class=\"ds-art\"></div><h3>Agent Keep</h3><p class=\"ds-kind\">Obsidian plugin <span class=\"ds-badge\">Coming soon</span></p><p class=\"ds-tag\">A pixel-art castle where your tasks, inbox and AI agents each get a room.</p><a href=\"#\">Demos and setup</a></article>",
+      "css": ".ds-item { max-width: 360px; color: #ede6d3; font: 400 1.125rem/1.6 'Atkinson Hyperlegible Next', system-ui, sans-serif; } .ds-art { aspect-ratio: 16/9; margin: 4px; background: #000; box-shadow: 0 -4px 0 0 #3a4280, 0 4px 0 0 #3a4280, -4px 0 0 0 #3a4280, 4px 0 0 0 #3a4280; } .ds-item h3 { margin: 20px 0 0; font: 600 1.75rem/1.08 'Chakra Petch', system-ui, sans-serif; } .ds-kind { margin: 10px 0 0; font-size: .875rem; color: #a9aecf; } .ds-tag { margin: 8px 0 0; color: #a9aecf; } .ds-item a { display: inline-block; margin-top: 12px; font-weight: 600; color: inherit; text-decoration-color: #e8b64c; text-decoration-thickness: 2px; text-underline-offset: 3px; } .ds-item a:hover { color: #e8b64c; } .ds-badge { display: inline-block; margin: 2px 2px 2px 10px; padding: 1px 8px; font-size: .8rem; font-weight: 600; color: #e8b64c; box-shadow: 0 -2px 0 0 #e8b64c, 0 2px 0 0 #e8b64c, -2px 0 0 0 #e8b64c, 2px 0 0 0 #e8b64c; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Moonlit Keep",
+    "overview": "The site is a night watch over a small castle workshop: deep indigo, lantern gold and parchment, the palette the Pixel Keep theme already uses. The real work is the hero: product renders sit in pixel frames, and the Xeneon Edge in the hero is drawn as a device, not a screenshot on a card. Everything around the work stays quiet so the work reads first. Game flavour comes from colour, the notched pixel frame and pixel art in the imagery. Text never uses a pixel font: pixel type is hard to read. Night is the default; a sandstone day palette follows the system or the toggle.",
+    "keyCharacteristics": ["Indigo night ground with gold as the single accent.", "Notched pixel frames around media, buttons and badges; no rounded cards.", "Readable display type (Chakra Petch) over a highly legible body face.", "Shelves of projects separated by space and a 4px rule, not by boxes."],
+    "rules": [
+      { "name": "The One Lantern Rule", "body": "Gold is the only accent. Teal marks \"Free\" and nothing else.", "section": "colors" },
+      { "name": "The Warm Day Rule", "body": "On sandstone, secondary text is umber; gray text on a coloured ground is refused.", "section": "colors" },
+      { "name": "The Readable Type Rule", "body": "No pixel fonts for text, headings included. Pixel art lives in images only.", "section": "typography" },
+      { "name": "The Title First Rule", "body": "A project's name comes first; its kind and status sit under it, never above as an eyebrow.", "section": "typography" },
+      { "name": "The Only Object Rule", "body": "Only the hardware drawing casts a shadow.", "section": "elevation" }
+    ],
+    "dos": ["Do put every project's real render or screenshot in a pixel frame before any description.", "Do keep store and donation buttons in the Off state until the page exists.", "Do check both night and day palettes for 4.5:1 text contrast."],
+    "donts": ["Don't use pixel fonts for any text.", "Don't put a label above a heading.", "Don't add a second accent colour or gray secondary text on sandstone.", "Don't wrap projects in rounded, shadowed cards."]
+  }
+}
