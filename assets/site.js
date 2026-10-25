@@ -30,6 +30,16 @@
     });
   });
 
+  // The Dispatch: topic filters. Without JavaScript every story simply shows.
+  var filters = document.querySelectorAll('[data-filter]');
+  [].forEach.call(filters, function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-filter');
+      [].forEach.call(filters, function (x) { x.setAttribute('aria-pressed', x === b); });
+      [].forEach.call(document.querySelectorAll('#stories .story'), function (s) { s.hidden = t !== 'all' && s.getAttribute('data-topic') !== t; });
+    });
+  });
+
   var edge = document.querySelector('[data-edge]');
   if (!edge) return;
   var tabs = [].slice.call(edge.querySelectorAll('[role="tab"]'));

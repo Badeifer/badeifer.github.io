@@ -22,6 +22,10 @@ The Toolbox section lists hardware, apps and add-ons in use, from `toolbox` in `
 
 Paste a public receiving address into `tips` in `src/site.mjs` (use a wallet kept only for tips) and rebuild. The Support section then shows it with a Copy button; with no address it shows one quiet line.
 
+## The Dispatch (news)
+
+Articles are Markdown files in `news/` named `YYYY-MM-DD-slug.md`; the header format is at the top of `src/news.mjs`. `node build.mjs` writes `news/index.html`, one page per article, `news/feed.xml` (RSS) and the home page strip. Covers are drawn from the slug; run `node tools/og.mjs --news` for the share cards. A daily job writes one article, following `tools/dispatch-job.md`.
+
 ## Share cards
 
 Link previews (Discord, X, iMessage) use designed 1200x630 cards in `media/og/`. After changing a name, tagline or picture, run `node tools/og.mjs` (needs Chrome and ffmpeg), then `node build.mjs`.

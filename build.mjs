@@ -1,7 +1,10 @@
 // Builds the static site from src/site.mjs: index.html and one page per project in p/<slug>/index.html.
 // Run: node build.mjs
-import { mkdirSync, writeFileSync, rmSync, existsSync } from 'node:fs';
+import { mkdirSync, writeFileSync, rmSync, existsSync, readdirSync } from 'node:fs';
 import { site, shelves, projects, statusLabel, toolbox, toolboxIntro, widgetPermissions } from './src/site.mjs';
+import { loadArticles, cover, prettyDate, TOPICS } from './src/news.mjs';
+
+const articles = loadArticles();
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const year = new Date().getFullYear();
@@ -48,7 +51,7 @@ function topbar(root) {
   const nav = shelves.map((s) => `<a href="${root}#${s.id}">${esc(s.nav)}</a>`).join('');
   return `<header class="top">
   <a class="mark" href="${root}"><img src="${root}assets/avatar.svg" alt="" width="40" height="40">${esc(site.name)}</a>
-  <nav class="nav" aria-label="Sections">${nav}<a href="${root}#toolbox">Toolbox</a><a href="${root}#support">Support</a></nav>
+  <nav class="nav" aria-label="Sections"><a href="${root}news/">News</a>${nav}<a href="${root}#toolbox">Toolbox</a><a href="${root}#support">Support</a></nav>
   <div class="theme" role="group" aria-label="Colour mode">
     <button type="button" data-mode="night" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>Night</button>
     <button type="button" data-mode="day" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>Day</button>
@@ -196,6 +199,7 @@ ${topbar(root)}
   <p class="lede">${esc(site.intro)}</p>
   ${edgeHero(root)}
 </section>
+${newsStrip(root)}
 ${shelvesHtml}
 ${toolboxBlock()}
 <section class="shelf help" id="help" aria-labelledby="help-h">
@@ -278,6 +282,98 @@ ${topbar(root)}
 ${footer(root)}`;
 }
 
+// ---------- The Dispatch: news ----------
+const topicChip = (a) => `<span class="topic t-${a.topic}">${esc(TOPICS[a.topic].name)}</span>`;
+const byline = `Written with AI for ${site.name}`;
+
+function storyCard(a, root, cls = '') {
+  return `<article class="story ${cls}" data-topic="${a.topic}">
+  <a class="story-art" href="${root}news/${a.slug}/" tabindex="-1" aria-hidden="true">${cover(a, { id: a.slug + (cls || 'c') })}</a>
+  <div class="story-text">
+    <h3><a href="${root}news/${a.slug}/">${esc(a.title)}</a></h3>
+    <p class="story-dek">${esc(a.dek)}</p>
+    <p class="story-meta">${topicChip(a)}<time datetime="${a.date}">${esc(prettyDate(a.date))}</time><span>${a.minutes} min read</span></p>
+  </div>
+</article>`;
+}
+
+function newsStrip(root) {
+  if (!articles.length) return '';
+  return `<section class="shelf dispatch-strip" id="news" aria-labelledby="news-h">
+  <div class="shelf-head"><h2 id="news-h">The Dispatch</h2><p>Daily briefings on AI tools, new skills, cyber and the industry. <a href="${root}news/">All stories</a></p></div>
+  <div class="stories">${articles.slice(0, 3).map((a) => storyCard(a, root)).join('')}</div>
+</section>`;
+}
+
+function newsIndex() {
+  const root = '../';
+  const [lead, ...rest] = articles;
+  const used = [...new Set(articles.map((a) => a.topic))];
+  const filters = used.length > 1 ? `<div class="filters" role="group" aria-label="Filter by topic"><button type="button" data-filter="all" aria-pressed="true">All</button>${used.map((t) => `<button type="button" data-filter="${t}" aria-pressed="false">${esc(TOPICS[t].name)}</button>`).join('')}</div>` : '';
+  const jsonld = { '@context': 'https://schema.org', '@type': 'Blog', name: `The Dispatch | ${site.name}`, url: `${site.url}/news/`, publisher: { '@type': 'Organization', name: site.name },
+    blogPost: articles.slice(0, 20).map((a) => ({ '@type': 'BlogPosting', headline: a.title, datePublished: a.date, url: `${site.url}/news/${a.slug}/` })) };
+  return `${head({ title: `The Dispatch | ${site.name}`, description: 'Daily briefings on AI tools, new skills, AI news, cyber and the industry, with every claim linked to its source.', root, path: '/news/', jsonld, share: 'media/og/news.jpg', shareTitle: `The Dispatch | ${site.name}` }).replace('</head>', `<link rel="alternate" type="application/rss+xml" title="The Dispatch" href="${site.url}/news/feed.xml">\n</head>`)}
+<body>
+<a class="skip" href="#main">Skip to content</a>
+${topbar(root)}
+<main id="main" class="dispatch">
+  <header class="dispatch-head">
+    <h1>The Dispatch</h1>
+    <p class="lede">Daily briefings on AI tools, new skills, AI news, cyber and the industry. Researched and written with AI, every claim linked to its source.</p>
+    <p class="dispatch-links"><a href="${root}news/feed.xml">RSS feed</a></p>
+  </header>
+  ${lead ? storyCard(lead, root, 'lead') : '<p class="empty">The first story lands tomorrow morning.</p>'}
+  ${filters}
+  ${rest.length ? `<div class="stories" id="stories">${rest.map((a) => storyCard(a, root)).join('')}</div>` : ''}
+</main>
+${footer(root)}`;
+}
+
+function articlePage(a, newer, older) {
+  const root = '../../';
+  const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: a.title, description: a.dek, datePublished: a.date, dateModified: a.date,
+    url: `${site.url}/news/${a.slug}/`, image: `${site.url}/media/og/news-${a.slug}.jpg`, author: { '@type': 'Organization', name: site.name, url: site.url + '/' },
+    publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: site.url + '/media/avatar-512.png' } }, keywords: a.tags.join(', ') };
+  const nav = (x, label) => x ? `<a class="next-story" href="${root}news/${x.slug}/"><span>${label}</span>${esc(x.title)}</a>` : '<span></span>';
+  return `${head({ title: `${a.title} | The Dispatch`, description: a.dek, root, path: `/news/${a.slug}/`, jsonld, share: `media/og/news-${a.slug}.jpg`, shareTitle: a.title }).replace('<meta property="og:type" content="website">', `<meta property="og:type" content="article">\n<meta property="article:published_time" content="${a.date}">`)}
+<body>
+<a class="skip" href="#main">Skip to content</a>
+${topbar(root)}
+<main id="main" class="article t-${a.topic}">
+  <p class="crumb"><a href="${root}news/">The Dispatch</a></p>
+  <header class="article-head">
+    <h1>${esc(a.title)}</h1>
+    <p class="article-dek">${esc(a.dek)}</p>
+    <p class="story-meta">${topicChip(a)}<time datetime="${a.date}">${esc(prettyDate(a.date))}</time><span>${a.minutes} min read</span></p>
+  </header>
+  <div class="article-art">${cover(a, { id: a.slug + 'hero' })}</div>
+  <div class="prose">${a.html}</div>
+  ${a.sources.length ? `<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ol>${a.sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a></li>`).join('')}</ol></section>` : ''}
+  <p class="made">${esc(byline)}. Facts are checked against the sources above on the day of publishing; if one is wrong, <a href="${esc(site.help[0].url)}">open an issue</a>.</p>
+  ${a.tags.length ? `<p class="tags">${a.tags.map((t) => `<span>${esc(t)}</span>`).join('')}</p>` : ''}
+  <nav class="story-nav" aria-label="More stories">${nav(newer, 'Newer')}${nav(older, 'Older')}</nav>
+</main>
+${footer(root)}`;
+}
+
+function rss() {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+<title>The Dispatch | ${esc(site.name)}</title><link>${site.url}/news/</link><description>Daily briefings on AI tools, new skills, AI news, cyber and the industry.</description>
+<atom:link href="${site.url}/news/feed.xml" rel="self" type="application/rss+xml"/>
+${articles.slice(0, 30).map((a) => `<item><title>${esc(a.title)}</title><link>${site.url}/news/${a.slug}/</link><guid>${site.url}/news/${a.slug}/</guid><pubDate>${new Date(a.date + 'T13:00:00Z').toUTCString()}</pubDate><category>${esc(TOPICS[a.topic].name)}</category><description>${esc(a.dek)}</description></item>`).join('\n')}
+</channel></rss>
+`;
+}
+
+// Article sources live in news/*.md; the built pages go to news/<slug>/ and are rebuilt every time.
+if (existsSync('news')) {
+  for (const d of readdirSync('news', { withFileTypes: true })) if (d.isDirectory()) rmSync(`news/${d.name}`, { recursive: true });
+  writeFileSync('news/index.html', newsIndex());
+  writeFileSync('news/feed.xml', rss());
+  articles.forEach((a, i) => { mkdirSync(`news/${a.slug}`, { recursive: true }); writeFileSync(`news/${a.slug}/index.html`, articlePage(a, articles[i - 1], articles[i + 1])); });
+}
+
 if (existsSync('p')) rmSync('p', { recursive: true });
 writeFileSync('index.html', indexPage());
 for (const p of projects) {
@@ -294,7 +390,7 @@ for (const [from, to] of Object.entries(moved)) {
 
 // Search engines: a sitemap of every page, and robots.txt pointing at it.
 const today = new Date().toISOString().slice(0, 10);
-const urls = ['/', ...projects.map((p) => `/p/${p.slug}/`)];
+const urls = ['/', ...(articles.length ? ['/news/', ...articles.map((a) => `/news/${a.slug}/`)] : []), ...projects.map((p) => `/p/${p.slug}/`)];
 writeFileSync('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map((u) => `  <url><loc>${site.url}${u}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
@@ -313,4 +409,4 @@ ${topbar('/')}
   <div class="row"><a class="btn primary" href="/">Browse all projects</a><a class="btn" href="/#help">Get help</a></div>
 </main>
 ${footer('/')}`);
-console.log(`built index.html, ${projects.length} project pages, 404.html, sitemap.xml and robots.txt`);
+console.log(`built index.html, ${projects.length} project pages, ${articles.length} news articles, 404.html, sitemap.xml and robots.txt`);

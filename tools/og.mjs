@@ -7,6 +7,8 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { site, shelves, projects } from '../src/site.mjs';
+import { loadArticles, cover, prettyDate, TOPICS } from '../src/news.mjs';
+const newsOnly = process.argv.includes('--news');   // the daily Dispatch job only needs the news cards
 
 const root = resolve(import.meta.dirname, '..');
 const out = join(root, 'media', 'og');
@@ -60,7 +62,7 @@ function shoot(name, html) {
 
 // Home: the promise, what is inside, and the real widgets on an Edge.
 const chips = shelves.filter((s) => projects.some((p) => p.shelf === s.id)).map((s) => `<span>${esc(s.name)}</span>`).join('');
-shoot('home', page(`
+if (!newsOnly) shoot('home', page(`
 <h1 style="font-size:58px;margin-top:26px;max-width:1000px">${esc(site.headline)}</h1>
 <div class="chips" style="margin-top:22px">${chips}</div>
 <div class="edge" style="margin-top:auto;align-self:center;width:1000px">
@@ -71,7 +73,7 @@ shoot('home', page(`
 </div>`));
 
 // One card per project: wide widget renders sit on an Edge under the text; other media sits beside it.
-for (const p of projects) {
+for (const p of newsOnly ? [] : projects) {
   const m = p.media[0];
   const src = m ? (m.video ? m.poster : m.src) : null;
   const wide = m && m.w / m.h > 2;
@@ -98,5 +100,20 @@ ${head}
 <p class="tag" style="margin-top:auto">${esc(shelf ? shelf.name : '')}</p>`;
   }
   shoot(p.slug, page(body));
+}
+// The Dispatch: one card for the index and one per article, on the article's own cover art.
+const articles = loadArticles(join(root, 'news'));
+const newsCard = (a, title, sub) => page(`
+<div style="position:absolute;inset:0;z-index:-1">${cover(a, { id: 'og' + a.slug }).replace('class="cover"', 'style="width:100%;height:100%"')}</div>
+<div style="position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(11,14,38,.94) 0%,rgba(11,14,38,.78) 48%,rgba(11,14,38,.1) 100%)"></div>
+<p style="margin-top:34px;font-size:22px;font-weight:700;color:${TOPICS[a.topic].hue}">The Dispatch</p>
+<h1 style="font-size:${title.length > 70 ? 50 : 58}px;margin-top:12px;max-width:820px">${esc(title)}</h1>
+<p class="tag" style="margin-top:auto;font-size:22px">${esc(sub)}</p>`);
+if (articles.length) {
+  shoot('news', newsCard(articles[0], 'The Dispatch: daily AI, tools, skills and cyber briefings', `Latest: ${articles[0].title}`));
+  for (const a of articles) {
+    if (newsOnly && existsSync(join(out, `news-${a.slug}.jpg`))) continue;
+    shoot(`news-${a.slug}`, newsCard(a, a.title, `${TOPICS[a.topic].name}  |  ${prettyDate(a.date)}  |  ${a.minutes} min read`));
+  }
 }
 if (existsSync(tmp)) rmSync(tmp, { recursive: true, force: true });
