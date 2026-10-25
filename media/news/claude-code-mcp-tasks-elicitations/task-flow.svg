@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>How a long MCP tool call runs as a task in Claude Code</title>
+  <rect width="1600" height="900" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">One slow tool call, before and after MCP Tasks</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">Claude Code v2.1.304+, server on MCP protocol revision 2026-07-28, terminal session</text>
+
+  <!-- Before -->
+  <text x="80" y="200" fill="#a9aecf" font-size="26" font-weight="700">BEFORE: the call blocks</text>
+  <rect x="80" y="225" width="1440" height="70" rx="12" fill="none" stroke="#a9aecf" stroke-width="2"/>
+  <rect x="80" y="225" width="200" height="70" rx="12" fill="#a9aecf" fill-opacity="0.15"/>
+  <text x="180" y="268" fill="#ede6d3" font-size="22" text-anchor="middle">tools/call</text>
+  <text x="800" y="268" fill="#a9aecf" font-size="22" text-anchor="middle">Claude waits, the turn is stuck, a timeout can kill the job</text>
+  <rect x="1320" y="225" width="200" height="70" rx="12" fill="#a9aecf" fill-opacity="0.15"/>
+  <text x="1420" y="268" fill="#ede6d3" font-size="22" text-anchor="middle">result</text>
+
+  <!-- After -->
+  <text x="80" y="370" fill="#74d6bb" font-size="26" font-weight="700">AFTER: the server hands back a task</text>
+  <g font-size="22">
+    <rect x="80" y="400" width="250" height="110" rx="12" fill="#74d6bb" fill-opacity="0.15" stroke="#74d6bb" stroke-width="2"/>
+    <text x="205" y="445" fill="#ede6d3" text-anchor="middle">1. tools/call</text>
+    <text x="205" y="478" fill="#a9aecf" text-anchor="middle" font-size="19">returns a task ID</text>
+
+    <rect x="390" y="400" width="250" height="110" rx="12" fill="none" stroke="#74d6bb" stroke-width="2"/>
+    <text x="515" y="445" fill="#ede6d3" text-anchor="middle">2. working</text>
+    <text x="515" y="478" fill="#a9aecf" text-anchor="middle" font-size="19">client polls tasks/get</text>
+
+    <rect x="700" y="400" width="250" height="110" rx="12" fill="none" stroke="#74d6bb" stroke-width="2"/>
+    <text x="825" y="445" fill="#ede6d3" text-anchor="middle">3. input_required</text>
+    <text x="825" y="478" fill="#a9aecf" text-anchor="middle" font-size="19">server needs an answer</text>
+
+    <rect x="1010" y="400" width="250" height="110" rx="12" fill="none" stroke="#74d6bb" stroke-width="2"/>
+    <text x="1135" y="445" fill="#ede6d3" text-anchor="middle">4. you answer</text>
+    <text x="1135" y="478" fill="#a9aecf" text-anchor="middle" font-size="19">form or browser link</text>
+
+    <rect x="1320" y="400" width="200" height="110" rx="12" fill="#74d6bb" fill-opacity="0.15" stroke="#74d6bb" stroke-width="2"/>
+    <text x="1420" y="445" fill="#ede6d3" text-anchor="middle">5. completed</text>
+    <text x="1420" y="478" fill="#a9aecf" text-anchor="middle" font-size="19">notice in transcript</text>
+  </g>
+  <g stroke="#74d6bb" stroke-width="3" fill="#74d6bb">
+    <line x1="330" y1="455" x2="380" y2="455"/><polygon points="380,447 392,455 380,463"/>
+    <line x1="640" y1="455" x2="690" y2="455"/><polygon points="690,447 702,455 690,463"/>
+    <line x1="950" y1="455" x2="1000" y2="455"/><polygon points="1000,447 1012,455 1000,463"/>
+    <line x1="1260" y1="455" x2="1310" y2="455"/><polygon points="1310,447 1322,455 1310,463"/>
+  </g>
+  <path d="M1135 520 C1135 580 515 580 515 520" fill="none" stroke="#a9aecf" stroke-width="2" stroke-dasharray="8 8"/>
+  <text x="825" y="600" fill="#a9aecf" font-size="19" text-anchor="middle">answer goes back as inputResponses, work resumes</text>
+
+  <rect x="80" y="650" width="1440" height="2" fill="#a9aecf" fill-opacity="0.4"/>
+  <text x="80" y="705" fill="#ede6d3" font-size="24" font-weight="700">Meanwhile Claude keeps working</text>
+  <text x="80" y="745" fill="#a9aecf" font-size="21">Footer shows "1 MCP task". /tasks shows progress; select a task and press x to ask the server to cancel.</text>
+  <text x="80" y="780" fill="#a9aecf" font-size="21">No task support on the server? Any main-conversation call still running after 2 minutes is moved to the background anyway.</text>
+  <text x="80" y="840" fill="#a9aecf" font-size="19">Not yet: subagents, one-shot claude -p, the VS Code extension, the desktop app, Bedrock. Source: Claude Code MCP docs.</text>
+</svg>
