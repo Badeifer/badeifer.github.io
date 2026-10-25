@@ -341,3 +341,7 @@ video[src*="keep"], video[src*="live-status"] { image-rendering: pixelated; }
   .story-nav .next-story:last-child { text-align: left; }
 }
 @media (prefers-reduced-motion: reduce) { .story-art .cover { transition: none; } }
+.prose .fig { margin: 2.2em 0; }
+.prose .fig img { width: 100%; height: auto; box-shadow: 0 0 0 1px var(--line); background: #0b0e26; }
+.prose .fig figcaption { margin-top: 10px; font-size: .9375rem; line-height: 1.5; color: var(--muted); }
+@media (min-width: 1100px) { .prose .fig.wide, .prose .fig:has(img[src*="-wide"]) { margin-right: -18ch; } }

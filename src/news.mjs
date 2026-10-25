@@ -68,6 +68,13 @@ export function markdown(md) {
     }
     let m;
     if (!l.trim()) { flush(); continue; }
+    // A figure: ![alt](media/news/slug/file.webp "Caption. Credit: Name, licence") on a line of its own.
+    if ((m = /^!\[([^\]]*)\]\(([^)\s]+)(?:\s+"([^"]*)")?\)\s*$/.exec(l))) {
+      flush();
+      const src = /^https?:\/\//.test(m[2]) ? m[2] : '../../' + m[2].replace(/^\/+/, '');
+      out.push(`<figure class="fig"><img src="${esc(src)}" alt="${esc(m[1])}" loading="lazy" decoding="async">${m[3] ? `<figcaption>${inline(m[3])}</figcaption>` : ''}</figure>`);
+      continue;
+    }
     if ((m = /^(#{2,3})\s+(.*)$/.exec(l))) { flush(); const n = m[1].length; out.push(`<h${n}>${inline(m[2])}</h${n}>`); continue; }
     if ((m = /^>\s?(.*)$/.exec(l))) { flushPara(); flushList(); quote.push(m[1]); continue; }
     if ((m = /^\s*[-*]\s+(.*)$/.exec(l)) || (m = /^\s*\d+\.\s+(.*)$/.exec(l))) {
