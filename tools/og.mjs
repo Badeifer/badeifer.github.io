@@ -13,7 +13,11 @@ const newsOnly = process.argv.includes('--news');   // the daily Dispatch job on
 const root = resolve(import.meta.dirname, '..');
 const out = join(root, 'media', 'og');
 const tmp = join(tmpdir(), 'bade-og');
-const chrome = 'C:/Program Files/Google/Chrome/Application/chrome.exe';
+// Chrome on this PC, or a Linux build in the cloud runner; no Chrome or ffmpeg means no cards, and the site uses its default card.
+const chrome = ['C:/Program Files/Google/Chrome/Application/chrome.exe', '/usr/bin/google-chrome', '/usr/bin/google-chrome-stable',
+  '/usr/bin/chromium', '/usr/bin/chromium-browser'].find((p) => existsSync(p));
+const hasFfmpeg = (() => { try { execFileSync('ffmpeg', ['-version'], { stdio: 'ignore' }); return true; } catch { return false; } })();
+if (!chrome || !hasFfmpeg) { console.log(`og: skipped (${!chrome ? 'no Chrome' : 'no ffmpeg'}); pages fall back to the default card`); process.exit(0); }
 mkdirSync(out, { recursive: true }); mkdirSync(tmp, { recursive: true });
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);

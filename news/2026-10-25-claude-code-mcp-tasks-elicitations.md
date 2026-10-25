@@ -13,7 +13,7 @@ sources:
 ---
 Claude Code's terminal app can now treat a slow MCP tool call as a background job instead of a wall. A server that supports the new Tasks extension hands back a task ID straight away, Claude carries on with the rest of the work, and the result turns up as a notice when the job is done. The same release lets a server pause mid-job and ask you a question, through a form in the terminal or a link that opens in your browser.
 
-If you run anything through MCP that takes longer than a coffee, a build, a deploy, a data export, a long scrape, this is the change that stops your agent from sitting there holding its breath.
+If you run anything through MCP that takes a while (a build, a deploy, a data export, a long scrape), this is the change that stops your agent from sitting there holding its breath.
 
 ## What actually shipped
 
