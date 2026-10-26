@@ -143,7 +143,7 @@ A two-time-of-day palette: moonlit indigo by night, sandstone and amber by day, 
 One centred column at 1440px max with a fluid gutter (16 to 56px); the Edge hero breaks out of it, up to 1760px wide. Shelves are separated by 56 to 112px. A shelf head puts the
 headline left and the blurb right on wide screens, stacked below 860px. Project items sit in an auto-fill grid (min 340px); the
 Edge shelf uses two columns to fit the wide widget renders. Project pages: gallery, then a 2:1 split of "What it does" and "You
-need", then numbered setup steps. Below 860px the top nav becomes a scrolling second row; below 640px the Edge hero shows only its
+need", then numbered setup steps. Below 1440px the top nav becomes a scrolling second row; below 640px the Edge hero shows only its
 large slot.
 
 ## Elevation & Depth
@@ -182,7 +182,7 @@ boxes. The one rounded shape is the Edge device (12px bezel; widget slots use th
   switch pages; arrow keys and a horizontal swipe do too. The new page slides in 3 percent from the swipe side.
 
 ### Navigation
-- Sticky top bar (72px): 40px avatar and the name Badeifer at 2rem left, section links (1.0625rem, 600) right, day/night toggle. Links in lavender, ink on hover.
+- Sticky top bar (72px): 40px avatar and the name at 2rem left (1.75rem with tighter gaps up to 1535px wide), section links (1.0625rem, 600) right, day/night toggle. Below 1440px the links move to a scrolling second row. Links in lavender, ink on hover.
 
 ## Do's and Don'ts
 
