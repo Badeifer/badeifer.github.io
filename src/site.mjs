@@ -95,8 +95,10 @@ export const projects = [
     tagline: 'Your Claude Code limits, open chats and talk buttons, live on the Edge.',
     status: 'workshop',
     media: [
-      { src: 'claude-1688.webp', alt: 'The Claude usage widget at large size: context, 5 hour and week limits beside a list of open chats, with a small pixel pet above the talk buttons.', w: 1688, h: 696 },
-      { src: 'claude-840.webp', alt: 'The same widget at medium size, limits only.', w: 840, h: 696 }
+      { src: 'claude-s.webp', size: 'Small', alt: 'The Claude usage widget at small size: context 38 percent, 5 hours 42 percent and week 51 percent, each with a bar and its reset time, and a small pixel pet walking below.', w: 840, h: 344 },
+      { src: 'claude-m.webp', size: 'Medium', alt: 'Claude usage at medium size: the three limits above a list of open chats, Landing page copy ready and two others working, with Talk to Claude and Talk to the Chief buttons.', w: 840, h: 696 },
+      { src: 'claude-l.webp', size: 'Large', alt: 'Claude usage at large size: the three limits and talk buttons on the left, four open chats on the right, and a pixel pet resting on a button.', w: 1688, h: 696, cover: true },
+      { src: 'claude-xl.webp', size: 'Extra Large', alt: 'Claude usage at extra large size: wide limit bars with reset times, the open chats beside them, and a pixel pet standing on the Talk to Claude button.', w: 2536, h: 696 }
     ],
     features: [
       'Context, 5 hour and weekly limits with reset times, plus a tick that shows where an even week would be by now.',
@@ -116,8 +118,10 @@ export const projects = [
     tagline: 'Ten touch keys for the NVIDIA app, with live FPS, CPU, GPU and memory beside them.',
     status: 'workshop',
     media: [
-      { src: 'nvdeck-1688.webp', alt: 'The NVIDIA Deck widget: ten keys such as Save replay, Record, Screenshot and Perf overlay, next to bars for CPU, GPU, RAM, VRAM and storage.', w: 1688, h: 696 },
-      { src: 'nvdeck-840.webp', alt: 'The NVIDIA Deck at medium size, keys only.', w: 840, h: 696 }
+      { src: 'nvdeck-s.webp', size: 'Small', alt: 'The NVIDIA Deck at small size: four keys, Save replay, Record, Screenshot and Talk to Claude.', w: 840, h: 344 },
+      { src: 'nvdeck-m.webp', size: 'Medium', alt: 'NVIDIA Deck at medium size: ten keys in two rows, with Instant replay and Perf overlay on, and a stats line reading 144 FPS, CPU 34 percent, GPU 71 percent.', w: 840, h: 696 },
+      { src: 'nvdeck-l.webp', size: 'Large', alt: 'NVIDIA Deck at large size: the ten keys beside the game in front, Starfall Racer at 144 FPS, and bars for CPU, GPU, RAM, VRAM and storage.', w: 1688, h: 696, cover: true },
+      { src: 'nvdeck-xl.webp', size: 'Extra Large', alt: 'NVIDIA Deck at extra large size: bigger keys beside the same game, FPS and system bars.', w: 2536, h: 696 }
     ],
     features: [
       'Save replay, record, screenshot, instant replay, performance overlay, vibrance, highlights, clip library and overlay.',
@@ -137,7 +141,10 @@ export const projects = [
     tagline: 'A count of what is waiting on you, from approvals to mail, one tap from the details.',
     status: 'workshop',
     media: [
-      { src: 'needsyou-840.webp', alt: 'The Needs You widget: a large 3, with three items below it such as an approval and a mail.', w: 840, h: 696 }
+      { src: 'needsyou-s.webp', size: 'Small', alt: 'The Needs You widget at small size: a large 6 beside the first two items, an approval and a mail.', w: 840, h: 344 },
+      { src: 'needsyou-m.webp', size: 'Medium', alt: 'Needs You at medium size: 6 items wait on you, listed below with icons: approvals, mail and a design pick.', w: 840, h: 696 },
+      { src: 'needsyou-l.webp', size: 'Large', alt: 'Needs You at large size: the count on the left and all six items in one list on the right.', w: 1688, h: 696, cover: true },
+      { src: 'needsyou-xl.webp', size: 'Extra Large', alt: 'Needs You at extra large size: the count on the left and the six items in two columns.', w: 2536, h: 696 }
     ],
     features: [
       'One big number, readable from across the room.',
@@ -156,8 +163,10 @@ export const projects = [
     tagline: 'A countdown for Claude\'s prompt cache, and how much money it saved you today and this week.',
     status: 'workshop',
     media: [
-      { src: 'cache-1688.webp', alt: 'The Prompt Cache widget: a ring counting down from 41:56 marked warm, money saved this chat, today and this week, and a 7 day bar chart.', w: 1688, h: 696 },
-      { src: 'cache-840.webp', alt: 'Prompt Cache at medium size: the ring and the savings.', w: 840, h: 696 }
+      { src: 'cache-s.webp', size: 'Small', alt: 'The Prompt Cache widget at small size: 41:52 left, warm, with a draining bar and money saved this chat, today and this week.', w: 840, h: 344 },
+      { src: 'cache-m.webp', size: 'Medium', alt: 'Prompt Cache at medium size: a ring counting down from 41:52 marked warm, savings this chat, today and this week, and a 7 day bar chart below.', w: 840, h: 696 },
+      { src: 'cache-l.webp', size: 'Large', alt: 'Prompt Cache at large size: the ring, the savings and a tall 7 day bar chart with today highlighted.', w: 1688, h: 696, cover: true },
+      { src: 'cache-xl.webp', size: 'Extra Large', alt: 'Prompt Cache at extra large size: the ring and savings on the left and a wide 7 day bar chart.', w: 2536, h: 696 }
     ],
     features: [
       'A ring that counts down until the cache goes cold, so you know when to reply.',
@@ -176,7 +185,10 @@ export const projects = [
     tagline: 'A pixel playground where a small pet stands in for each of your open Claude chats.',
     status: 'workshop',
     media: [
-      { src: 'pets-1688.webp', alt: 'The Pets widget: three pixel pets with chat names on crates and shelves under a night sky with a moon.', w: 1688, h: 696 }
+      { src: 'pets-s.webp', size: 'Small', alt: 'The Pets widget at small size: a strip of daytime playground with crates, a plant, a lamp post and four tiny pets.', w: 840, h: 344 },
+      { src: 'pets-m.webp', size: 'Medium', alt: 'Pets at medium size: four pixel pets with chat names on crates and shelves under a blue sky with a sun; one says Landing page copy is ready.', w: 840, h: 696 },
+      { src: 'pets-l.webp', size: 'Large', alt: 'Pets at large size: a wider playground with three crates and floating shelves, each pet labelled with its chat.', w: 1688, h: 696, cover: true },
+      { src: 'pets-xl.webp', size: 'Extra Large', alt: 'Pets at extra large size: the full playground edge to edge, pets on a shelf, the grass and between the crates.', w: 2536, h: 696 }
     ],
     features: [
       'One named pet per open chat, up to six.',
@@ -196,8 +208,10 @@ export const projects = [
     intro: 'Start on your desktop, pick up on your laptop, never hit a merge mess. Universal Repo Sync watches every Git repo on this PC, shows which ones are ahead of or behind GitHub, and brings each one level with a single tap. GitHub is the meeting point, so every device that syncs sees the same code.',
     status: 'workshop',
     media: [
-      { src: 'repos-1688.webp', alt: 'Universal Repo Sync: counts of repos with changes, commits to push and to pull, beside a list of repos, each with a Sync key showing arrows for commits to push and pull.', w: 1688, h: 696 },
-      { src: 'repos-840.webp', alt: 'Universal Repo Sync at medium size.', w: 840, h: 696 }
+      { src: 'repos-s.webp', size: 'Small', alt: 'Universal Repo Sync at small size: counts only, 3 repos changed, 3 commits to push and 5 to pull.', w: 840, h: 344 },
+      { src: 'repos-m.webp', size: 'Medium', alt: 'Universal Repo Sync at medium size: the three counts above the four repos that need a look, with changed chips, Sync keys and a local only tag.', w: 840, h: 696 },
+      { src: 'repos-l.webp', size: 'Large', alt: 'Universal Repo Sync at large size: the counts stacked on the left and all seven repos on the right, each with its last commit and a Sync key where needed.', w: 1688, h: 696, cover: true },
+      { src: 'repos-xl.webp', size: 'Extra Large', alt: 'Universal Repo Sync at extra large size: the counts on the left and the seven repos in two columns.', w: 2536, h: 696 }
     ],
     features: [
       'One Sync key per repo. The arrows show the job: up for commits to push, down for commits to pull.',
@@ -217,8 +231,10 @@ export const projects = [
     tagline: 'Your Bambu Lab printer on the Edge: live camera, progress, time left, temperatures and AMS filament.',
     status: 'workshop',
     media: [
-      { src: 'printmon-1688.webp', alt: 'Print Monitor during a real print on a Bambu Lab P1S: the live camera over the build plate, a ring at 90 percent with layer 40 of 72, 1 minute left, nozzle 220 and bed 55 degrees at target, and four AMS colours with the active one ringed.', w: 1688, h: 696 },
-      { src: 'printmon-840.webp', alt: 'Print Monitor at medium size: the progress ring, time left, temperatures and AMS row.', w: 840, h: 696 }
+      { src: 'printmon-s.webp', size: 'Small', alt: 'Print Monitor at small size: a progress ring at 62 percent, 47 minutes left, nozzle 220 and bed 55 degrees.', w: 840, h: 344 },
+      { src: 'printmon-m.webp', size: 'Medium', alt: 'Print Monitor at medium size: the ring with layer 118 of 190, time left, nozzle and bed temperatures, speed, fan and light, and four AMS colours with the active one ringed.', w: 840, h: 696 },
+      { src: 'printmon-l.webp', size: 'Large', alt: 'Print Monitor at large size: the live camera over the build plate beside the ring, time left, temperatures and the AMS row.', w: 1688, h: 696, cover: true },
+      { src: 'printmon-xl.webp', size: 'Extra Large', alt: 'Print Monitor at extra large size: the camera, the ring, time and temperatures, and the AMS colours in a grid.', w: 2536, h: 696 }
     ],
     features: [
       'The printer camera, live. Tap it to fill the widget.',
@@ -244,8 +260,10 @@ export const projects = [
     tagline: 'Your PC stats on a green-screen terminal, kept company by Blip, a pixel critter that reacts to the load.',
     status: 'workshop',
     media: [
-      { src: 'phosphor-1688.webp', alt: 'Phosphor at large size: a green monochrome terminal with scanlines. Blip, a small pixel critter with two antennae, smiles beside 144 FPS; the next columns show CPU and GPU load with segmented bars and history traces, then RAM, VRAM and disk.', w: 1688, h: 696 },
-      { src: 'phosphor-840.webp', alt: 'Phosphor at medium size: Blip beside CPU load at 18 percent, with Status, System and Memory tabs along the bottom.', w: 840, h: 696 }
+      { src: 'phosphor-s.webp', size: 'Small', alt: 'Phosphor at small size: a green terminal with Blip the pixel critter beside 144 FPS and CPU, GPU and RAM, over Status, System and Memory tabs.', w: 840, h: 344 },
+      { src: 'phosphor-m.webp', size: 'Medium', alt: 'Phosphor at medium size: Blip beside a large 144 FPS with CPU, GPU and RAM below, a status line and the three tabs.', w: 840, h: 696 },
+      { src: 'phosphor-l.webp', size: 'Large', alt: 'Phosphor at large size: Status, System and Memory side by side, with CPU and GPU load bars and history traces, then RAM, VRAM and disk.', w: 1688, h: 696, cover: true },
+      { src: 'phosphor-xl.webp', size: 'Extra Large', alt: 'Phosphor at extra large size: the same three panels with more room, scanlines across the whole terminal.', w: 2536, h: 696 }
     ],
     features: [
       'A green CRT look: scanlines, a soft glow, a rolling scan bar and curved-glass edges. One switch turns the effects off.',
@@ -265,8 +283,10 @@ export const projects = [
     tagline: 'A voice assistant for your desk: an original hologram on a projector pad. Tap the Edge, ask out loud, and she answers with subtitles in a natural voice.',
     status: 'workshop',
     media: [
-      { src: 'vela-1688.webp', alt: 'Vela at large size: a tall adult woman with dark shoulder-length hair in an armoured bodysuit, drawn as a cool blue hologram standing on a glowing projector pad in a dark room with a faint grid floor. Beside her a subtitle reads: Want me to keep an eye on it while you play? Under it, a cue: Tap to stop.', w: 1688, h: 696 },
-      { src: 'vela-840.webp', alt: 'Vela at medium size: the anime hologram on the left and the subtitle beside her.', w: 840, h: 696 }
+      { src: 'vela-s.webp', size: 'Small', alt: 'Vela at small size: the blue hologram on her projector pad at the left, with the question and her answer as subtitles.', w: 840, h: 344 },
+      { src: 'vela-m.webp', size: 'Medium', alt: 'Vela at medium size: the hologram standing in a beam of light beside the subtitle: Want me to keep an eye on it while you play? Tap to stop.', w: 840, h: 696 },
+      { src: 'vela-l.webp', size: 'Large', alt: 'Vela at large size: the hologram on a glowing pad over a faint grid floor, with the subtitle centred in the space beside her.', w: 1688, h: 696, cover: true },
+      { src: 'vela-xl.webp', size: 'Extra Large', alt: 'Vela at extra large size: the hologram at the left and the subtitle on one line across the wide screen.', w: 2536, h: 696 }
     ],
     features: [
       'Tap and talk. She stops listening when you stop talking, or tap again to send. Claude Code answers and she speaks it a sentence at a time, so the first words come about four seconds after you finish.',
@@ -293,8 +313,10 @@ export const projects = [
     tagline: 'A live 3D headquarters where each of your agents works in its own room.',
     status: 'workshop',
     media: [
-      { src: 'agenthome-1688.webp', alt: 'A 3D building seen from above at night, with rooms named Mission Control, Planning and Strategy, Research, Development and Break room, each with small figures at work. Chips read 2 need you, Night and Agent Home.', w: 1688, h: 696 },
-      { src: 'agenthome-chief-840.webp', alt: 'A close-up of Mission Control: a glowing globe ringed by desks, wall screens of charts, and the Chief at work, with a Talk to the Chief button below.', w: 840, h: 696 }
+      { src: 'agenthome-s.webp', size: 'Small', alt: 'Agent Home at small size: the whole 3D building seen from above at night, with a 2 need you chip.', w: 840, h: 344 },
+      { src: 'agenthome-m.webp', size: 'Medium', alt: 'Agent Home at medium size: the building among dark trees under a moon, rooms such as Mission Control, Research and Break room with small figures at work.', w: 840, h: 696 },
+      { src: 'agenthome-l.webp', size: 'Large', alt: 'Agent Home at large size: the building larger, name tags over the Chief, Research and Packages, with Night and The Keep buttons.', w: 1688, h: 696, cover: true },
+      { src: 'agenthome-xl.webp', size: 'Extra Large', alt: 'Agent Home at extra large size: the full night scene edge to edge, the building in the middle of a wooded hill.', w: 2536, h: 696 }
     ],
     features: [
       'The same scene as the Agent Home desktop wallpaper, edge to edge.',

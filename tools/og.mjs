@@ -71,14 +71,13 @@ if (!newsOnly) shoot('home', page(`
 <div class="chips" style="margin-top:22px">${chips}</div>
 <div class="edge" style="margin-top:auto;align-self:center;width:1000px">
   <div class="screen" style="height:248px">
-    <img src="${file('media/claude-1688.webp')}" style="flex:1688 1 0" alt="">
-    <img src="${file('media/printmon-840.webp')}" style="flex:840 1 0" alt="">
+    <img src="${file('media/claude-xl.webp')}" style="flex:1 1 0" alt="">
   </div>
 </div>`));
 
 // One card per project: wide widget renders sit on an Edge under the text; other media sits beside it.
 for (const p of newsOnly ? [] : projects) {
-  const m = p.media[0];
+  const m = p.media.find((x) => x.cover) || p.media[0];
   const src = m ? (m.video ? m.poster : m.src) : null;
   const wide = m && m.w / m.h > 2;
   const shelf = shelves.find((s) => s.id === p.shelf);

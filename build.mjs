@@ -10,7 +10,7 @@ const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '
 const year = new Date().getFullYear();
 
 // Share previews use the designed cards from tools/og.mjs (media/og/*.jpg, 1200x630) and a short title.
-function head({ title, description, root, path, image = 'media/claude-1688.webp', jsonld, share, shareTitle }) {
+function head({ title, description, root, path, image = 'media/claude-l.webp', jsonld, share, shareTitle }) {
   const url = site.url + path;
   const card = share && existsSync(share) ? share : 'media/og/home.jpg';
   const ogTitle = shareTitle || title;
@@ -70,6 +70,9 @@ function footer(root) {
 </html>`;
 }
 
+// The picture that stands for a project in a shelf, a share card and search results: the one marked cover, else the first.
+const leadMedia = (p) => p.media.find((m) => m.cover) || p.media[0];
+
 const badge = (p) => `<span class="badge s-${p.status}">${esc(p.status === 'paid' && p.price ? p.price : statusLabel[p.status])}</span>`;
 
 function getButtons(p, root) {
@@ -91,7 +94,7 @@ function frame(m, root, cls = '') {
 
 // One shelf entry. When every project on the shelf shares a status, the shelf heading shows it once (sharedStatus).
 function listing(p, root, sharedStatus) {
-  const m = p.media[0];
+  const m = leadMedia(p);
   const more = p.status === 'workshop' ? `See how ${esc(p.name)} works` : `Set up ${esc(p.name)}`;
   return `<article class="item${m ? '' : ' no-art'}">
   ${m ? `<a class="item-art" href="${root}p/${p.slug}/" tabindex="-1" aria-hidden="true">${frame(m, root)}</a>` : ''}
@@ -104,18 +107,14 @@ function listing(p, root, sharedStatus) {
 </article>`;
 }
 
+// Each page shows one widget alone at Extra Large, the full width of the Edge; a phone gets its Large render instead.
 function edgeHero(root) {
-  const pages = [
-    { label: 'Claude usage', slots: [['claude-1688.webp', 'Claude usage widget: context, 5 hour and week limits beside the open chats'], ['needsyou-840.webp', 'Needs You widget: three items waiting']] },
-    { label: 'Prompt Cache', slots: [['cache-1688.webp', 'Prompt Cache widget: a countdown ring, money saved and a 7 day chart'], ['repos-840.webp', 'Universal Repo Sync widget, medium']] },
-    { label: 'Pets', slots: [['pets-1688.webp', 'Pets widget: pixel pets on crates and shelves under a night sky, one per chat'], ['cache-840.webp', 'Prompt Cache widget, medium']] },
-    { label: 'Repo Sync', slots: [['repos-1688.webp', 'Universal Repo Sync widget: changed, to push and to pull counts beside a list of repos with Sync keys'], ['claude-840.webp', 'Claude usage widget, medium']] },
-    { label: 'Print Monitor', slots: [['printmon-1688.webp', 'Print Monitor widget: printer camera, progress ring, time left, temperatures and AMS filament'], ['cache-840.webp', 'Prompt Cache widget, medium']] },
-    { label: 'Phosphor', slots: [['phosphor-1688.webp', 'Phosphor widget: a green terminal with Blip the pixel critter beside FPS, CPU, GPU and memory'], ['phosphor-840.webp', 'Phosphor widget, medium']] },
-    { label: 'NVIDIA Deck', slots: [['nvdeck-1688.webp', 'NVIDIA Deck widget: ten keys beside CPU, GPU and memory bars'], ['needsyou-840.webp', 'Needs You widget']] },
-    { label: 'Agent Home', slots: [['agenthome-1688.webp', 'Agent Home scene widget: a 3D building with agents at work'], ['agenthome-chief-840.webp', 'A close-up of Mission Control, where the Chief works, with a Talk to the Chief button']] }
-  ];
-  const screens = pages.map((pg, i) => `<div class="edge-page" role="tabpanel" id="edge-p${i}" aria-labelledby="edge-t${i}"${i ? ' hidden' : ''}>${pg.slots.map(([src, alt], j) => `<img class="slot ${j ? 'm' : 'l'}" src="${root}media/${src}" alt="${esc(alt)}" width="${j ? 840 : 1688}" height="696"${i ? ' loading="lazy"' : ''}>`).join('')}</div>`).join('');
+  const pages = ['claude-usage', 'prompt-cache', 'pets', 'universal-repo-sync', 'print-monitor', 'phosphor', 'nvidia-deck', 'needs-you', 'vela', 'agent-home-scene']
+    .map((slug) => projects.find((p) => p.slug === slug))
+    .filter(Boolean)
+    .map((p) => ({ label: { 'universal-repo-sync': 'Repo Sync', 'agent-home-scene': 'Agent Home' }[p.slug] || p.name, xl: p.media.find((m) => m.size === 'Extra Large'), l: p.media.find((m) => m.size === 'Large') }))
+    .filter((pg) => pg.xl && pg.l);
+  const screens = pages.map((pg, i) => `<div class="edge-page" role="tabpanel" id="edge-p${i}" aria-labelledby="edge-t${i}"${i ? ' hidden' : ''}><picture class="slot"><source media="(max-width: 640px)" srcset="${root}media/${pg.l.src}" width="${pg.l.w}" height="${pg.l.h}"><img src="${root}media/${pg.xl.src}" alt="${esc(pg.xl.alt)}" width="${pg.xl.w}" height="${pg.xl.h}"${i ? ' loading="lazy"' : ''}></picture></div>`).join('');
   const tabs = pages.map((pg, i) => `<button type="button" role="tab" id="edge-t${i}" aria-controls="edge-p${i}" aria-selected="${i === 0}"${i ? ' tabindex="-1"' : ''}>${esc(pg.label)}</button>`).join('');
   return `<div class="edge" data-edge>
   <div class="edge-bezel"><div class="edge-screen">${screens}</div></div>
@@ -222,18 +221,30 @@ function permissionsBlock(p) {
   </section>`;
 }
 
+// A widget at every slot it fits, smallest first, drawn to scale against the widest slot so a buyer can see what fits.
+function sizesGallery(p, root) {
+  const widest = Math.max(...p.media.map((m) => m.w));
+  return `<section class="sizes" aria-labelledby="sizes-h">
+    <h2 id="sizes-h">Sizes</h2>
+    <p class="note">Every slot on the Xeneon Edge, smallest first, drawn to scale. Pick the one that fits your layout.</p>
+    <div class="size-row">${p.media.map((m, i) => `<figure class="size" style="--w:${(m.w / widest).toFixed(4)}"><div class="pix"><img src="${root}media/${esc(m.src)}" alt="${esc(m.alt)}" width="${m.w}" height="${m.h}"${i ? ' loading="lazy"' : ' fetchpriority="high"'} decoding="async"></div><figcaption><b>${esc(m.size)}</b> ${m.w} x ${m.h}</figcaption></figure>`).join('')}</div>
+  </section>`;
+}
+
 function projectPage(p) {
   const root = '../../';
   const shelf = shelves.find((s) => s.id === p.shelf);
   const [first, ...rest] = p.media;
-  const gallery = first
+  const sized = p.media.length > 0 && p.media.every((m) => m.size);
+  const gallery = sized ? sizesGallery(p, root) : first
     ? `<div class="gallery">${frame(first, root, 'lead')}${rest.length ? `<div class="thumbs">${rest.map((m) => frame(m, root)).join('')}</div>` : ''}</div>`
     : '';
   const setup = p.setup.length
     ? `<ol class="steps">${p.setup.map((t) => `<li>${esc(t)}</li>`).join('')}</ol>`
     : '';
   const buttons = getButtons(p, root);
-  const image = first ? `media/${first.video ? first.poster : first.src}` : undefined;
+  const c = leadMedia(p);
+  const image = c ? `media/${c.video ? c.poster : c.src}` : undefined;
   const jsonld = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
