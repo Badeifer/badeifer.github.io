@@ -63,8 +63,8 @@ main { display: block; }
 /* ---------- hero: the Edge ---------- */
 .hero { padding-top: clamp(40px, 8vw, 96px); padding-bottom: 32px; }
 @media (min-width: 1280px) {
-  .hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); column-gap: 64px; align-items: end; padding-top: 48px; }
-  .hero h1 { font-size: clamp(3rem, 3.9vw, 4.5rem); max-width: none; }
+  .hero { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr); column-gap: 64px; align-items: end; padding-top: 48px; }
+  .hero h1 { font-size: clamp(2.75rem, 3.5vw, 4.25rem); max-width: none; }
   .hero .lede { margin-top: 0; padding-bottom: 8px; }
   .hero .edge, .hero .cap { grid-column: 1 / -1; }
   .hero .edge { margin-top: 40px; }

@@ -12,7 +12,7 @@ export const site = {
   handle: 'Badeifer',
   url: 'https://badeifer.github.io',
   pageTitle: "Bade's Mod Shop | Xeneon Edge widgets, Stream Deck keys, Claude skills and Obsidian tools",
-  headline: 'Your limits, replays and to-dos, live on your desk',
+  headline: 'Your session limits, gaming replays and personal tasks, live on your desk',
   intro: 'Touchscreen widgets for the Corsair Xeneon Edge, Stream Deck keys, skills and mods for Claude, and pixel-art tools for Obsidian, each with a step-by-step setup guide.',
   caption: 'Swipe the screen, or use the arrows, to see every page.',
   // Help: where to go for answers. Shown in place of an About section.
