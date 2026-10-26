@@ -11,15 +11,15 @@ colors:
   frame-indigo: "#5c66b3"
   ember-ink: "#1a1530"
   lantern-teal: "#74d6bb"
-  day-sandstone: "#ecdcb9"
-  day-sandstone-deep: "#e2cea4"
-  day-ink: "#2a2140"
-  day-umber: "#5b4630"
-  day-amber: "#7a4405"
+  day-sandstone: "#f1e5c8"
+  day-sandstone-deep: "#e6d4ab"
+  day-ink: "#1c1530"
+  day-umber: "#4a3622"
+  day-amber: "#6b3a02"
   day-on-amber: "#fff7e6"
-  day-rampart: "#cdb582"
-  day-frame: "#8f6f3a"
-  day-lantern-teal: "#1d6b55"
+  day-rampart: "#a8884f"
+  day-frame: "#6d5126"
+  day-lantern-teal: "#155a47"
 typography:
   display:
     fontFamily: "Chakra Petch, Segoe UI, system-ui, sans-serif"
@@ -180,6 +180,9 @@ boxes. The one rounded shape is the Edge device (12px bezel; widget slots use th
 ### Edge hero (signature)
 - A Xeneon Edge drawing (2560:720 screen in a black bezel on a small stand) with three pages of real widget renders. Tabs below
   switch pages; arrow keys and a horizontal swipe do too. The new page slides in 3 percent from the swipe side.
+
+### Dispatch covers
+- Each article gets a pixel-art night scene drawn from its slug by `src/cover-art.mjs` (176x88 PNG, scaled with crisp pixels): one building per topic (AI a crystal tower, AI tools a forge, skills a library, cyber a gatehouse, industry a windmill), lit in the topic colour, with the moon, stars, hills and props varying per article. Covers stay at night in both themes. Keep the building inside the middle of the frame: cards crop to 16:10 and the article hero to 21:9.
 
 ### Navigation
 - Sticky top bar (72px): 40px avatar and the name at 2rem left (1.75rem with tighter gaps up to 1535px wide), section links (1.0625rem, 600) right, day/night toggle. Below 1440px the links move to a scrolling second row. Links in lavender, ink on hover.

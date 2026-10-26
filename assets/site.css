@@ -13,8 +13,8 @@
   color-scheme: dark;
 }
 :root[data-theme="day"] {
-  --bg: #ecdcb9; --bg2: #e2cea4; --ink: #2a2140; --muted: #5b4630; --line: #cdb582;
-  --gold: #7a4405; --on-gold: #fff7e6; --teal: #1d6b55; --frame: #8f6f3a; --dither: #dcc699;
+  --bg: #f1e5c8; --bg2: #e6d4ab; --ink: #1c1530; --muted: #4a3622; --line: #a8884f;
+  --gold: #6b3a02; --on-gold: #fff7e6; --teal: #155a47; --frame: #6d5126; --dither: #e0cb9d;
   color-scheme: light;
 }
 
@@ -62,6 +62,7 @@ main { display: block; }
 
 /* ---------- hero: the Edge ---------- */
 .hero { padding-top: clamp(40px, 8vw, 96px); padding-bottom: 32px; }
+.hero h1 { font-size: clamp(2.25rem, 5vw, 3.75rem); letter-spacing: -0.02em; max-width: 20ch; text-wrap: balance; }
 @media (min-width: 1280px) {
   .hero { display: grid; grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr); column-gap: 64px; align-items: end; padding-top: 48px; }
   .hero h1 { font-size: clamp(2.75rem, 3.5vw, 4.25rem); max-width: none; }
@@ -69,7 +70,6 @@ main { display: block; }
   .hero .edge, .hero .cap { grid-column: 1 / -1; }
   .hero .edge { margin-top: 40px; }
 }
-.hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); letter-spacing: -0.02em; max-width: 16ch; text-wrap: balance; }
 .lede { margin-top: 20px; max-width: 60ch; font-size: clamp(1.25rem, 1.6vw, 1.5rem); color: var(--muted); }
 /* The Edge breaks out of the text column: up to 1760px wide on big screens. */
 .edge { width: min(1760px, calc(100vw - 2 * var(--gut))); margin: clamp(32px, 5vw, 64px) 0 0 calc(50% - min(880px, 50vw - var(--gut))); }
@@ -283,7 +283,7 @@ video[src*="keep"], video[src*="live-status"] { image-rendering: pixelated; }
 /* ---------- The Dispatch: news ----------
    Editorial, not a card kit: generous type, covers drawn per story, colour only in the topic mark and the cover. */
 .t-ai { --tc: #e8b64c; } .t-tools { --tc: #74d6bb; } .t-skills { --tc: #8fa2ff; } .t-cyber { --tc: #ff6b6b; } .t-industry { --tc: #c59bff; }
-:root[data-theme="day"] .t-ai { --tc: #7a4405; } :root[data-theme="day"] .t-tools { --tc: #11594a; } :root[data-theme="day"] .t-skills { --tc: #2d3f9e; }
+:root[data-theme="day"] .t-ai { --tc: #6b3a02; } :root[data-theme="day"] .t-tools { --tc: #11594a; } :root[data-theme="day"] .t-skills { --tc: #2d3f9e; }
 :root[data-theme="day"] .t-cyber { --tc: #a3202b; } :root[data-theme="day"] .t-industry { --tc: #5b2d9e; }
 .topic { display: inline-flex; align-items: center; gap: 8px; color: var(--tc); font-weight: 700; }
 .topic::before { content: ""; width: 10px; height: 10px; background: var(--tc); }
@@ -296,6 +296,7 @@ video[src*="keep"], video[src*="live-status"] { image-rendering: pixelated; }
 .dispatch-links { margin-top: 14px; font-weight: 700; font-size: 1rem; }
 
 .story-art { display: block; overflow: hidden; background: #0b0e26; box-shadow: 0 0 0 1px var(--line); }
+.cover { image-rendering: pixelated; object-fit: cover; background: #0a0d25; }
 .story-art .cover { display: block; width: 100%; height: auto; aspect-ratio: 16 / 10; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
 .story:hover .story-art .cover { transform: scale(1.035); }
 .story h3 { font-size: clamp(1.5rem, 2vw, 1.875rem); line-height: 1.12; margin-top: 20px; }

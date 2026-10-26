@@ -7,7 +7,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { site, shelves, projects } from '../src/site.mjs';
-import { loadArticles, cover, prettyDate, TOPICS } from '../src/news.mjs';
+import { loadArticles, prettyDate, TOPICS } from '../src/news.mjs';
 const newsOnly = process.argv.includes('--news');   // the daily Dispatch job only needs the news cards
 
 const root = resolve(import.meta.dirname, '..');
@@ -107,10 +107,11 @@ ${head}
 // The Dispatch: one card for the index and one per article, on the article's own cover art.
 const articles = loadArticles(join(root, 'news'));
 const newsCard = (a, title, sub) => page(`
-<div style="position:absolute;inset:0;z-index:-1">${cover(a, { id: 'og' + a.slug }).replace('class="cover"', 'style="width:100%;height:100%"')}</div>
-<div style="position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(11,14,38,.94) 0%,rgba(11,14,38,.78) 48%,rgba(11,14,38,.1) 100%)"></div>
+<div style="position:absolute;inset:0;z-index:-1;background:#0a0d25"></div>
+<img src="${file('media/news/covers/' + a.slug + '.png')}" style="position:absolute;top:104px;bottom:0;right:0;width:50%;height:calc(100% - 104px);object-fit:cover;image-rendering:pixelated;z-index:-1" alt="">
+<div style="position:absolute;top:104px;bottom:0;right:0;width:50%;z-index:-1;background:linear-gradient(90deg,#0a0d25 0%,rgba(10,13,37,.5) 18%,rgba(10,13,37,0) 40%),linear-gradient(#0a0d25 0%,rgba(10,13,37,0) 14%)"></div>
 <p style="margin-top:34px;font-size:22px;font-weight:700;color:${TOPICS[a.topic].hue}">The Dispatch</p>
-<h1 style="font-size:${title.length > 70 ? 50 : 58}px;margin-top:12px;max-width:820px">${esc(title)}</h1>
+<h1 style="font-size:${title.length > 70 ? 50 : 58}px;margin-top:12px;max-width:560px">${esc(title)}</h1>
 <p class="tag" style="margin-top:auto;font-size:22px">${esc(sub)}</p>`);
 if (articles.length) {
   shoot('news', newsCard(articles[0], 'The Dispatch: daily AI, tools, skills and cyber briefings', `Latest: ${articles[0].title}`));

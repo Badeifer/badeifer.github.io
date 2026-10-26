@@ -2,9 +2,10 @@
 // Run: node build.mjs
 import { mkdirSync, writeFileSync, rmSync, existsSync, readdirSync } from 'node:fs';
 import { site, shelves, projects, statusLabel, toolbox, toolboxIntro, widgetPermissions } from './src/site.mjs';
-import { loadArticles, cover, prettyDate, TOPICS } from './src/news.mjs';
+import { loadArticles, cover, writeCovers, prettyDate, TOPICS } from './src/news.mjs';
 
 const articles = loadArticles();
+writeCovers(articles, 'media/news/covers');
 
 const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 const year = new Date().getFullYear();
@@ -299,7 +300,7 @@ const byline = `Written with AI for ${site.name}`;
 
 function storyCard(a, root, cls = '') {
   return `<article class="story ${cls}" data-topic="${a.topic}">
-  <a class="story-art" href="${root}news/${a.slug}/" tabindex="-1" aria-hidden="true">${cover(a, { id: a.slug + (cls || 'c') })}</a>
+  <a class="story-art" href="${root}news/${a.slug}/" tabindex="-1" aria-hidden="true">${cover(a, root, { lazy: cls !== 'lead' })}</a>
   <div class="story-text">
     <h3><a href="${root}news/${a.slug}/">${esc(a.title)}</a></h3>
     <p class="story-dek">${esc(a.dek)}</p>
@@ -358,7 +359,7 @@ ${topbar(root)}
     <p class="article-dek">${esc(a.dek)}</p>
     <p class="story-meta">${topicChip(a)}<time datetime="${a.date}">${esc(prettyDate(a.date))}</time><span>${a.minutes} min read</span></p>
   </header>
-  <div class="article-art">${cover(a, { id: a.slug + 'hero' })}</div>
+  <div class="article-art">${cover(a, '../../', { lazy: false })}</div>
   <div class="prose">${a.html}</div>
   ${a.sources.length ? `<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ol>${a.sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a></li>`).join('')}</ol></section>` : ''}
   <p class="made">${esc(byline)}. Facts are checked against the sources above on the day of publishing; if one is wrong, <a href="${esc(site.help[0].url)}">open an issue</a>.</p>
