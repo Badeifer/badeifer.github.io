@@ -333,6 +333,7 @@ ${topbar(root)}
     <p class="lede">Daily briefings on AI tools, new skills, AI news, cyber and the industry. Researched and written with AI, every claim linked to its source.</p>
     <p class="dispatch-links"><a href="${root}news/feed.xml">RSS feed</a></p>
   </header>
+  <h2 class="sr-only">Latest stories</h2>
   ${lead ? storyCard(lead, root, 'lead') : '<p class="empty">The first story lands tomorrow morning.</p>'}
   ${filters}
   ${rest.length ? `<div class="stories" id="stories">${rest.map((a) => storyCard(a, root)).join('')}</div>` : ''}
