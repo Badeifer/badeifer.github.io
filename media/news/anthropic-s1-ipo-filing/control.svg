@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Who controls Anthropic after the IPO: founders, the Long-Term Benefit Trust and public shareholders</title>
+  <rect width="1600" height="720" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Buying ANT shares buys revenue, not control</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Share classes and who holds the levers, as described in the S-1 and its trust agreement exhibit.</text>
+
+  <g font-size="22">
+    <rect x="80" y="170" width="440" height="250" rx="14" fill="none" stroke="#c59bff" stroke-width="3"/>
+    <text x="110" y="214" fill="#c59bff" font-size="28" font-weight="700">Founder LLC</text>
+    <text x="110" y="252" fill="#ede6d3">One Class F share</text>
+    <text x="110" y="288" fill="#ede6d3">Held for the seven co-founders</text>
+    <text x="110" y="340" fill="#ede6d3" font-size="34" font-weight="700">50.1% of the vote</text>
+    <text x="110" y="378" fill="#a9aecf">on most stockholder matters</text>
+
+    <rect x="580" y="170" width="440" height="250" rx="14" fill="none" stroke="#ede6d3" stroke-width="2"/>
+    <text x="610" y="214" fill="#ede6d3" font-size="28" font-weight="700">Long-Term Benefit Trust</text>
+    <text x="610" y="252" fill="#ede6d3">Holds Class T stock only</text>
+    <text x="610" y="288" fill="#ede6d3">Up to five voting trustees</text>
+    <text x="610" y="340" fill="#ede6d3" font-size="34" font-weight="700">Elects most of</text>
+    <text x="610" y="378" fill="#ede6d3" font-size="34" font-weight="700">the board</text>
+
+    <rect x="1080" y="170" width="440" height="250" rx="14" fill="none" stroke="#a9aecf" stroke-width="2" stroke-dasharray="10 8"/>
+    <text x="1110" y="214" fill="#a9aecf" font-size="28" font-weight="700">Public investors</text>
+    <text x="1110" y="252" fill="#ede6d3">Class A shares</text>
+    <text x="1110" y="288" fill="#ede6d3">Nasdaq, ticker ANT</text>
+    <text x="1110" y="340" fill="#ede6d3" font-size="34" font-weight="700">Economic stake,</text>
+    <text x="1110" y="378" fill="#ede6d3" font-size="34" font-weight="700">minority vote</text>
+  </g>
+
+  <!-- board -->
+  <rect x="580" y="520" width="440" height="110" rx="14" fill="#c59bff" fill-opacity="0.15" stroke="#c59bff" stroke-width="2"/>
+  <text x="800" y="565" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="middle">Board of Anthropic, PBC</text>
+  <text x="800" y="600" fill="#a9aecf" font-size="20" text-anchor="middle">a Delaware public benefit corporation</text>
+  <line x1="800" y1="420" x2="800" y2="512" stroke="#ede6d3" stroke-width="3"/>
+  <polygon points="790,506 810,506 800,520" fill="#ede6d3"/>
+  <text x="815" y="475" fill="#ede6d3" font-size="20">majority of seats</text>
+  <line x1="300" y1="420" x2="580" y2="560" stroke="#c59bff" stroke-width="2" stroke-dasharray="6 6"/>
+  <line x1="1300" y1="420" x2="1020" y2="560" stroke="#a9aecf" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="250" y="520" fill="#a9aecf" font-size="20">votes on other</text>
+  <text x="250" y="546" fill="#a9aecf" font-size="20">stockholder matters</text>
+  <text x="1180" y="520" fill="#a9aecf" font-size="20">votes, outweighed</text>
+  <text x="1180" y="546" fill="#a9aecf" font-size="20">while Class F stands</text>
+
+  <text x="80" y="690" fill="#a9aecf" font-size="18">Simplified. The trust agreement lets some of these rules change after the Class F share sunsets. Source: Anthropic Form S-1 and Exhibit 99.1; TechCrunch; Fortune.</text>
+</svg>
