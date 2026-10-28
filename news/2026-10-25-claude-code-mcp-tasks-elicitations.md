@@ -3,6 +3,7 @@ title: Claude Code stops waiting on slow tools: MCP Tasks and mid-job questions 
 dek: Long MCP tool calls can now run as background tasks that report back, and servers can stop to ask you something halfway through. Here is what works today, what does not, and how to try it.
 date: 2026-10-25
 topic: tools
+art: terminal, clock, bell
 tags: Claude Code, MCP, agents, developer tools
 sources:
   - Claude Code docs: Connect Claude Code to tools via MCP (MCP Tasks, elicitation) | https://code.claude.com/docs/en/mcp

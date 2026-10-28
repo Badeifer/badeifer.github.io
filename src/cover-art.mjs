@@ -3,6 +3,7 @@
 // industry a windmill); the slug seeds everything else: where it stands, the moon, the stars, hills, trees and fireflies.
 // Drawn at 176x88 and written as a PNG with no dependencies, so the daily cloud job can build it too.
 import { deflateSync } from 'node:zlib';
+import { readFileSync } from 'node:fs';
 
 export const COVER_W = 176, COVER_H = 88;
 
@@ -256,6 +257,51 @@ export function drawCover(slug, topic, hue, deep) {
   return c.px;
 }
 
+// ---------- icon covers: the article's own pixel-art objects standing in the night scene ----------
+const SPR = JSON.parse(readFileSync(new URL('./sprites.json', import.meta.url), 'utf8')).sprites;
+export const SPRITE_NAMES = Object.keys(SPR);
+const TOPIC_ART = { ai: ['robot', 'chip', 'brain'], tools: ['terminal', 'gear', 'laptop'], skills: ['code', 'trophy', 'doc'], cyber: ['shield', 'bug', 'lock'], industry: ['chart', 'building', 'coin'] };
+
+function spritePal(hue) {
+  return { A: hue, a: mix(hue, '#000000', 0.45), L: mix(hue, '#ffffff', 0.5), W: '#ede6d3', w: '#a9aecf', S: '#6f7bb8', s: '#353d75', D: '#141833', K: '#0b0e26',
+    R: '#ff6b6b', Y: '#e8b64c', O: '#ff9f5a', G: '#74d6bb', B: '#8fa2ff', P: '#c59bff' };
+}
+// One 16x16 icon at an integer scale, with a hard one-pixel shadow like the site's frames.
+function drawSprite(c, name, x0, y0, scale, pal) {
+  const rows = SPR[name] || SPR.doc;
+  for (let pass = 0; pass < 2; pass++) {
+    for (let y = 0; y < 16; y++) for (let x = 0; x < 16; x++) {
+      const ch = rows[y][x]; if (!pal[ch]) continue;
+      c.rect(x0 + x * scale + (pass ? 0 : scale), y0 + y * scale + (pass ? 0 : scale), scale, scale, pass ? pal[ch] : P.out);
+    }
+  }
+}
+
+export function drawIconCover(slug, topic, hue, deep, art) {
+  const r = rng(slug), c = canvas(), W = COVER_W, H = COVER_H, base = 72;
+  const names = (art && art.length ? art : TOPIC_ART[topic] || TOPIC_ART.ai).filter((n) => SPR[n]).slice(0, 3);
+  if (!names.length) names.push(...TOPIC_ART.ai);
+  const pal = spritePal(hue), dim = mix(hue, '#141833', 0.6), bright = mix(hue, '#ffffff', 0.55);
+  const sky = [...P.sky.slice(0, 4), mix(P.sky[4], deep, 0.5)];
+  const skyAt = (x, y) => { const t = Math.min(1, y / 66) * (sky.length - 1), i = Math.floor(t); return i >= sky.length - 1 ? sky[sky.length - 1] : (t - i) * 16 > BAYER[y & 3][x & 3] ? sky[i + 1] : sky[i]; };
+  for (let y = 0; y < H; y++) for (let x = 0; x < W; x++) c.set(x, y, skyAt(x, y));
+  for (let i = 0; i < 55; i++) { const x = r() * W, y = r() * 56, k = r(); c.set(x, y, k < 0.15 ? P.star : k < 0.5 ? P.star2 : P.star3); }
+  const side = r() < 0.5 ? -1 : 1, mx = Math.round(W / 2 + side * (52 + r() * 14)), my = Math.round(14 + r() * 6);
+  c.glow(mx, my, 13, sky[3]); c.disc(mx, my, 6, P.moon); c.set(mx - 2, my - 2, P.moonShade); c.set(mx + 2, my + 1, P.moonPit); c.disc(mx - 3, my + 2, 1, P.moonShade);
+  const p = [r() * 6, r() * 6];
+  for (let x = 0; x < W; x++) { const f = Math.round(60 + Math.sin(x * 0.05 + p[0]) * 4 + Math.sin(x * 0.12 + p[1]) * 1.5); for (let y = f; y < H; y++) c.set(x, y, y === f ? P.hillFar2 : P.hillFar); }
+  for (let x = 0; x < W; x++) for (let y = base + 2; y < H; y++) c.set(x, y, P.ground);
+  for (let x = 0; x < W; x++) c.set(x, base + 1, P.hillMid);
+  for (let i = 0; i < 28; i++) c.set(r() * W, base + 3 + r() * 12, P.groundSpeck);
+  // Main icon big and centred a little off the moon; the others smaller on either side.
+  const cx = Math.round(W / 2 - side * 6), s3 = 3, s2 = 2;
+  c.glow(cx, base - 24, 34, mix(hue, '#0a0d25', 0.78));
+  const spots = [[cx - 24, base - 48, s3], [cx - 78 + (side > 0 ? 0 : 6), base - 30, s2], [cx + 46, base - 30, s2]];
+  for (let j = names.length - 1; j >= 0; j--) { const [x, y, s] = spots[j]; drawSprite(c, names[j], x, y, s, pal); }
+  for (let i = 0; i < 9; i++) c.set(cx - 40 + r() * 80, 12 + r() * 50, i % 3 ? dim : bright);
+  return c.px;
+}
+
 // ---------- a minimal PNG writer ----------
 const CRC = new Uint32Array(256).map((_, n) => { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1; return c >>> 0; });
 const crc32 = (buf) => { let c = 0xffffffff; for (const b of buf) c = CRC[(c ^ b) & 255] ^ (c >>> 8); return (c ^ 0xffffffff) >>> 0; };
@@ -263,8 +309,8 @@ function chunk(type, data) {
   const out = Buffer.alloc(12 + data.length); out.writeUInt32BE(data.length, 0); out.write(type, 4, 'ascii'); data.copy(out, 8);
   out.writeUInt32BE(crc32(out.subarray(4, 8 + data.length)), 8 + data.length); return out;
 }
-export function coverPng(slug, topic, hue, deep) {
-  const px = drawCover(slug, topic, hue, deep), raw = Buffer.alloc((COVER_W * 3 + 1) * COVER_H);
+export function coverPng(slug, topic, hue, deep, art) {
+  const px = drawIconCover(slug, topic, hue, deep, art), raw = Buffer.alloc((COVER_W * 3 + 1) * COVER_H);
   for (let y = 0; y < COVER_H; y++) {
     raw[y * (COVER_W * 3 + 1)] = 0;
     for (let x = 0; x < COVER_W; x++) { const [R, G, B] = hex(px[y * COVER_W + x] || '#000000'), o = y * (COVER_W * 3 + 1) + 1 + x * 3; raw[o] = R; raw[o + 1] = G; raw[o + 2] = B; }

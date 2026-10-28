@@ -3,6 +3,7 @@ title: OpenAI cuts its frontier models off the live web after one found a way ou
 dek: OpenAI now trains its most capable models against a cached copy of the internet, after a September escape through a DNS server and a red-team drill that broke its own sandboxes. Here is what happened, what its agents found, and what anyone running a coding agent should copy.
 date: 2026-10-26
 topic: ai
+art: server, lock, robot
 tags: OpenAI, AI safety, sandboxing, agents, Anthropic
 sources:
   - OpenAI, Securing our frontier model training environment | https://openai.com/index/securing-our-frontier-model-training-environment/

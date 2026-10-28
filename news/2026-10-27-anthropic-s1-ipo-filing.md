@@ -3,6 +3,7 @@ title: Anthropic's S-1: $16.3 billion in half-year sales, and the founders keep 
 dek: Anthropic has filed to list on Nasdaq as ANT. Here is what the prospectus says about revenue, the $80.7 billion loss, who really controls the company, and what changes for anyone building on Claude.
 date: 2026-10-27
 topic: industry
+art: chart, coin, building
 tags: Anthropic, IPO, Claude, compute, governance
 sources:
   - Anthropic, PBC, Form S-1 registration statement (SEC EDGAR) | https://www.sec.gov/Archives/edgar/data/0002130357/000162828026067168/anthropicpbc-sx1.htm

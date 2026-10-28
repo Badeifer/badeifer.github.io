@@ -38,17 +38,20 @@ jobs:
           if tar tvzf "$f" | grep -vE '^[-d]' ; then echo "links or special files in the archive"; exit 1; fi
           bad=$(tar tzf "$f" | grep -vE '^media(/news|/social)?(/[a-z0-9-]+)?/$' | grep -vE '^media/news/[a-z0-9-]+/(video\.mp4|video\.vtt|video-poster\.jpg|video\.json)$' | grep -vE '^media/social/[0-9]{4}-[0-9]{2}-[0-9]{2}-[a-z0-9-]+/(video\.mp4|captions\.srt|poster\.jpg|post\.json)$' || true)
           if [ -n "$bad" ]; then echo "unexpected paths in the archive:"; echo "$bad"; exit 1; fi
-          tar xzf "$f" --no-same-owner --no-same-permissions
-          if grep -rIniE 'github_pat_|ghp_|gho_|sk-ant|192[.]168' media/news media/social; then echo "secret-like text in the archive"; exit 1; fi
+          mkdir "$RUNNER_TEMP/pub"
+          tar xzf "$f" -C "$RUNNER_TEMP/pub" --no-same-owner --no-same-permissions
+          if grep -rIniE 'github_pat_|ghp_|gho_|sk-ant|192[.]168' "$RUNNER_TEMP/pub"; then echo "secret-like text in the archive"; exit 1; fi
       - name: Build, prune, commit, push
         run: |
-          node build.mjs
-          ls -d media/social/*/ | sort | head -n -14 | xargs -r git rm -r -q
           git config user.name "Dispatch video"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main   # the site may have changed while the agent worked; build with its newest code
+          cp -r "$RUNNER_TEMP/pub/media/." media/
+          node build.mjs
+          ls -d media/social/*/ | sort | head -n -14 | xargs -r git rm -r -q
           git add media news social sitemap.xml index.html robots.txt
           git commit -m "Dispatch video: $(ls -t media/news/*/video.mp4 | head -1 | cut -d/ -f3)"
-          git pull --rebase
+          git pull --rebase origin main
           git push
       - name: Ask Pages to rebuild
         continue-on-error: true

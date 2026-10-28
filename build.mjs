@@ -67,6 +67,7 @@ function footer(root) {
   <p class="fine">Corsair, iCUE, Xeneon, Elgato, Stream Deck, NVIDIA, Obsidian and Claude are trademarks of their owners. These are independent projects, not made by or endorsed by them.</p>
 </footer>
 <script src="${root}assets/site.js" defer></script>
+<script src="${root}assets/pal.js" defer></script>
 </body>
 </html>`;
 }

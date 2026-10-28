@@ -3,6 +3,7 @@ title: An AI agent stripped the ads off a Google TV and built it a new home scre
 dek: In one evening, Claude Code took a stock TCL Google TV from sponsored rows to a custom, ad-free home screen with skins and sleep features. Here is what changed, how to repeat it, and what it says about owning your software.
 date: 2026-10-26
 topic: tools
+art: robot, laptop, shield
 tags: Claude Code, Google TV, Android TV, open source, privacy
 sources:
   - TV Home kit (the patch, skins, scripts and full guide) | https://github.com/Badeifer/tv-home-kit

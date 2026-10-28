@@ -108,7 +108,7 @@ export function loadArticles(dir = 'news') {
     const words = body.split(/\s+/).filter(Boolean).length;
     return {
       file: f, slug, date: meta.date || f.slice(0, 10), title: meta.title || slug, dek: meta.dek || '',
-      topic: TOPICS[meta.topic] ? meta.topic : 'ai', tags: meta.tags, sources: meta.sources, html: markdown(body),
+      topic: TOPICS[meta.topic] ? meta.topic : 'ai', art: (meta.art || '').split(',').map((t) => t.trim()).filter(Boolean), tags: meta.tags, sources: meta.sources, html: markdown(body),
       minutes: Math.max(1, Math.round(words / 230)), video: videoFor(slug)
     };
   }).filter((a) => a.date <= new Date().toISOString().slice(0, 10)).sort((a, b) => (b.date + b.slug).localeCompare(a.date + a.slug));
@@ -123,7 +123,7 @@ export function prettyDate(iso) {
 // them as media/news/covers/<slug>.png at build time; cover() is the <img> for a page at depth `root`.
 export function writeCovers(list, dir) {
   mkdirSync(dir, { recursive: true });
-  for (const a of list) writeFileSync(join(dir, a.slug + '.png'), coverPng(a.slug, a.topic, TOPICS[a.topic].hue, TOPICS[a.topic].deep));
+  for (const a of list) writeFileSync(join(dir, a.slug + '.png'), coverPng(a.slug, a.topic, TOPICS[a.topic].hue, TOPICS[a.topic].deep, a.art));
 }
 
 export function cover(a, root, { lazy = true } = {}) {

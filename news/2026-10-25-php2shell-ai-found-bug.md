@@ -3,6 +3,7 @@ title: PHP2Shell: AI found a 14-year-old hole in the web's favourite language, a
 dek: Two critical PHP flaws let a single request take over a server. Frontier models helped find them, and the same speed is now on the attackers' side. Here is what to patch today.
 date: 2026-10-25
 topic: cyber
+art: bug, server, skull
 tags: PHP, vulnerabilities, AI security, patching
 sources:
   - Help Net Security: PHP2Shell, critical PHP vulnerabilities patched | https://www.helpnetsecurity.com/2026/10/21/php2shell-php-vulnerabilities-patched-cve-2026-109618-cve-2026-109619/

@@ -28,6 +28,9 @@ write code or care about security. This file is your whole brief. Follow it exac
 3. Pick the story with the most real consequence for the reader: something to patch, try, learn, avoid or rethink.
    Prefer a revelation, a sharp change or a practical how-to over a press release. Skip rumours.
 4. Topic is one of: `ai`, `tools`, `skills`, `cyber`, `industry`.
+5. Art: add a front matter line `art: name1, name2, name3` with 3 pixel-art icons that show **what this story is about** (they draw the cover
+   and the video). Use only these names: `lock shield bug server laptop globe cloud chip warning magnifier key doc chart coin gear bolt robot terminal envelope rocket flame skull clock database building package wifi eye phone brain code trophy bell heart camera`.
+   The first is drawn biggest. A breach: `server, skull, lock`. A model launch: `robot, chip, rocket`. Earnings: `chart, coin, building`. A patch: `bug, shield, package`.
 
 ## 3. Report it
 
