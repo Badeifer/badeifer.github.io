@@ -1,13 +1,13 @@
 {
   "files": {
     "render/make_video.py": {
-      "id": "file_01UY1L6NsPCEYCFCeYUFUuSi",
-      "hash": "18d48b109d4a8a1e",
+      "id": "file_01Dmch4PzhXtj62QQ4yJWSEz",
+      "hash": "528a2fe1cb85865c",
       "mount": "/vid/render/make_video.py"
     },
     "render/audio.py": {
-      "id": "file_01XozB9bx3CEnN1uHpTmg6cB",
-      "hash": "17682d670255619f",
+      "id": "file_01MTNLJNHA2YW7bTdsf7zVUf",
+      "hash": "9d2cba59bb905849",
       "mount": "/vid/render/audio.py"
     },
     "fonts/AtkinsonHyperlegibleNext.ttf": {
@@ -24,9 +24,24 @@
       "id": "file_01Gy7jzpzPjmnDed6AFhj2cy",
       "hash": "c6d3b98f08315cb4",
       "mount": "/vid/voices/en_US-ryan-high.onnx.json"
+    },
+    "render/sprites.json": {
+      "id": "file_01U7y9qGgLTzWDzPMbeyPszg",
+      "hash": "85dce8e73006fe32",
+      "mount": "/vid/render/sprites.json"
+    },
+    "voices/kokoro-v1.0.onnx": {
+      "id": "file_01Ck7J4uF7mqDo8DhqpvzWd1",
+      "hash": "7d5df8ecf7d4b187",
+      "mount": "/vid/voices/kokoro-v1.0.onnx"
+    },
+    "voices/voices-v1.0.bin": {
+      "id": "file_012dtV3ZakGoeEHmgr2MYYyd",
+      "hash": "bca610b8308e8d99",
+      "mount": "/vid/voices/voices-v1.0.bin"
     }
   },
   "environment": "env_01VN3wx55dWX8SAXdYHXVS27",
   "agent": "agent_01VVBocF5Um4y2ejB392gtHT",
-  "agentVersion": 5
+  "agentVersion": 6
 }
