@@ -20,7 +20,7 @@ const pi = args.indexOf('--publish');
 const PUBLISH = pi >= 0 ? args[pi + 1] : null;
 const slug = args.find((a, i) => !a.startsWith('--') && i !== pi + 1) || 'latest';
 const BUDGET_CENTS = '800'; /* $8 per run at list price; the API takes cents as an integer string */
-const TIMEOUT_MS = 40 * 60 * 1000;
+const TIMEOUT_MS = 80 * 60 * 1000;
 const BETAS = ['managed-agents-2026-04-01', 'files-api-2025-04-14'];
 
 const state = JSON.parse(fs.readFileSync(path.join(HERE, 'state.json'), 'utf8'));
