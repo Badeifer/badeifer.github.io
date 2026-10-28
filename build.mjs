@@ -348,7 +348,7 @@ function videoBlock(a, root) {
   return `<figure class="article-video">
     <video controls playsinline preload="metadata"${v.poster ? ` poster="${root}${v.poster}"` : ''} aria-label="${esc(a.title)}: video summary">
       <source src="${root}${v.src}" type="video/mp4">${v.captions ? `
-      <track kind="captions" src="${root}${v.captions}" srclang="en" label="English" default>` : ''}
+      <track kind="captions" src="${root}${v.captions}" srclang="en" label="English">` : ''}
     </video>
     <figcaption><b>${v.seconds ? clock(v.seconds) + ' video' : 'Video'}</b> The short version, captioned. The full story is below.</figcaption>
   </figure>`;
