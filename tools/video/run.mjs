@@ -62,8 +62,12 @@ for await (const ev of A.beta.sessions.events.list(session.id, { limit: 200 })) 
 console.log(`status ${status} after ${Math.round((Date.now() - t0) / 60000)} min\n${last}`);
 const ok = status === 'idle' && /^\s*OK\b/.test(last);
 if (ok && PUBLISH) {
-  const page = await A.beta.files.list({ scope_id: session.id, limit: 100, betas: BETAS });
-  const f = page.data.find((x) => x.filename === 'publish.tar.gz' && x.downloadable);
+  let f;
+  for (let i = 0; i < 18 && !f; i++) { /* the session's output files can show up a few seconds after it goes idle */
+    const page = await A.beta.files.list({ scope_id: session.id, limit: 100, betas: BETAS });
+    f = page.data.find((x) => x.filename === 'publish.tar.gz' && x.downloadable);
+    if (!f) await new Promise((r) => setTimeout(r, 10000));
+  }
   if (!f) { console.log('no publish.tar.gz in the session outputs'); process.exit(1); }
   const r = await A.beta.files.download(f.id, { betas: BETAS });
   fs.writeFileSync(PUBLISH, Buffer.from(await r.arrayBuffer()));
