@@ -1,8 +1,8 @@
 {
   "files": {
     "render/make_video.py": {
-      "id": "file_01DfYVTEFB5XDgjJcNhaFBaZ",
-      "hash": "e18bca1424844823",
+      "id": "file_01KS7ZyETuhtv9gAHxYtDP2a",
+      "hash": "c3c11867d37e470a",
       "mount": "/vid/render/make_video.py"
     },
     "render/audio.py": {
@@ -28,5 +28,5 @@
   },
   "environment": "env_01VN3wx55dWX8SAXdYHXVS27",
   "agent": "agent_01VVBocF5Um4y2ejB392gtHT",
-  "agentVersion": 3
+  "agentVersion": 4
 }
