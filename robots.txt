@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /src/
 Disallow: /.impeccable/
+Disallow: /social/
+Disallow: /media/social/
 
 Sitemap: https://badeifer.github.io/sitemap.xml
