@@ -1,0 +1,32 @@
+{
+  "files": {
+    "render/make_video.py": {
+      "id": "file_01HVKnc2FhRB2u4xnBVs94cR",
+      "hash": "6f1981e9308ac046",
+      "mount": "/vid/render/make_video.py"
+    },
+    "render/audio.py": {
+      "id": "file_01AxyhnzjUqmRiKNSNdkzX55",
+      "hash": "4aab7cde4275d0f2",
+      "mount": "/vid/render/audio.py"
+    },
+    "fonts/AtkinsonHyperlegibleNext.ttf": {
+      "id": "file_01M4o1sgiSWmwFVXLaiSKjow",
+      "hash": "85adb3a43bd398cd",
+      "mount": "/vid/fonts/AtkinsonHyperlegibleNext.ttf"
+    },
+    "voices/en_US-ryan-high.onnx": {
+      "id": "file_01TJ4TDdvxj42XsH7sqhjdsL",
+      "hash": "b3990d7606e183ec",
+      "mount": "/vid/voices/en_US-ryan-high.onnx"
+    },
+    "voices/en_US-ryan-high.onnx.json": {
+      "id": "file_01Gy7jzpzPjmnDed6AFhj2cy",
+      "hash": "c6d3b98f08315cb4",
+      "mount": "/vid/voices/en_US-ryan-high.onnx.json"
+    }
+  },
+  "environment": "env_01VN3wx55dWX8SAXdYHXVS27",
+  "agent": "agent_01VVBocF5Um4y2ejB392gtHT",
+  "agentVersion": 2
+}
