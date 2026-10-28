@@ -91,6 +91,15 @@ export function markdown(md) {
   return out.join('\n');
 }
 
+// The Dispatch video agent drops media/news/<slug>/video.mp4 (+ video-poster.jpg, video.vtt, video.json); no front matter needed.
+function videoFor(slug) {
+  const dir = `media/news/${slug}`;
+  if (!existsSync(`${dir}/video.mp4`)) return null;
+  let seconds = 0;
+  try { seconds = Math.round(JSON.parse(readFileSync(`${dir}/video.json`, 'utf8')).duration) || 0; } catch { /* the player works without it */ }
+  return { src: `${dir}/video.mp4`, poster: existsSync(`${dir}/video-poster.jpg`) ? `${dir}/video-poster.jpg` : null, captions: existsSync(`${dir}/video.vtt`) ? `${dir}/video.vtt` : null, seconds };
+}
+
 export function loadArticles(dir = 'news') {
   if (!existsSync(dir)) return [];
   return readdirSync(dir).filter((f) => /^\d{4}-\d{2}-\d{2}-[a-z0-9-]+\.md$/.test(f)).map((f) => {
@@ -100,7 +109,7 @@ export function loadArticles(dir = 'news') {
     return {
       file: f, slug, date: meta.date || f.slice(0, 10), title: meta.title || slug, dek: meta.dek || '',
       topic: TOPICS[meta.topic] ? meta.topic : 'ai', tags: meta.tags, sources: meta.sources, html: markdown(body),
-      minutes: Math.max(1, Math.round(words / 230))
+      minutes: Math.max(1, Math.round(words / 230)), video: videoFor(slug)
     };
   }).filter((a) => a.date <= new Date().toISOString().slice(0, 10)).sort((a, b) => (b.date + b.slug).localeCompare(a.date + a.slug));
 }

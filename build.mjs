@@ -342,11 +342,24 @@ ${topbar(root)}
 ${footer(root)}`;
 }
 
+const clock = (n) => `${Math.floor(n / 60)}:${String(n % 60).padStart(2, '0')}`;
+function videoBlock(a, root) {
+  const v = a.video;
+  return `<figure class="article-video">
+    <video controls playsinline preload="metadata"${v.poster ? ` poster="${root}${v.poster}"` : ''} aria-label="${esc(a.title)}: video summary">
+      <source src="${root}${v.src}" type="video/mp4">${v.captions ? `
+      <track kind="captions" src="${root}${v.captions}" srclang="en" label="English" default>` : ''}
+    </video>
+    <figcaption><b>${v.seconds ? clock(v.seconds) + ' video' : 'Video'}</b> The short version, captioned. The full story is below.</figcaption>
+  </figure>`;
+}
+
 function articlePage(a, newer, older) {
   const root = '../../';
   const jsonld = { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: a.title, description: a.dek, datePublished: a.date, dateModified: a.date,
     url: `${site.url}/news/${a.slug}/`, image: `${site.url}/media/og/news-${a.slug}.jpg`, author: { '@type': 'Organization', name: site.name, url: site.url + '/' },
     publisher: { '@type': 'Organization', name: site.name, logo: { '@type': 'ImageObject', url: site.url + '/media/avatar-512.png' } }, keywords: a.tags.join(', ') };
+  if (a.video) jsonld.video = { '@type': 'VideoObject', name: a.title, description: a.dek, uploadDate: a.date, contentUrl: `${site.url}/${a.video.src}`, ...(a.video.poster ? { thumbnailUrl: [`${site.url}/${a.video.poster}`] } : {}), ...(a.video.seconds ? { duration: `PT${Math.floor(a.video.seconds / 60)}M${a.video.seconds % 60}S` } : {}) };
   const nav = (x, label) => x ? `<a class="next-story" href="${root}news/${x.slug}/"><span>${label}</span>${esc(x.title)}</a>` : '<span></span>';
   return `${head({ title: `${a.title} | The Dispatch`, description: a.dek, root, path: `/news/${a.slug}/`, jsonld, share: `media/og/news-${a.slug}.jpg`, shareTitle: a.title }).replace('<meta property="og:type" content="website">', `<meta property="og:type" content="article">\n<meta property="article:published_time" content="${a.date}">`)}
 <body>
@@ -359,7 +372,7 @@ ${topbar(root)}
     <p class="article-dek">${esc(a.dek)}</p>
     <p class="story-meta">${topicChip(a)}<time datetime="${a.date}">${esc(prettyDate(a.date))}</time><span>${a.minutes} min read</span></p>
   </header>
-  <div class="article-art">${cover(a, '../../', { lazy: false })}</div>
+  ${a.video ? videoBlock(a, root) : `<div class="article-art">${cover(a, '../../', { lazy: false })}</div>`}
   <div class="prose">${a.html}</div>
   ${a.sources.length ? `<section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ol>${a.sources.map((s) => `<li><a href="${esc(s.url)}" rel="noopener">${esc(s.name)}</a></li>`).join('')}</ol></section>` : ''}
   <p class="made">${esc(byline)}. Facts are checked against the sources above on the day of publishing; if one is wrong, <a href="${esc(site.help[0].url)}">open an issue</a>.</p>

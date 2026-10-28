@@ -328,6 +328,10 @@ video[src*="keep"], video[src*="live-status"] { image-rendering: pixelated; }
 .article-head .story-meta { margin-top: 22px; }
 .article-art { margin-top: clamp(32px, 5vw, 56px); overflow: hidden; box-shadow: 0 0 0 1px var(--line); }
 .article-art .cover { display: block; width: 100%; height: auto; aspect-ratio: 21 / 9; }
+.article-video { margin: clamp(32px, 5vw, 56px) 0 0; }
+.article-video video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #0b0e26; box-shadow: 0 0 0 1px var(--line), 8px 8px 0 var(--line); }
+.article-video figcaption { margin-top: 18px; color: var(--muted); font-size: 1rem; }
+.article-video figcaption b { color: var(--tc, var(--ink)); margin-right: 8px; font-variant-numeric: tabular-nums; }
 .prose { max-width: 68ch; margin: clamp(40px, 6vw, 72px) 0 0; font-size: 1.1875rem; line-height: 1.75; }
 .prose > * + * { margin-top: 1.15em; }
 .prose h2 { font-size: clamp(1.75rem, 2.6vw, 2.25rem); margin-top: 2.2em; line-height: 1.12; }
