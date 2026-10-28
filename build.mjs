@@ -400,6 +400,60 @@ if (existsSync('news')) {
   articles.forEach((a, i) => { mkdirSync(`news/${a.slug}`, { recursive: true }); writeFileSync(`news/${a.slug}/index.html`, articlePage(a, articles[i - 1], articles[i + 1])); });
 }
 
+// Social cuts: media/social/<slug>/{video.mp4,poster.jpg,captions.srt,post.json}, written by the Dispatch video agent.
+// /social/ is a phone-friendly kit (preview, download, share, copy captions). Not linked, not indexed.
+function socialPage() {
+  const root = '../';
+  const items = existsSync('media/social') ? readdirSync('media/social', { withFileTypes: true }).filter((d) => d.isDirectory() && existsSync(`media/social/${d.name}/video.mp4`)).map((d) => d.name).sort().reverse() : [];
+  const card = (slug) => {
+    const dir = `media/social/${slug}`;
+    let post = {};
+    try { post = JSON.parse(readFileSync(`${dir}/post.json`, 'utf8')); } catch { /* the video still shows */ }
+    const a = articles.find((x) => slug.endsWith(x.slug));
+    const copy = (label, text) => text ? `<div class="soc-copy"><label>${esc(label)}<textarea readonly rows="4">${esc(text)}</textarea></label><button type="button" data-copy>Copy</button></div>` : '';
+    return `<article class="soc-card" data-file="${root}${dir}/video.mp4" data-title="${esc(post.title || a?.title || slug)}">
+    <video controls playsinline preload="metadata" poster="${root}${dir}/poster.jpg" src="${root}${dir}/video.mp4"></video>
+    <div class="soc-body">
+      <h2>${esc(post.title || a?.title || slug)}</h2>
+      <div class="row"><button type="button" class="btn primary" data-share hidden>Share</button><a class="btn" href="${root}${dir}/video.mp4" download="${esc(slug)}.mp4">Download video</a><a class="btn" href="${root}${dir}/captions.srt" download>Captions (.srt)</a>${a ? `<a class="btn" href="${root}news/${a.slug}/">Article</a>` : ''}</div>
+      ${copy('TikTok, Reels and Shorts caption', post.short)}${copy('X post', post.x)}${copy('LinkedIn post', post.linkedin)}
+    </div>
+  </article>`;
+  };
+  return `${head({ title: `Social cuts | ${site.name}`, description: 'Vertical cuts of The Dispatch videos, ready to post.', root, path: '/social/' }).replace('<meta name="description"', '<meta name="robots" content="noindex">\n<meta name="description"')}
+<body>
+<a class="skip" href="#main">Skip to content</a>
+${topbar(root)}
+<main id="main" class="page">
+  <h1>Social cuts</h1>
+  <p class="lede">Vertical 9:16 videos with burned-in captions. Share goes straight to your phone's apps; Download saves the file.</p>
+  <div class="soc-grid">${items.length ? items.map(card).join('') : '<p>No cuts yet. The first one appears after the next Dispatch video run.</p>'}</div>
+</main>
+${footer(root)}
+<script>
+for (const c of document.querySelectorAll('.soc-card')) {
+  const share = c.querySelector('[data-share]');
+  if (navigator.canShare && share) {
+    share.hidden = false;
+    share.addEventListener('click', async () => {
+      try {
+        const blob = await (await fetch(c.dataset.file)).blob();
+        const file = new File([blob], 'dispatch.mp4', { type: 'video/mp4' });
+        if (navigator.canShare({ files: [file] })) await navigator.share({ files: [file], title: c.dataset.title });
+      } catch (e) { /* cancelled or unsupported */ }
+    });
+  }
+  for (const b of c.querySelectorAll('[data-copy]')) b.addEventListener('click', async () => {
+    const t = b.previousElementSibling.querySelector('textarea');
+    try { await navigator.clipboard.writeText(t.value); b.textContent = 'Copied'; } catch (e) { t.select(); }
+    setTimeout(() => { b.textContent = 'Copy'; }, 1600);
+  });
+}
+</script>`;
+}
+mkdirSync('social', { recursive: true });
+writeFileSync('social/index.html', socialPage());
+
 if (existsSync('p')) rmSync('p', { recursive: true });
 writeFileSync('index.html', indexPage());
 for (const p of projects) {
@@ -422,7 +476,7 @@ writeFileSync('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>
 ${urls.map((u) => `  <url><loc>${site.url}${u}</loc><lastmod>${today}</lastmod></url>`).join('\n')}
 </urlset>
 `);
-writeFileSync('robots.txt', `User-agent: *\nAllow: /\nDisallow: /src/\nDisallow: /.impeccable/\n\nSitemap: ${site.url}/sitemap.xml\n`);
+writeFileSync('robots.txt', `User-agent: *\nAllow: /\nDisallow: /src/\nDisallow: /.impeccable/\nDisallow: /social/\nDisallow: /media/social/\n\nSitemap: ${site.url}/sitemap.xml\n`);
 
 // 404: GitHub Pages serves it for any unknown path, so links use absolute paths.
 writeFileSync('404.html', `${head({ title: `Page not found | ${site.name}`, description: 'This page does not exist.', root: '/', path: '/404.html' }).replace('<meta name="description"', '<meta name="robots" content="noindex">\n<meta name="description"')}
