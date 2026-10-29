@@ -1,0 +1,19 @@
+name: Dispatch video check
+# Alert: if neither the main nor the backup run produced the newest article's video by 19:30 UTC, this run fails and GitHub emails the repo owner.
+on:
+  schedule:
+    - cron: '30 19 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Newest article must have a video
+        run: |
+          slug=$(ls news/*.md | sort | tail -1 | xargs basename | sed 's/\.md$//' | cut -c12-)
+          if [ ! -f "media/news/$slug/video.mp4" ]; then echo "::error::No video for $slug. Both the 15:40 and 17:10 UTC runs failed or did not start."; exit 1; fi
+          echo "$slug has a video"
