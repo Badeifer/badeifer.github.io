@@ -1,0 +1,176 @@
+1
+00:00:00,250 --> 00:00:02,245
+Anthropic's sales grew more than
+
+2
+00:00:02,045 --> 00:00:03,840
+thirteen times in a year,
+
+3
+00:00:03,640 --> 00:00:04,837
+and now it wants to
+
+4
+00:00:04,637 --> 00:00:05,635
+list on Nasdaq.
+
+5
+00:00:06,335 --> 00:00:08,692
+First-half revenue was sixteen point
+
+6
+00:00:08,492 --> 00:00:10,222
+three billion dollars,
+
+7
+00:00:10,022 --> 00:00:11,544
+up from about one point
+
+8
+00:00:11,344 --> 00:00:13,144
+two billion a year earlier.
+
+9
+00:00:13,694 --> 00:00:15,822
+The eighty point seven billion
+
+10
+00:00:15,622 --> 00:00:17,305
+dollar loss is mostly a
+
+11
+00:00:17,105 --> 00:00:18,640
+non-cash paper charge.
+
+12
+00:00:18,680 --> 00:00:20,295
+The operating loss was six
+
+13
+00:00:20,095 --> 00:00:22,095
+hundred ninety-three million,
+
+14
+00:00:21,895 --> 00:00:23,767
+down from two point one billion.
+
+15
+00:00:24,317 --> 00:00:26,223
+The seven co-founders hold one
+
+16
+00:00:26,023 --> 00:00:27,724
+share with fifty point one
+
+17
+00:00:27,524 --> 00:00:28,816
+percent of the vote.
+
+18
+00:00:28,856 --> 00:00:30,429
+A trust elects most of
+
+19
+00:00:30,229 --> 00:00:31,007
+the board.
+
+20
+00:00:31,047 --> 00:00:32,784
+Public buyers get money,
+
+21
+00:00:32,584 --> 00:00:33,453
+not control.
+
+22
+00:00:34,003 --> 00:00:35,821
+The day after the filing,
+
+23
+00:00:35,621 --> 00:00:37,581
+banks and Blackstone lined up
+
+24
+00:00:37,381 --> 00:00:40,044
+sixty-three billion dollars for Broadcom
+
+25
+00:00:39,844 --> 00:00:41,663
+chips to lease to Anthropic.
+
+26
+00:00:42,213 --> 00:00:44,058
+More than eleven thousand nine
+
+27
+00:00:43,858 --> 00:00:45,956
+hundred customers spend a hundred
+
+28
+00:00:45,756 --> 00:00:47,664
+thousand dollars a year or more.
+
+29
+00:00:47,704 --> 00:00:49,591
+About nineteen hundred spend a
+
+30
+00:00:49,391 --> 00:00:50,403
+million or more.
+
+31
+00:00:50,443 --> 00:00:51,745
+The top five bring in
+
+32
+00:00:51,545 --> 00:00:53,236
+about a quarter of revenue.
+
+33
+00:00:53,786 --> 00:00:56,112
+Enforcement is getting stricter,
+
+34
+00:00:55,912 --> 00:00:57,963
+so gray-market keys and reseller
+
+35
+00:00:57,763 --> 00:00:58,923
+seats can vanish.
+
+36
+00:00:58,963 --> 00:01:00,560
+Move to a direct plan,
+
+37
+00:01:00,360 --> 00:01:02,489
+and read the risk factors yourself.
+
+38
+00:01:03,039 --> 00:01:04,613
+The listing could come as
+
+39
+00:01:04,413 --> 00:01:06,119
+soon as mid to late November.
+
+40
+00:01:06,159 --> 00:01:08,041
+After that, a frontier lab
+
+41
+00:01:07,841 --> 00:01:10,666
+reports to public shareholders every quarter.
+
+42
+00:01:11,216 --> 00:01:12,412
+The full story,
+
+43
+00:01:12,212 --> 00:01:14,007
+with what changes for Claude
+
+44
+00:01:13,807 --> 00:01:15,866
+developers, is on The Dispatch.
+
