@@ -1,0 +1,6 @@
+{
+ "title": "Upgraded twice, patched zero times: the GitLab bug that hit Alpine",
+ "short": "Alpine Linux upgraded GitLab twice after a CVSS 10 fix and stayed exposed for two weeks. The bug lives in Ruby, not GitLab. Full story: https://badeifer.github.io/news/gitlab-ruby-regex-alpine-attack/ #GitLab #Ruby #AlpineLinux #CyberSecurity",
+ "x": "A max-severity GitLab bug is now on CISA's exploited list. Alpine Linux upgraded twice and was still open, because the fix lives in Ruby's regex engine. How to check your own server: https://badeifer.github.io/news/gitlab-ruby-regex-alpine-attack/",
+ "linkedin": "CISA has added CVE-2026-97229, a CVSS 10 GitLab flaw, to its exploited list after an attacker targeted Alpine Linux's GitLab server. Alpine upgraded twice after the fix shipped and stayed exposed for two weeks, because its image ran stock Ruby and the bug lives in Ruby's regex engine.\n\nAlpine says the attack failed but cannot prove it, and rebuilt the server. If you build GitLab from source or a custom image, check your Ruby version, not just GitLab's. https://badeifer.github.io/news/gitlab-ruby-regex-alpine-attack/"
+}
