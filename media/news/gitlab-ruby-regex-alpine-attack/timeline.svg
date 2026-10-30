@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Timeline of CVE-2026-97229 and the attack on Alpine Linux's GitLab server, 12 October to 1 November 2026</title>
+  <rect width="1600" height="760" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Patched on paper, open in practice</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">CVE-2026-97229 and Alpine Linux's GitLab server, October 2026. Dates from GitLab, Ruby, Alpine and CISA.</text>
+
+  <line x1="120" y1="420" x2="1480" y2="420" stroke="#a9aecf" stroke-width="3"/>
+  <rect x="188" y="408" width="952" height="24" rx="4" fill="#ff6b6b" opacity="0.85"/>
+
+  <!-- above, far -->
+  <line x1="120" y1="420" x2="120" y2="250" stroke="#a9aecf" stroke-width="2"/>
+  <circle cx="120" cy="420" r="11" fill="#ede6d3"/>
+  <text x="120" y="190" fill="#ede6d3" font-size="26" font-weight="700">12 Oct</text>
+  <text x="120" y="222" fill="#a9aecf" font-size="21">GitLab ships 19.4.2, 19.3.5, 19.2.8</text>
+
+  <line x1="868" y1="420" x2="868" y2="250" stroke="#a9aecf" stroke-width="2"/>
+  <circle cx="868" cy="420" r="11" fill="#ede6d3"/>
+  <text x="868" y="190" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">23 Oct</text>
+  <text x="868" y="222" fill="#a9aecf" font-size="21" text-anchor="middle">Ruby 3.3.13, 3.4.12, 4.0.9 fix the engine</text>
+
+  <line x1="1480" y1="420" x2="1480" y2="250" stroke="#a9aecf" stroke-width="2"/>
+  <circle cx="1480" cy="420" r="11" fill="#ede6d3"/>
+  <text x="1480" y="190" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="end">1 Nov</text>
+  <text x="1480" y="222" fill="#a9aecf" font-size="21" text-anchor="end">US federal deadline</text>
+
+  <!-- above, near -->
+  <line x1="698" y1="408" x2="698" y2="352" stroke="#ff6b6b" stroke-width="2"/>
+  <circle cx="698" cy="420" r="11" fill="#ff6b6b"/>
+  <text x="698" y="306" fill="#ff6b6b" font-size="26" font-weight="700" text-anchor="middle">20-21 Oct</text>
+  <text x="698" y="338" fill="#ede6d3" font-size="21" text-anchor="middle">Attack: 8 worker crashes</text>
+
+  <line x1="1140" y1="408" x2="1140" y2="352" stroke="#a9aecf" stroke-width="2"/>
+  <circle cx="1140" cy="420" r="11" fill="#ede6d3"/>
+  <text x="1140" y="306" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">27 Oct</text>
+  <text x="1140" y="338" fill="#a9aecf" font-size="21" text-anchor="middle">Server locked down, rebuilt</text>
+
+  <!-- below, near -->
+  <line x1="188" y1="432" x2="188" y2="474" stroke="#a9aecf" stroke-width="2"/>
+  <circle cx="188" cy="420" r="11" fill="#ede6d3"/>
+  <text x="188" y="506" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">13 Oct</text>
+  <text x="188" y="538" fill="#a9aecf" font-size="21" text-anchor="middle">Alpine installs 19.3.4</text>
+  <text x="188" y="566" fill="#a9aecf" font-size="21" text-anchor="middle">by mistake</text>
+
+  <line x1="800" y1="432" x2="800" y2="474" stroke="#a9aecf" stroke-width="2"/>
+  <circle cx="800" cy="420" r="11" fill="#ede6d3"/>
+  <text x="800" y="506" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">22 Oct</text>
+  <text x="800" y="538" fill="#a9aecf" font-size="21" text-anchor="middle">Upgrade to 19.3.6;</text>
+  <text x="800" y="566" fill="#a9aecf" font-size="21" text-anchor="middle">its own Ruby still unfixed</text>
+
+  <line x1="1276" y1="432" x2="1276" y2="474" stroke="#a9aecf" stroke-width="2"/>
+  <circle cx="1276" cy="420" r="11" fill="#ede6d3"/>
+  <text x="1276" y="506" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">29 Oct</text>
+  <text x="1276" y="538" fill="#a9aecf" font-size="21" text-anchor="middle">CISA lists it as exploited;</text>
+  <text x="1276" y="566" fill="#a9aecf" font-size="21" text-anchor="middle">Alpine reopens on 19.3.7</text>
+
+  <!-- below, far -->
+  <line x1="1038" y1="432" x2="1038" y2="590" stroke="#ff6b6b" stroke-width="2"/>
+  <circle cx="1038" cy="420" r="11" fill="#ff6b6b"/>
+  <text x="1038" y="626" fill="#ff6b6b" font-size="26" font-weight="700" text-anchor="middle">25-26 Oct</text>
+  <text x="1038" y="658" fill="#ede6d3" font-size="21" text-anchor="middle">Attacker returns, fails</text>
+
+  <rect x="80" y="704" width="36" height="18" rx="3" fill="#ff6b6b" opacity="0.85"/>
+  <text x="130" y="720" fill="#a9aecf" font-size="21">Alpine's server stayed exposed from 13 to 27 October, while a fix was already out</text>
+</svg>
