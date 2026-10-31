@@ -7,7 +7,7 @@
 
    The agent has no write access to anything: it hands back an archive and a job with the site's own token publishes it.
    Keys: ANTHROPIC_API_KEY, and GH_TOKEN (any token that can read Badeifer/badeifer.github.io) from the environment, or on
-   Cade's PC from %LOCALAPPDATA%\TextAgent\keys.json (anthropicApiKey, githubToken).
+   Windows from %LOCALAPPDATA%\TextAgent\keys.json (anthropicApiKey, githubToken).
    A copy of this file and state.json lives in the site repo at tools/video/ (setup.mjs refreshes it). */
 import { Anthropic } from '@anthropic-ai/sdk';
 import fs from 'node:fs';
