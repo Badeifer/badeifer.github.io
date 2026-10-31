@@ -3,6 +3,7 @@
 import { mkdirSync, writeFileSync, rmSync, existsSync, readdirSync } from 'node:fs';
 import { site, shelves, projects, statusLabel, toolbox, toolboxIntro, widgetPermissions } from './src/site.mjs';
 import { loadArticles, cover, writeCovers, prettyDate, TOPICS } from './src/news.mjs';
+import { scanRepo, report } from './tools/check-private.mjs';
 
 const articles = loadArticles();
 writeCovers(articles, 'media/news/covers');
@@ -490,3 +491,4 @@ ${topbar('/')}
 </main>
 ${footer('/')}`);
 console.log(`built index.html, ${projects.length} project pages, ${articles.length} news articles, 404.html, sitemap.xml and robots.txt`);
+if (report(scanRepo())) process.exit(1);
