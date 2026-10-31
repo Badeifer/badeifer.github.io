@@ -19,7 +19,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; scroll-padding-top: 80px; scrollbar-color: var(--frame) var(--bg); accent-color: var(--gold); }
+html { -webkit-text-size-adjust: 100%; scroll-padding-top: 5.75rem; scrollbar-color: var(--frame) var(--bg); accent-color: var(--gold); }
 ::selection { background: var(--gold); color: var(--on-gold); }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1.125rem/1.6 var(--text); overflow-x: hidden; }
 img, video { display: block; max-width: 100%; height: auto; }
@@ -74,7 +74,8 @@ main { display: block; }
 /* The Edge breaks out of the text column: up to 1760px wide on big screens. */
 .edge { width: min(1760px, calc(100vw - 2 * var(--gut))); margin: clamp(32px, 5vw, 64px) 0 0 calc(50% - min(880px, 50vw - var(--gut))); }
 .edge-bezel { background: var(--edge); border-radius: 12px; padding: 1.1%; box-shadow: 0 0 0 1px #2a2a30, 0 30px 60px -30px rgba(0,0,0,.6); }
-.edge-screen { container-type: inline-size; aspect-ratio: 2560 / 720; background: #000; overflow: hidden; border-radius: 3px; }
+/* Sideways drags are the page swipe; up and down still scroll, and pinch still zooms. */
+.edge-screen { container-type: inline-size; aspect-ratio: 2560 / 720; background: #000; overflow: hidden; border-radius: 3px; touch-action: pan-y pinch-zoom; }
 .edge-page { display: flex; gap: 0.4%; padding: 0.43%; height: 100%; }
 .edge-page[hidden] { display: none; }
 .edge-page .slot { display: block; flex: 1 1 0; min-width: 0; height: 100%; }
@@ -228,6 +229,7 @@ video[src*="keep"], video[src*="live-status"] { image-rendering: pixelated; }
   .nav { gap: 18px; }
 }
 @media (max-width: 1439px) {
+  html { scroll-padding-top: 8.75rem; } /* the header is two rows here */
   .top { flex-wrap: wrap; row-gap: 4px; }
   .theme { margin-left: auto; }
   .nav { order: 3; width: 100%; margin: 0 calc(-1 * var(--gut)); padding: 4px var(--gut) 2px; overflow-x: auto; scrollbar-width: none; gap: 22px; }
@@ -264,6 +266,9 @@ video[src*="keep"], video[src*="live-status"] { image-rendering: pixelated; }
   .mark img { width: 28px; height: 28px; }
   .theme button { min-height: 36px; padding: 0 8px; gap: 5px; font-size: 0.875rem; }
   .theme svg { width: 15px; height: 15px; }
+}
+@media (max-width: 374px) {
+  html { scroll-padding-top: 10.625rem; } /* the name and the switch stop fitting on one row: three rows */
 }
 /* Windows contrast themes: the browser drops box-shadow and backgrounds, so the pixel frames, the picked side of the Night/Day
    switch, the selected Edge tab and the list bullets are redrawn with system colours. */
