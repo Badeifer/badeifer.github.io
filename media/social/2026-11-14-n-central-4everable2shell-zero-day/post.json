@@ -1,0 +1,6 @@
+{
+ "title": "N-central's emergency hotfix was beaten in two days",
+ "short": "19 of 21 hijacked N-central servers were already on the newest fix. A public root exploit had them mining Monero within hours. Full story: https://badeifer.github.io/news/n-central-4everable2shell-zero-day/ #cybersecurity #MSP #zeroday #infosec",
+ "x": "A public N-central exploit gives root with no login and beats Tuesday's Hotfix 2. Within hours, 21 servers were mining Monero. No patch yet, so turn off the Legacy API. https://badeifer.github.io/news/n-central-4everable2shell-zero-day/",
+ "linkedin": "If you run N-able N-central yourself, Hotfix 2 does not protect you. A new public exploit chain, 4EverAble2Shell, gives an unauthenticated attacker root, and within hours 21 servers were mining Monero. Nineteen were fully patched.\n\nThe chain needs the Legacy API on and reachable from the internet. Turn it off today, or put the server behind a VPN, then hunt for signs of the miner. Root on an RMM server reaches every client behind it. https://badeifer.github.io/news/n-central-4everable2shell-zero-day/"
+}

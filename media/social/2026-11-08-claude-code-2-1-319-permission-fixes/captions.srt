@@ -1,0 +1,180 @@
+1
+00:00:00,250 --> 00:00:02,010
+Claude Code just closed six
+
+2
+00:00:01,810 --> 00:00:03,503
+ways a command could slip
+
+3
+00:00:03,303 --> 00:00:05,063
+past its permission checks.
+
+4
+00:00:05,103 --> 00:00:06,824
+Many installs do not have
+
+5
+00:00:06,624 --> 00:00:07,620
+the fixes yet.
+
+6
+00:00:08,320 --> 00:00:10,313
+The stable channel still serves
+
+7
+00:00:10,113 --> 00:00:11,841
+version two point one point
+
+8
+00:00:11,641 --> 00:00:12,771
+three one one,
+
+9
+00:00:12,571 --> 00:00:14,232
+from October twenty-sixth.
+
+10
+00:00:14,272 --> 00:00:15,558
+Nothing will tell you.
+
+11
+00:00:16,108 --> 00:00:17,967
+A variable prefix could hide
+
+12
+00:00:17,767 --> 00:00:18,962
+part of a command.
+
+13
+00:00:19,002 --> 00:00:20,601
+A new worktree could escape
+
+14
+00:00:20,401 --> 00:00:21,184
+the sandbox.
+
+15
+00:00:21,224 --> 00:00:23,096
+An in-place edit skipped the check.
+
+16
+00:00:23,646 --> 00:00:25,726
+Deny rules missed quoted words.
+
+17
+00:00:25,766 --> 00:00:27,681
+Rewind followed symlinks out of
+
+18
+00:00:27,481 --> 00:00:28,316
+your folder.
+
+19
+00:00:28,356 --> 00:00:30,587
+Untrusted repos could still run
+
+20
+00:00:30,387 --> 00:00:32,392
+hooks on self-hosted runners.
+
+21
+00:00:32,942 --> 00:00:34,888
+A booby-trapped repo can steer
+
+22
+00:00:34,688 --> 00:00:36,298
+the model into a command
+
+23
+00:00:36,098 --> 00:00:37,507
+the checker misreads.
+
+24
+00:00:37,547 --> 00:00:39,272
+Anthropic has not said if
+
+25
+00:00:39,072 --> 00:00:40,724
+any were used in attacks.
+
+26
+00:00:40,764 --> 00:00:41,894
+Update anyway.
+
+27
+00:00:42,444 --> 00:00:44,876
+Stable also misses earlier fixes:
+
+28
+00:00:44,676 --> 00:00:48,189
+resumed worktrees, restricted sessions uploading
+
+29
+00:00:47,989 --> 00:00:49,989
+outside files, and a check
+
+30
+00:00:49,789 --> 00:00:51,574
+before sharing your email.
+
+31
+00:00:52,124 --> 00:00:53,396
+Run claude version.
+
+32
+00:00:53,436 --> 00:00:55,045
+On the default channel,
+
+33
+00:00:54,845 --> 00:00:56,646
+run claude update and restart.
+
+34
+00:00:56,686 --> 00:00:58,586
+On stable, switch to latest
+
+35
+00:00:58,386 --> 00:01:00,014
+or set a minimum version.
+
+36
+00:01:00,564 --> 00:01:02,924
+On Homebrew, install the latest cask.
+
+37
+00:01:02,964 --> 00:01:05,132
+On Linux, point the repository
+
+38
+00:01:04,932 --> 00:01:05,694
+at latest.
+
+39
+00:01:05,734 --> 00:01:07,668
+Teams can enforce a required
+
+40
+00:01:07,468 --> 00:01:08,640
+minimum version.
+
+41
+00:01:09,190 --> 00:01:10,527
+For a tool that holds
+
+42
+00:01:10,327 --> 00:01:11,917
+a shell on your laptop,
+
+43
+00:01:11,717 --> 00:01:13,181
+the fresher build may be
+
+44
+00:01:12,981 --> 00:01:13,876
+the safer one.
+
+45
+00:01:13,916 --> 00:01:15,685
+Full story on The Dispatch.
+

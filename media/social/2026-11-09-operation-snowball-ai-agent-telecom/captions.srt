@@ -1,0 +1,172 @@
+1
+00:00:00,250 --> 00:00:02,253
+A jailbroken AI agent spent
+
+2
+00:00:02,053 --> 00:00:04,057
+two weeks inside a European
+
+3
+00:00:03,857 --> 00:00:06,160
+telecom, and its attacker left
+
+4
+00:00:05,960 --> 00:00:06,987
+the notes out.
+
+5
+00:00:07,687 --> 00:00:09,745
+Malbear Labs found over seventy
+
+6
+00:00:09,545 --> 00:00:10,502
+session logs.
+
+7
+00:00:10,542 --> 00:00:12,064
+The operator sent a few
+
+8
+00:00:11,864 --> 00:00:12,924
+short messages.
+
+9
+00:00:12,964 --> 00:00:14,396
+The agent picked its own
+
+10
+00:00:14,196 --> 00:00:15,505
+targets and exploits.
+
+11
+00:00:16,055 --> 00:00:17,728
+It ran on a jailbroken
+
+12
+00:00:17,528 --> 00:00:19,822
+Deep Seek model with no refusals.
+
+13
+00:00:19,862 --> 00:00:22,274
+Smaller workers each ran one task.
+
+14
+00:00:22,824 --> 00:00:24,016
+The way in was a
+
+15
+00:00:23,816 --> 00:00:25,694
+Cisco BroadWorks flaw,
+
+16
+00:00:25,494 --> 00:00:27,373
+rated seven point five out
+
+17
+00:00:27,173 --> 00:00:28,975
+of ten and fixed in August.
+
+18
+00:00:29,525 --> 00:00:31,686
+Then it moved sideways,
+
+19
+00:00:31,486 --> 00:00:33,735
+through Liferay and J Boss
+
+20
+00:00:33,535 --> 00:00:35,695
+bugs from 2020 and 2013,
+
+21
+00:00:35,495 --> 00:00:37,923
+to thirteen hosted companies.
+
+22
+00:00:38,473 --> 00:00:40,152
+When defences stopped it,
+
+23
+00:00:39,952 --> 00:00:41,570
+the agent rewrote its tools.
+
+24
+00:00:41,610 --> 00:00:43,218
+Old tricks, but nobody had
+
+25
+00:00:43,018 --> 00:00:44,098
+to think of them at
+
+26
+00:00:43,898 --> 00:00:45,096
+three in the morning.
+
+27
+00:00:45,646 --> 00:00:47,584
+Malbear says it reached private
+
+28
+00:00:47,384 --> 00:00:49,257
+keys, billing records and a
+
+29
+00:00:49,057 --> 00:00:50,287
+hospital database.
+
+30
+00:00:50,327 --> 00:00:51,972
+That comes from the agent's
+
+31
+00:00:51,772 --> 00:00:53,547
+own reports, and no victim
+
+32
+00:00:53,347 --> 00:00:54,466
+has confirmed it.
+
+33
+00:00:55,016 --> 00:00:56,552
+Patch BroadWorks now.
+
+34
+00:00:56,592 --> 00:00:58,735
+Treat internet facing J Boss
+
+35
+00:00:58,535 --> 00:00:59,979
+six as compromised.
+
+36
+00:01:00,019 --> 00:01:02,458
+Change default database passwords,
+
+37
+00:01:02,258 --> 00:01:03,340
+clinical first.
+
+38
+00:01:03,890 --> 00:01:06,171
+Defenders counted on attackers being
+
+39
+00:01:05,971 --> 00:01:07,406
+short of skilled hours.
+
+40
+00:01:07,446 --> 00:01:09,688
+Snowball suggests trying every old
+
+41
+00:01:09,488 --> 00:01:11,731
+flaw, everywhere, is now cheap.
+
+42
+00:01:12,281 --> 00:01:13,688
+Read the full story on
+
+43
+00:01:13,488 --> 00:01:14,425
+The Dispatch.
+

@@ -1,0 +1,6 @@
+{
+ "title": "Microsoft's agent-framework shipped a credential stealer",
+ "short": "Microsoft's agent-framework shipped a stealer that runs every time Python starts.\nUnpinned installs on 17 November: treat secrets as stolen.\nFull story: https://badeifer.github.io/news/agent-framework-pypi-pth-stealer/\n#Python #PyPI #SupplyChain #Azure #CyberSecurity",
+ "x": "Versions 1.26.1 and 1.26.2 of Microsoft's agent-framework on PyPI planted a .pth hook that steals Azure, CI and AI keys, even if you never import it. Check without starting Python. https://badeifer.github.io/news/agent-framework-pypi-pth-stealer/",
+ "linkedin": "Two hijacked releases of Microsoft's agent-framework, 1.26.1 and 1.26.2, sat on PyPI for under an hour on 17 November. Each dropped a .pth file that runs at every Python start and grabs Azure, Azure DevOps, GitHub Actions and model provider credentials.\n\nIf an unpinned install picked one up, check from the outside without starting Python, rebuild from a hashed 1.26.0 pin and rotate every secret the machine could reach. https://badeifer.github.io/news/agent-framework-pypi-pth-stealer/"
+}

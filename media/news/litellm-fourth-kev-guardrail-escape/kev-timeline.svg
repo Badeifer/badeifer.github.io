@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>LiteLLM's four entries in CISA's Known Exploited Vulnerabilities catalog in 2026</title>
+  <rect width="1600" height="900" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Four LiteLLM bugs on CISA's exploited list in 2026</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Date added to the KEV catalog, the flaw, who can reach it, and the first fixed version. Sources: CISA KEV, LiteLLM advisories.</text>
+
+  <line x1="120" y1="250" x2="1500" y2="250" stroke="#a9aecf" stroke-width="3"/>
+
+  <g font-size="22">
+    <circle cx="200" cy="250" r="16" fill="#ff6b6b"/>
+    <text x="200" y="210" fill="#ff6b6b" font-size="26" font-weight="700" text-anchor="middle">8 May</text>
+    <text x="110" y="310" fill="#ede6d3" font-weight="700">CVE-2026-42208</text>
+    <text x="110" y="344" fill="#a9aecf">SQL injection in API</text>
+    <text x="110" y="376" fill="#a9aecf">key checks</text>
+    <text x="110" y="420" fill="#ede6d3">Login needed: none</text>
+    <text x="110" y="454" fill="#ede6d3">Fixed in 1.83.7</text>
+
+    <circle cx="560" cy="250" r="16" fill="#ff6b6b"/>
+    <text x="560" y="210" fill="#ff6b6b" font-size="26" font-weight="700" text-anchor="middle">8 Jun</text>
+    <text x="470" y="310" fill="#ede6d3" font-weight="700">CVE-2026-42271</text>
+    <text x="470" y="344" fill="#a9aecf">Command injection in</text>
+    <text x="470" y="376" fill="#a9aecf">MCP test endpoints</text>
+    <text x="470" y="420" fill="#ede6d3">Login needed: any key</text>
+    <text x="470" y="454" fill="#ede6d3">Fixed in 1.83.7</text>
+
+    <circle cx="920" cy="250" r="16" fill="#ff6b6b"/>
+    <text x="920" y="210" fill="#ff6b6b" font-size="26" font-weight="700" text-anchor="middle">2 Sep</text>
+    <text x="830" y="310" fill="#ede6d3" font-weight="700">CVE-2026-59822</text>
+    <text x="830" y="344" fill="#a9aecf">MCP accepts any</text>
+    <text x="830" y="376" fill="#a9aecf">Bearer token</text>
+    <text x="830" y="420" fill="#ede6d3">Login needed: none</text>
+    <text x="830" y="454" fill="#ede6d3">Fixed in 1.84.0</text>
+
+    <circle cx="1280" cy="250" r="20" fill="#ff6b6b"/>
+    <text x="1280" y="210" fill="#ff6b6b" font-size="26" font-weight="700" text-anchor="middle">18 Nov</text>
+    <text x="1190" y="310" fill="#ede6d3" font-weight="700">CVE-2026-40217</text>
+    <text x="1190" y="344" fill="#a9aecf">Guardrail test endpoint</text>
+    <text x="1190" y="376" fill="#a9aecf">sandbox escape</text>
+    <text x="1190" y="420" fill="#ede6d3">Login needed: admin key</text>
+    <text x="1190" y="454" fill="#ede6d3">Fixed in 1.83.11</text>
+  </g>
+
+  <rect x="80" y="540" width="1440" height="290" rx="18" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+  <text x="120" y="600" fill="#ff6b6b" font-size="30" font-weight="700">One upgrade covers all four: LiteLLM 1.84.0 or later</text>
+  <text x="120" y="650" fill="#ede6d3" font-size="24">If you cannot upgrade today, block these paths at your reverse proxy:</text>
+  <text x="120" y="696" fill="#a9aecf" font-size="24" font-family="ui-monospace, monospace">POST /guardrails/test_custom_code</text>
+  <text x="120" y="736" fill="#a9aecf" font-size="24" font-family="ui-monospace, monospace">POST /mcp-rest/test/connection   POST /mcp-rest/test/tools/list</text>
+  <text x="120" y="776" fill="#a9aecf" font-size="24" font-family="ui-monospace, monospace">/mcp/ routes, if you do not use MCP</text>
+  <text x="120" y="808" fill="#a9aecf" font-size="20">Then rotate every provider key the proxy stores.</text>
+</svg>

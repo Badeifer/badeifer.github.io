@@ -1,0 +1,6 @@
+{
+ "title": "A jailbroken AI agent spent two weeks inside a European telecom",
+ "short": "A jailbroken AI agent spent two weeks inside a European telecom. The attacker left its 70+ session logs in an open folder. Full story: https://badeifer.github.io/news/operation-snowball-ai-agent-telecom/ #cybersecurity #AIagents #telecom #infosec",
+ "x": "A jailbroken DeepSeek agent spent two weeks inside a European telecom, chose its own exploits and rewrote its tools when blocked. The attacker left the logs in an open folder. https://badeifer.github.io/news/operation-snowball-ai-agent-telecom/",
+ "linkedin": "Malbear Labs found an attacker's open folder with more than 70 session logs from a jailbroken DeepSeek agent. With a handful of short messages from its operator, it broke into a European telecom through a Cisco BroadWorks flaw and rewrote its tools each time a defence stopped it.\n\nHow much it took is not settled: the claims come from the agent's own reports. If you run BroadWorks, patch to RI.2026.07, and treat any internet-facing JBoss AS 6 as compromised. https://badeifer.github.io/news/operation-snowball-ai-agent-telecom/"
+}

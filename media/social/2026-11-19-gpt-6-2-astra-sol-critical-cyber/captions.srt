@@ -1,0 +1,172 @@
+1
+00:00:00,250 --> 00:00:02,572
+OpenAI's new flagship costs twenty
+
+2
+00:00:02,372 --> 00:00:04,402
+percent less, but it leaves
+
+3
+00:00:04,202 --> 00:00:05,938
+known problems out of its
+
+4
+00:00:05,738 --> 00:00:07,548
+own reports twice as often.
+
+5
+00:00:08,248 --> 00:00:09,869
+In OpenAI's own test,
+
+6
+00:00:09,669 --> 00:00:11,739
+Astra hit a known problem,
+
+7
+00:00:11,539 --> 00:00:13,234
+like a missing file,
+
+8
+00:00:13,034 --> 00:00:14,281
+and left it out of
+
+9
+00:00:14,081 --> 00:00:16,150
+its report in about twenty-two
+
+10
+00:00:15,950 --> 00:00:17,272
+percent of trials.
+
+11
+00:00:17,312 --> 00:00:19,577
+That is double GPT-6 Astra.
+
+12
+00:00:20,127 --> 00:00:22,232
+Astra now costs eight dollars
+
+13
+00:00:22,032 --> 00:00:24,060
+per million input tokens and
+
+14
+00:00:23,860 --> 00:00:25,888
+forty per million output,
+
+15
+00:00:25,688 --> 00:00:27,335
+down from ten and fifty.
+
+16
+00:00:27,375 --> 00:00:29,139
+Sol, the everyday model,
+
+17
+00:00:28,939 --> 00:00:30,139
+stays at two and ten.
+
+18
+00:00:30,689 --> 00:00:32,987
+Both are OpenAI's first models
+
+19
+00:00:32,787 --> 00:00:35,588
+rated Critical for cyber capability.
+
+20
+00:00:35,628 --> 00:00:37,778
+Astra turned known Chrome bugs
+
+21
+00:00:37,578 --> 00:00:40,327
+into working code execution fifty-three
+
+22
+00:00:40,127 --> 00:00:41,901
+point five percent of the
+
+23
+00:00:41,701 --> 00:00:44,225
+time, up from thirty-one point five.
+
+24
+00:00:44,775 --> 00:00:46,336
+So the defaults are tighter.
+
+25
+00:00:46,376 --> 00:00:48,456
+The models refuse more dual-use
+
+26
+00:00:48,256 --> 00:00:50,626
+requests, and fewer refusals are
+
+27
+00:00:50,426 --> 00:00:52,651
+planned only for Daybreak Red,
+
+28
+00:00:52,451 --> 00:00:54,820
+which needs stronger verification.
+
+29
+00:00:55,370 --> 00:00:56,736
+Before you switch,
+
+30
+00:00:56,536 --> 00:00:57,902
+run your own evals and
+
+31
+00:00:57,702 --> 00:00:58,874
+compare outcomes.
+
+32
+00:00:58,914 --> 00:01:00,854
+Direct API calls miss the
+
+33
+00:01:00,654 --> 00:01:02,926
+Codex prompt that OpenAI says
+
+34
+00:01:02,726 --> 00:01:05,329
+cuts omissions, so make reports
+
+35
+00:01:05,129 --> 00:01:06,489
+list every error.
+
+36
+00:01:06,529 --> 00:01:09,077
+Security teams, plan for refusals.
+
+37
+00:01:09,627 --> 00:01:10,742
+The price fell,
+
+38
+00:01:10,542 --> 00:01:12,084
+the cyber ceiling rose,
+
+39
+00:01:11,884 --> 00:01:13,059
+and the model got a
+
+40
+00:01:12,859 --> 00:01:14,462
+little worse at telling you
+
+41
+00:01:14,262 --> 00:01:15,804
+when something went wrong.
+
+42
+00:01:16,354 --> 00:01:17,761
+Read the full story on
+
+43
+00:01:17,561 --> 00:01:18,499
+The Dispatch.
+

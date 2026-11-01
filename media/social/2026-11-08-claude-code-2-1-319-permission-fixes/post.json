@@ -1,0 +1,6 @@
+{
+ "title": "Claude Code fixed six permission gaps. Stable doesn't have them yet",
+ "short": "Claude Code 2.1.319 closes six ways a command could slip past its permission checks or sandbox. The stable channel is still on 2.1.311. Full story: https://badeifer.github.io/news/claude-code-2-1-319-permission-fixes/ #ClaudeCode #AIagents #DevSecurity #CodingTools",
+ "x": "Claude Code 2.1.319 fixes six ways a command could get past permission rules or the sandbox. The stable channel, default Homebrew cask and Linux repos still serve 2.1.311. https://badeifer.github.io/news/claude-code-2-1-319-permission-fixes/",
+ "linkedin": "Claude Code 2.1.319 closes six gaps where a command could slip past permission rules or the sandbox, from a crafted variable prefix to deny rules that missed quoted words. Anthropic has not said whether any were used in attacks.\n\nThe catch: the stable channel, the default Homebrew cask and the default Linux repositories still serve 2.1.311. Switch to latest or set a minimum version of 2.1.319. https://badeifer.github.io/news/claude-code-2-1-319-permission-fixes/"
+}

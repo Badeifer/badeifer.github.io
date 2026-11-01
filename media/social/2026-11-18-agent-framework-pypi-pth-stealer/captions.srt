@@ -1,0 +1,172 @@
+1
+00:00:00,250 --> 00:00:02,846
+Microsoft's agent library for Python
+
+2
+00:00:02,646 --> 00:00:05,166
+shipped a credential stealer that
+
+3
+00:00:04,966 --> 00:00:06,480
+ran even if you never
+
+4
+00:00:06,280 --> 00:00:07,253
+imported it.
+
+5
+00:00:07,953 --> 00:00:09,761
+Two bad versions sat on
+
+6
+00:00:09,561 --> 00:00:11,284
+PyPI for under an hour.
+
+7
+00:00:11,324 --> 00:00:13,360
+If an unpinned install grabbed
+
+8
+00:00:13,160 --> 00:00:15,549
+one, treat every reachable secret
+
+9
+00:00:15,349 --> 00:00:16,114
+as stolen.
+
+10
+00:00:16,664 --> 00:00:18,369
+Each one dropped a startup
+
+11
+00:00:18,169 --> 00:00:19,938
+file that Python runs at boot.
+
+12
+00:00:19,978 --> 00:00:22,040
+Tests, linters or notebooks all
+
+13
+00:00:21,840 --> 00:00:23,066
+set off the stealer.
+
+14
+00:00:23,616 --> 00:00:25,578
+The first release landed at
+
+15
+00:00:25,378 --> 00:00:27,033
+twenty thirty-five UTC.
+
+16
+00:00:27,073 --> 00:00:29,064
+Scanners flagged it in minutes,
+
+17
+00:00:28,864 --> 00:00:30,485
+and both versions were gone
+
+18
+00:00:30,285 --> 00:00:31,844
+by about twenty-one thirty.
+
+19
+00:00:32,394 --> 00:00:35,231
+It swept secret environment variables,
+
+20
+00:00:35,031 --> 00:00:37,135
+dozens of credential files,
+
+21
+00:00:36,935 --> 00:00:38,966
+and cloud and pipeline tokens
+
+22
+00:00:38,766 --> 00:00:40,798
+from Azure and GitHub Actions.
+
+23
+00:00:41,348 --> 00:00:43,752
+Wiz counted seventeen requests with
+
+24
+00:00:43,552 --> 00:00:44,748
+real victim data.
+
+25
+00:00:44,788 --> 00:00:46,926
+That covers only one address,
+
+26
+00:00:46,726 --> 00:00:48,576
+and stolen cloud tokens can
+
+27
+00:00:48,376 --> 00:00:49,724
+stay valid for up to
+
+28
+00:00:49,524 --> 00:00:50,083
+a day.
+
+29
+00:00:50,633 --> 00:00:52,312
+Every Python launch in an
+
+30
+00:00:52,112 --> 00:00:54,989
+infected environment runs the stealer again.
+
+31
+00:00:55,029 --> 00:00:56,867
+So check from the outside,
+
+32
+00:00:56,667 --> 00:00:58,779
+with lockfiles and file searches.
+
+33
+00:00:59,329 --> 00:01:01,296
+Search lockfiles and CI logs
+
+34
+00:01:01,096 --> 00:01:02,547
+for the bad versions.
+
+35
+00:01:02,587 --> 00:01:04,431
+Rebuild from a hashed pin
+
+36
+00:01:04,231 --> 00:01:05,627
+of one point two six
+
+37
+00:01:05,427 --> 00:01:07,644
+point zero, then rotate every
+
+38
+00:01:07,444 --> 00:01:08,690
+reachable token.
+
+39
+00:01:09,240 --> 00:01:11,151
+Pinning with hashes and waiting
+
+40
+00:01:10,951 --> 00:01:12,672
+a day before fresh releases
+
+41
+00:01:12,472 --> 00:01:14,384
+would have stopped this one cold.
+
+42
+00:01:14,424 --> 00:01:16,018
+The full story lists every
+
+43
+00:01:15,818 --> 00:01:16,652
+file and key.
+

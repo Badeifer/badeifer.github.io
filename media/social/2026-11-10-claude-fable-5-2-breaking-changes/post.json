@@ -1,0 +1,6 @@
+{
+ "title": "Claude Fable 5.2 is 20% cheaper, and four API changes break 5.1 code",
+ "short": "Claude Fable 5.2 costs a fifth less, but four API changes can break code that ran on 5.1. Check them before you swap the model ID. Full story: https://badeifer.github.io/news/claude-fable-5-2-breaking-changes/ #Anthropic #Claude #AI #API #developers",
+ "x": "Claude Fable 5.2 drops to $8 and $40 per million tokens, a fifth off. If your own code builds requests, four API changes can return a 400 where 5.1 worked. https://badeifer.github.io/news/claude-fable-5-2-breaking-changes/",
+ "linkedin": "Anthropic's Claude Fable 5.2 lists at $8 per million input tokens and $40 per million output, down from $10 and $50. On Anthropic's own, unverified benchmarks, the biggest gains are on long, messy tasks.\n\nIf your own code builds API requests, check four changes before you swap the model ID: edited history fails on every account, Fable 5.2 reasoning only flows one way, the old computer use tool is gone, and the advisor must be a 5.2 model. https://badeifer.github.io/news/claude-fable-5-2-breaking-changes/"
+}

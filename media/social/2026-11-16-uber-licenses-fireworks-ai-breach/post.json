@@ -1,0 +1,6 @@
+{
+ "title": "Uber driver licences leaked through its AI vendor",
+ "short": "Uber drivers' licence photos were stolen, and Uber was never broken into.\nThe way in was its AI vendor.\nFull story: https://badeifer.github.io/news/uber-licenses-fireworks-ai-breach/\n#cybersecurity #databreach #Uber #AI",
+ "x": "Uber drivers' licence photos were stolen through its AI vendor, Fireworks AI, with valid credentials. No alert fired, and the vendor's story kept growing. https://badeifer.github.io/news/uber-licenses-fireworks-ai-breach/",
+ "linkedin": "Uber is notifying US drivers that licence photos, names, addresses and dates of birth were stolen in October. The attackers did not break into Uber. They used valid credentials at Fireworks AI, a model host, and Uber's alerting stayed quiet.\n\nFireworks widened what it admits was taken over six weeks, from stored secrets to datasets and model weights for some customers. If your team sends data to an AI provider, here is what to check: https://badeifer.github.io/news/uber-licenses-fireworks-ai-breach/"
+}

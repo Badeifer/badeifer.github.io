@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Claude Code 2.1.319 closes six permission gaps, and the stable channel doesn&#39;t have them yet | The Dispatch</title>
+<meta name="description" content="Anthropic&#39;s latest Claude Code release fixes ways a command could slip past permission rules or the sandbox. Here is what each fix covers, which install methods still serve 2.1.311, and how to check yours in a minute.">
+<link rel="canonical" href="https://badeifer.github.io/news/claude-code-2-1-319-permission-fixes/">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-11-08">
+<meta property="og:site_name" content="Bade&#39;s Mod Shop">
+<meta property="og:title" content="Claude Code 2.1.319 closes six permission gaps, and the stable channel doesn&#39;t have them yet">
+<meta property="og:description" content="Anthropic&#39;s latest Claude Code release fixes ways a command could slip past permission rules or the sandbox. Here is what each fix covers, which install methods still serve 2.1.311, and how to check yours in a minute.">
+<meta property="og:url" content="https://badeifer.github.io/news/claude-code-2-1-319-permission-fixes/">
+<meta property="og:image" content="https://badeifer.github.io/media/og/home.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Claude Code 2.1.319 closes six permission gaps, and the stable channel doesn&#39;t have them yet: Anthropic&#39;s latest Claude Code release fixes ways a command could slip past permission rules or the sandbox. Here is what each fix covers, which install methods still serve 2.1.311, and how to check yours in a minute.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Claude Code 2.1.319 closes six permission gaps, and the stable channel doesn&#39;t have them yet">
+<meta name="twitter:description" content="Anthropic&#39;s latest Claude Code release fixes ways a command could slip past permission rules or the sandbox. Here is what each fix covers, which install methods still serve 2.1.311, and how to check yours in a minute.">
+<meta name="twitter:image" content="https://badeifer.github.io/media/og/home.jpg">
+<meta name="theme-color" content="#141833">
+<link rel="icon" href="../../assets/avatar.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../media/avatar-512.png">
+<link rel="preload" href="../../assets/fonts/atkinson-hyperlegible-next.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/chakra-petch-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Claude Code 2.1.319 closes six permission gaps, and the stable channel doesn't have them yet","description":"Anthropic's latest Claude Code release fixes ways a command could slip past permission rules or the sandbox. Here is what each fix covers, which install methods still serve 2.1.311, and how to check yours in a minute.","datePublished":"2026-11-08","dateModified":"2026-11-08","url":"https://badeifer.github.io/news/claude-code-2-1-319-permission-fixes/","image":"https://badeifer.github.io/media/og/news-claude-code-2-1-319-permission-fixes.jpg","author":{"@type":"Organization","name":"Bade's Mod Shop","url":"https://badeifer.github.io/"},"publisher":{"@type":"Organization","name":"Bade's Mod Shop","logo":{"@type":"ImageObject","url":"https://badeifer.github.io/media/avatar-512.png"}},"keywords":"Claude Code, Anthropic, coding agents, permissions, sandbox, auto mode, release channels, security update","video":{"@type":"VideoObject","name":"Claude Code 2.1.319 closes six permission gaps, and the stable channel doesn't have them yet","description":"Anthropic's latest Claude Code release fixes ways a command could slip past permission rules or the sandbox. Here is what each fix covers, which install methods still serve 2.1.311, and how to check yours in a minute.","uploadDate":"2026-11-08","contentUrl":"https://badeifer.github.io/media/news/claude-code-2-1-319-permission-fixes/video.mp4","thumbnailUrl":["https://badeifer.github.io/media/news/claude-code-2-1-319-permission-fixes/video-poster.jpg"],"duration":"PT1M17S"}}</script>
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('theme');document.documentElement.dataset.theme=t==='day'?'day':'night'}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="mark" href="../../"><img src="../../assets/avatar.svg" alt="" width="40" height="40">Bade&#39;s Mod Shop</a>
+  <nav class="nav" aria-label="Sections"><a href="../../news/">News</a><a href="../../#edge">Widgets</a><a href="../../#streamdeck">Stream Deck keys</a><a href="../../#skills">Skills</a><a href="../../#plugins">Plugins</a><a href="../../#claude">Claude mods</a><a href="../../#obsidian">Obsidian</a><a href="../../#toolbox">Toolbox</a><a href="../../#support">Support</a></nav>
+  <div class="theme" role="group" aria-label="Colour mode">
+    <button type="button" data-mode="night" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>Night</button>
+    <button type="button" data-mode="day" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>Day</button>
+  </div>
+</header>
+<main id="main" class="article t-tools">
+  <p class="crumb"><a href="../../news/">The Dispatch</a></p>
+  <header class="article-head">
+    <h1>Claude Code 2.1.319 closes six permission gaps, and the stable channel doesn&#39;t have them yet</h1>
+    <p class="article-dek">Anthropic&#39;s latest Claude Code release fixes ways a command could slip past permission rules or the sandbox. Here is what each fix covers, which install methods still serve 2.1.311, and how to check yours in a minute.</p>
+    <p class="story-meta"><span class="topic t-tools">AI tools</span><time datetime="2026-11-08">November 8, 2026</time><span>5 min read</span></p>
+  </header>
+  <figure class="article-video">
+    <video controls playsinline preload="metadata" poster="../../media/news/claude-code-2-1-319-permission-fixes/video-poster.jpg" aria-label="Claude Code 2.1.319 closes six permission gaps, and the stable channel doesn&#39;t have them yet: video summary">
+      <source src="../../media/news/claude-code-2-1-319-permission-fixes/video.mp4" type="video/mp4">
+      <track kind="captions" src="../../media/news/claude-code-2-1-319-permission-fixes/video.vtt" srclang="en" label="English">
+    </video>
+    <figcaption><b>1:17 video</b> The short version, captioned. The full story is below.</figcaption>
+  </figure>
+  <div class="prose"><p>Claude Code 2.1.319 went out late on 5 November, US time, and buried in a changelog of more than a hundred lines are six fixes for ways a command could get past the tool&#39;s permission checks or out of its sandbox. If you let a coding agent run shell commands on your machine, these are the guard rails that decide what it can do without asking you first.</p>
+<p>There is a catch. Anyone on Claude Code&#39;s stable release channel is still on 2.1.311, from 26 October, and that includes the default Homebrew cask and the default Linux package repositories. On those installs the fixes have not arrived, and nothing will tell you so.</p>
+<h2>What the six fixes close</h2>
+<p>Anthropic&#39;s changelog describes each fix in a single line, without technical detail, CVE numbers or severity scores. Read together, they cover the places where the permission system decides whether a command is safe:</p>
+<ul><li><strong>A crafted environment prefix.</strong> A Bash command that starts with variable assignments, such as <code>FOO=bar some-command</code>, could be written so that part of the command was hidden from the permission check. The changelog calls it a permission bypass.</li><li><strong>A sandbox escape when creating a worktree.</strong> Worktrees are the separate checkouts Claude Code uses to run parallel jobs. Creating one could reach outside the sandbox.</li><li><strong><code>sed</code> skipping the check</strong> in accept-edits mode and auto mode. <code>sed -i</code> edits files in place, so this was a way to change files the rules were meant to protect.</li><li><strong>Deny and ask rules missing quoted words.</strong> A rule meant to block or flag a command did not match when that command was written with quotes around parts of it.</li><li><strong><code>/rewind</code> following directory symlinks</strong>, so restoring a checkpoint could restore or delete a file outside the folder you meant.</li><li><strong>Self-hosted runners and untrusted repos.</strong> With <code>--trust-workspace false</code>, hooks in a repository&#39;s settings files and skills could still run. Now they don&#39;t.</li></ul>
+<p>The same release also stops a project&#39;s settings files or a plugin from switching auto mode&#39;s server-side safety check back on after you have switched it off yourself. Same theme: the repository you open should not get to rewrite your rules.</p>
+<figure class="fig"><img src="../../media/news/claude-code-2-1-319-permission-fixes/timeline.svg" alt="Timeline of Claude Code releases: 2.1.311 on 26 October, where the stable channel still sits; 2.1.314 on 30 October, sandbox now applies to worktrees on resume; 2.1.316 on 31 October, restricted sessions no longer upload outside files; 2.1.317 on 2 November, asks before a tool call sends your account email; 2.1.319 on 6 November UTC, six permission and sandbox fixes" loading="lazy" decoding="async"><figcaption>Security-relevant fixes since the current stable build. Figure: The Dispatch, from the Claude Code changelog and npm publish times.</figcaption></figure>
+<h2>Why a missed rule matters more than it sounds</h2>
+<p>Most people do not watch every command an agent runs. They write a few deny rules (no <code>rm -rf</code>, no <code>git push --force</code>), turn on accept-edits or auto mode, and trust the tool to stop at the line. Every fix above is a case where that line had a gap.</p>
+<p>The realistic attack is a booby-trapped repository, a poisoned dependency or a web page that steers the model into writing a command in exactly the shape the checker misread. Anthropic&#39;s last published advisory for Claude Code, on 26 October, described that same threat: code running inside the sandbox, planted by a malicious repo or install script, writing files outside the workspace. That one was rated High and fixed back in 2.1.251.</p>
+<p>Anthropic has not said whether any of the new six were reported by outside researchers or used in the wild, and its advisory page lists none of them so far. Treat them as fixed weaknesses, not known attacks, and update anyway.</p>
+<h2>The stable channel is about two weeks behind</h2>
+<p>Claude Code ships two channels. The docs describe <code>latest</code>, the default, as getting new versions as soon as they ship, and <code>stable</code> as a build &quot;typically about one week old&quot; that skips releases with major regressions. On Sunday, Anthropic&#39;s stable pointer, the npm <code>stable</code> tag and the Homebrew <code>claude-code</code> cask all said 2.1.311. The <code>latest</code> pointer and the <code>claude-code@latest</code> cask said 2.1.319.</p>
+<p>That trade made sense when the risk was a buggy build. It looks different when the newer builds are the ones with the security fixes. Stable users are also missing 2.1.314&#39;s fix for sandbox protections not applying to a worktree opened with <code>claude -p --resume</code>, and 2.1.316&#39;s fix for <code>--restricted</code> sessions uploading files from outside the working directories.</p>
+<figure class="fig"><img src="../../media/news/claude-code-2-1-319-permission-fixes/channels.svg" alt="Table of install paths: native installer with default settings, Homebrew cask claude-code@latest and npm latest give 2.1.319, fixed. Native installer with the stable channel, Homebrew cask claude-code and the apt, dnf and apk stable repositories give 2.1.311, not fixed" loading="lazy" decoding="async"><figcaption>Same product, two versions. Figure: The Dispatch, from Anthropic&#39;s setup docs, release pointers and the Homebrew cask API.</figcaption></figure>
+<h2>Check yours in a minute</h2>
+<ol><li><strong>Run <code>claude --version</code>.</strong> If it prints 2.1.319 or later, you are done.</li><li><strong>Native installs on the default channel</strong> update in the background and take effect on the next start. Run <code>claude update</code> to do it now, then restart open sessions.</li><li><strong>On the stable channel,</strong> you can switch to <code>latest</code> in <code>/config</code> under Auto-update channel, or set <code>&quot;autoUpdatesChannel&quot;: &quot;latest&quot;</code> in settings. If you prefer to stay on stable, set <code>minimumVersion</code> to <code>2.1.319</code> in your settings. The docs say updates never install below that floor, so you can stay on stable without being moved back.</li><li><strong>Homebrew:</strong> the <code>claude-code</code> cask tracks stable. <code>brew install --cask claude-code@latest</code> gets 2.1.319 today. Homebrew does not auto-update either cask unless you set <code>CLAUDE_CODE_PACKAGE_MANAGER_AUTO_UPDATE=1</code>.</li><li><strong>apt, dnf and apk:</strong> the documented setup points at the stable repository. Switch the repository line to <code>latest</code> as the docs describe, or wait for stable to move.</li><li><strong>Teams:</strong> managed settings can enforce <code>requiredMinimumVersion</code>, which makes Claude Code refuse to start below that version. Use it for fleets and CI runners.</li></ol>
+<p>If you rely on deny rules, remember that matching a command&#39;s text was the weak spot in two of these fixes. The sandbox, and running untrusted repos in a throwaway container, still do more than any pattern list.</p>
+<h2>The email check, briefly</h2>
+<p>Two releases earlier, 2.1.317 added a check that asks before a web or shell tool call sends your account email address over the network. It followed a public report that the agent put a user&#39;s address into request headers for sites that ask bots for contact details. The Kernel Post reads the evidence as a narrow pattern, and commenters it cites disagree on how complete the fix is.</p>
+<blockquote><p>A permission rule is only as good as the parser reading the command, and the parser is the part that keeps getting patched.</p></blockquote>
+<h2>Speed and safety are pulling against each other</h2>
+<p>Release channels were built for a world where the newest build was the riskiest one. Coding agents flip that: the tool changes weekly, and much of each week&#39;s work is closing new gaps in what the agent can do on its own. For a tool that holds a shell on your laptop, the safer default may be the fresher one, with a version floor rather than a lag. Expect more vendors to face the same choice, and to start labelling security fixes so that stable users can tell when waiting stops being the careful option.</p></div>
+  <section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ol><li><a href="https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md" rel="noopener">Anthropic, Claude Code CHANGELOG (2.1.311 to 2.1.319)</a></li><li><a href="https://code.claude.com/docs/en/setup" rel="noopener">Anthropic, Claude Code docs: Advanced setup, release channels and updates</a></li><li><a href="https://www.npmjs.com/package/@anthropic-ai/claude-code" rel="noopener">npm registry, @anthropic-ai/claude-code release times and dist-tags</a></li><li><a href="https://formulae.brew.sh/cask/claude-code" rel="noopener">Homebrew, claude-code cask</a></li><li><a href="https://github.com/anthropics/claude-code/security/advisories/GHSA-5xjx-9qx6-jcrv" rel="noopener">Anthropic, GitHub security advisory GHSA-5xjx-9qx6-jcrv (CVE-2026-88968)</a></li><li><a href="https://kernelpost.com/claude-code-email-leak/" rel="noopener">The Kernel Post, Claude Code email leak appears narrower than feared</a></li></ol></section>
+  <p class="made">Written with AI for Bade&#39;s Mod Shop. Facts are checked against the sources above on the day of publishing; if one is wrong, <a href="https://github.com/Badeifer/badeifer.github.io/issues/new">open an issue</a>.</p>
+  <p class="tags"><span>Claude Code</span><span>Anthropic</span><span>coding agents</span><span>permissions</span><span>sandbox</span><span>auto mode</span><span>release channels</span><span>security update</span></p>
+  <nav class="story-nav" aria-label="More stories"><a class="next-story" href="../../news/operation-snowball-ai-agent-telecom/"><span>Newer</span>A jailbroken AI agent spent two weeks inside a European telecom, and left its notes out</a><a class="next-story" href="../../news/sonicwall-saml-mfa-bypass-exploited/"><span>Older</span>SonicWall&#39;s VPN let some logins skip SAML and MFA, and attackers may already be using it</a></nav>
+</main>
+<footer class="foot">
+  <p>Bade&#39;s Mod Shop, 2026. Updates and issues on <a href="https://github.com/Badeifer">GitHub</a>. Stuck? <a href="../../#help">Get help</a>.</p>
+  <p class="fine">Privacy: no cookies, no analytics, nothing loaded from other sites. Your Night or Day choice is saved in your own browser. The site is hosted on GitHub Pages, which keeps standard server logs under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+  <p class="fine">Corsair, iCUE, Xeneon, Elgato, Stream Deck, NVIDIA, Obsidian and Claude are trademarks of their owners. These are independent projects, not made by or endorsed by them.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

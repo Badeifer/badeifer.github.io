@@ -1,0 +1,6 @@
+{
+ "title": "Gemini 4 Hydrogen costs double, until Flash catches up in January",
+ "short": "Google's new Gemini 4 Hydrogen costs twice what 3.8 Flash does per token. On 1 January, Flash rises to the same price.\nFull story: https://badeifer.github.io/news/gemini-4-hydrogen-price-doubles/\n#Gemini #GoogleAI #AIpricing #LLM #DevTools",
+ "x": "Gemini 4 Hydrogen is $1.50 in and $7.50 out per million tokens, twice 3.8 Flash. On 1 January Flash rises to match. Per benchmark task, Hydrogen is already cheaper: $3.16 vs $7.77. https://badeifer.github.io/news/gemini-4-hydrogen-price-doubles/",
+ "linkedin": "Google's Gemini 4 Hydrogen costs $1.50 per million input tokens and $7.50 per million output, exactly twice Gemini 3.8 Flash. On 1 January 2027, Flash goes up to the same rates. On the Artificial Analysis benchmark, Hydrogen already costs less per finished task, $3.16 against $7.77.\n\nSwapping the model name is not enough: the default thinking level is now high, some old parameters return errors, and explicit caching is gone. Test your real prompts on both before January. https://badeifer.github.io/news/gemini-4-hydrogen-price-doubles/"
+}

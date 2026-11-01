@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Timeline of the hijacked agent-framework releases on PyPI, 17 November 2026, in UTC</title>
+  <rect width="1600" height="1000" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">Under an hour on PyPI, long enough for unpinned installs</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">The agent-framework package on 17 November 2026, times in UTC. Red marks a malicious release.</text>
+
+  <line x1="160" y1="190" x2="160" y2="780" stroke="#a9aecf" stroke-width="3"/>
+
+  <circle cx="160" cy="210" r="11" fill="#a9aecf"/>
+  <text x="200" y="205" fill="#ede6d3" font-size="28" font-weight="700">12 Nov</text>
+  <text x="380" y="205" fill="#ede6d3" font-size="26">1.26.0 published: the last clean release</text>
+  <text x="380" y="240" fill="#a9aecf" font-size="22">Wheel and source archive, like every normal release</text>
+
+  <circle cx="160" cy="330" r="13" fill="#ff6b6b"/>
+  <text x="200" y="325" fill="#ede6d3" font-size="28" font-weight="700">20:35</text>
+  <text x="380" y="325" fill="#ede6d3" font-size="26">1.26.1 uploaded, wheel only</text>
+  <text x="380" y="360" fill="#a9aecf" font-size="22">Adds agent_framework_meta.pth, which runs the stealer at every Python start</text>
+
+  <circle cx="160" cy="450" r="11" fill="#a9aecf"/>
+  <text x="200" y="445" fill="#ede6d3" font-size="28" font-weight="700">20:38</text>
+  <text x="380" y="445" fill="#ede6d3" font-size="26">Scanners flag it</text>
+  <text x="380" y="480" fill="#a9aecf" font-size="22">Endor Labs says it caught both releases within three minutes of upload</text>
+
+  <circle cx="160" cy="570" r="13" fill="#ff6b6b"/>
+  <text x="200" y="565" fill="#ede6d3" font-size="28" font-weight="700">21:08</text>
+  <text x="380" y="565" fill="#ede6d3" font-size="26">1.26.2 uploaded, wheel only</text>
+  <text x="380" y="600" fill="#a9aecf" font-size="22">Payload moved to af_runtime_diag.pth; now also asks GitHub Actions for OIDC tokens</text>
+
+  <circle cx="160" cy="690" r="11" fill="#a9aecf"/>
+  <text x="200" y="685" fill="#ede6d3" font-size="28" font-weight="700">~21:30</text>
+  <text x="380" y="685" fill="#ede6d3" font-size="26">Both versions gone from PyPI</text>
+  <text x="380" y="720" fill="#a9aecf" font-size="22">Reports put removal between 21:20 and 21:30; 1.26.0 is the latest version again</text>
+
+  <rect x="80" y="820" width="1440" height="130" rx="14" fill="none" stroke="#ff6b6b" stroke-width="2"/>
+  <text x="120" y="870" fill="#ede6d3" font-size="26" font-weight="700">Check without starting Python: search lockfiles for 1.26.1 or 1.26.2, and site-packages for</text>
+  <text x="120" y="912" fill="#a9aecf" font-size="24">agent_framework_meta.pth   agent_framework_meta/_telemetry.py   af_runtime_diag.pth   af_runtime_diag.py</text>
+</svg>

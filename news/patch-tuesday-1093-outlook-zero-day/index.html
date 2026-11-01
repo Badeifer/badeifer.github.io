@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft fixed 1,093 bugs, and the one under attack leaks your Windows password hash | The Dispatch</title>
+<meta name="description" content="November&#39;s Patch Tuesday is eighteen times the size it was a year ago, yet only one flaw is being exploited. Here is what that Outlook bug does, why outlets can&#39;t agree on the total, and what to patch first.">
+<link rel="canonical" href="https://badeifer.github.io/news/patch-tuesday-1093-outlook-zero-day/">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-11-11">
+<meta property="og:site_name" content="Bade&#39;s Mod Shop">
+<meta property="og:title" content="Microsoft fixed 1,093 bugs, and the one under attack leaks your Windows password hash">
+<meta property="og:description" content="November&#39;s Patch Tuesday is eighteen times the size it was a year ago, yet only one flaw is being exploited. Here is what that Outlook bug does, why outlets can&#39;t agree on the total, and what to patch first.">
+<meta property="og:url" content="https://badeifer.github.io/news/patch-tuesday-1093-outlook-zero-day/">
+<meta property="og:image" content="https://badeifer.github.io/media/og/home.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Microsoft fixed 1,093 bugs, and the one under attack leaks your Windows password hash: November&#39;s Patch Tuesday is eighteen times the size it was a year ago, yet only one flaw is being exploited. Here is what that Outlook bug does, why outlets can&#39;t agree on the total, and what to patch first.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Microsoft fixed 1,093 bugs, and the one under attack leaks your Windows password hash">
+<meta name="twitter:description" content="November&#39;s Patch Tuesday is eighteen times the size it was a year ago, yet only one flaw is being exploited. Here is what that Outlook bug does, why outlets can&#39;t agree on the total, and what to patch first.">
+<meta name="twitter:image" content="https://badeifer.github.io/media/og/home.jpg">
+<meta name="theme-color" content="#141833">
+<link rel="icon" href="../../assets/avatar.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../media/avatar-512.png">
+<link rel="preload" href="../../assets/fonts/atkinson-hyperlegible-next.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/chakra-petch-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Microsoft fixed 1,093 bugs, and the one under attack leaks your Windows password hash","description":"November's Patch Tuesday is eighteen times the size it was a year ago, yet only one flaw is being exploited. Here is what that Outlook bug does, why outlets can't agree on the total, and what to patch first.","datePublished":"2026-11-11","dateModified":"2026-11-11","url":"https://badeifer.github.io/news/patch-tuesday-1093-outlook-zero-day/","image":"https://badeifer.github.io/media/og/news-patch-tuesday-1093-outlook-zero-day.jpg","author":{"@type":"Organization","name":"Bade's Mod Shop","url":"https://badeifer.github.io/"},"publisher":{"@type":"Organization","name":"Bade's Mod Shop","logo":{"@type":"ImageObject","url":"https://badeifer.github.io/media/avatar-512.png"}},"keywords":"Microsoft, Patch Tuesday, Outlook, NTLM, zero-day, CVE-2026-124194, Chrome, CVE-2026-125350, CISA KEV, vulnerability management"}</script>
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('theme');document.documentElement.dataset.theme=t==='day'?'day':'night'}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="mark" href="../../"><img src="../../assets/avatar.svg" alt="" width="40" height="40">Bade&#39;s Mod Shop</a>
+  <nav class="nav" aria-label="Sections"><a href="../../news/">News</a><a href="../../#edge">Widgets</a><a href="../../#streamdeck">Stream Deck keys</a><a href="../../#skills">Skills</a><a href="../../#plugins">Plugins</a><a href="../../#claude">Claude mods</a><a href="../../#obsidian">Obsidian</a><a href="../../#toolbox">Toolbox</a><a href="../../#support">Support</a></nav>
+  <div class="theme" role="group" aria-label="Colour mode">
+    <button type="button" data-mode="night" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>Night</button>
+    <button type="button" data-mode="day" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>Day</button>
+  </div>
+</header>
+<main id="main" class="article t-cyber">
+  <p class="crumb"><a href="../../news/">The Dispatch</a></p>
+  <header class="article-head">
+    <h1>Microsoft fixed 1,093 bugs, and the one under attack leaks your Windows password hash</h1>
+    <p class="article-dek">November&#39;s Patch Tuesday is eighteen times the size it was a year ago, yet only one flaw is being exploited. Here is what that Outlook bug does, why outlets can&#39;t agree on the total, and what to patch first.</p>
+    <p class="story-meta"><span class="topic t-cyber">Cyber</span><time datetime="2026-11-11">November 11, 2026</time><span>5 min read</span></p>
+  </header>
+  <div class="article-art"><img class="cover" src="../../media/news/covers/patch-tuesday-1093-outlook-zero-day.png" width="176" height="88" alt="" decoding="async"></div>
+  <div class="prose"><p>Microsoft shipped fixes for 1,093 of its own vulnerabilities on Tuesday, and exactly one of them is already being used by attackers: an Outlook flaw that hands your network password hash to whoever sent you the right file. If you run Windows with classic Outlook or any Microsoft 365 desktop apps, that is the update to push today, along with the Chrome release Google put out a day earlier for its own exploited bug.</p>
+<p>The other 1,092 still matter. But a month this big rewards a patch order more than panic, and the order is short.</p>
+<h2>A file that phones home with your credentials</h2>
+<p>The exploited bug is CVE-2026-124194, which Microsoft files as an Outlook spoofing vulnerability. That label undersells it. According to Microsoft&#39;s advisory, an attacker sends a crafted message file and talks the target into opening it. Outlook then reaches out to a server the attacker controls, skipping the warning it normally shows before loading outside content, and in doing so hands over the user&#39;s NTLMv2 hash.</p>
+<p>NTLM is the old Windows challenge-and-response login scheme that still sits under a lot of corporate networks. A captured NTLMv2 hash can be cracked offline if the password is weak, or relayed straight away to another server that accepts NTLM, letting the attacker sign in as the victim without ever learning the password. Microsoft rates the bug 6.5 out of 10 on the CVSS scale because it needs a user to open something. Attackers have shown for years that this is not much of a hurdle.</p>
+<p>Two details from the advisory help. The Preview Pane is not an attack vector, so simply clicking past the message in your inbox does not trigger it; opening the file does. And the fixes cover Microsoft 365 Apps for Enterprise plus Office LTSC 2021 and LTSC 2024, in both 32-bit and 64-bit builds.</p>
+<p>CISA added the bug to its Known Exploited Vulnerabilities catalog the same day and gave US federal agencies until 24 November to fix it. Microsoft has not said who is using it or against whom. Its acknowledgements credit two finders, one of them a researcher who worked with Anthropic and used its Claude model.</p>
+<h2>Why one outlet says 1,093 and another says 1,235</h2>
+<p>If you read three write-ups this morning you saw three totals. Tenable says 1,093, BleepingComputer says a record 1,235, and Rapid7 says 1,092. They are mostly counting different things, and the difference is not trivia, because it tells you where the work is.</p>
+<p>We pulled Microsoft&#39;s machine-readable release file for November. It lists 1,362 CVEs in all, but many belong to other projects that Microsoft ships inside its products: 165 Chromium bugs that flow into Edge, 41 Linux kernel bugs patched in Azure Linux, and about 60 from other open-source projects. Count only the CVEs Microsoft itself assigned and first published on Tuesday and you get 1,093, of which 63 are rated Critical and 1,029 Important. Add the 142 Edge entries BleepingComputer included and you arrive at its 1,235.</p>
+<figure class="fig"><img src="../../media/news/patch-tuesday-1093-outlook-zero-day/monthly-cves.svg" alt="Bar chart of Microsoft-assigned CVEs first published on each Patch Tuesday. November 2025: 61. December: 51. January 2026: 109. February: 52. March: 78. April: 158. May: 113. June: 180. July: 517. August: 346. September: 902. October: 1,259. November 2026: 1,093. Exploited zero-days by month: 1, 1, 1, 6, 0, 2, 0, 0, 3, 1, 1, 1, 1." loading="lazy" decoding="async"><figcaption>Microsoft&#39;s own CVEs per Patch Tuesday over the last year. Figure: The Dispatch, counted from Microsoft&#39;s Security Update Guide data.</figcaption></figure>
+<p>The bigger story sits in the trend. By the same method, a year ago Microsoft&#39;s November release carried 61 of its own CVEs. This summer the count broke 500, September brought 902, October 1,259. The number Microsoft flags as exploited in the wild has stayed stubbornly flat at roughly one a month. Rapid7&#39;s write-up says volumes like this &quot;would have been unimaginable&quot; not long ago, and asks a fair question: whether pushing out this much changed code is making anyone safer, given that every fix is new code that can carry new bugs.</p>
+<p>Nobody at Microsoft has put a single cause on the curve, so we won&#39;t either. The acknowledgements list is suggestive, though. One of the month&#39;s most prolific finders is credited on 18 CVEs as using GLM, a large language model from z.ai, and a handful of other entries name Claude or Anthropic.</p>
+<h2>What to patch first</h2>
+<p>The volume makes triage the real job. A sensible order for most shops:</p>
+<ol><li><strong>Outlook and Office.</strong> Install the November Office security updates for Microsoft 365 Apps and Office LTSC 2021 and 2024. This is the only Microsoft bug with confirmed attacks.</li><li><strong>Chrome and every Chromium browser.</strong> Google&#39;s 9 November update to version 157.0.8103.50 (Linux) and 157.0.8103.50/.51 (Windows and Mac) fixes CVE-2026-125350, a use-after-free in Chrome&#39;s XML code. Google says an exploit exists in the wild. Edge, Brave and Opera need their own matching updates.</li><li><strong>Exchange servers.</strong> CVE-2026-116928 is a 9.8-rated flaw in Windows Search that Exchange triggers by itself when it indexes an incoming attachment, so nobody has to open anything. The fix ships in the Windows update, not an Exchange one.</li><li><strong>Domain controllers and anything speaking TLS.</strong> CVE-2026-118146 in Active Directory and CVE-2026-119952 in Schannel, the Windows TLS library, are both Critical, and Microsoft rates each as more likely than usual to be exploited.</li><li><strong>Everything else</strong> on your normal cycle, through the Windows 11 cumulative updates KB5132061 and KB5131087.</li></ol>
+<p>Then make the Outlook bug less useful even where patching lags. NTLM relay only works against services that accept unsigned NTLM logins, so turn on SMB signing and LDAP signing and channel binding, enable Extended Protection on Exchange, and block outbound SMB on port 445 at the firewall so a hash has a harder time leaving the building. Those steps also blunt the next NTLM leak, and given the past few years, there will be one.</p>
+<h2>The real bottleneck is now on the receiving end</h2>
+<p>For most of the past decade, the scarce resource in security was finding bugs. That is visibly no longer true. Machines and the people steering them now turn up flaws faster than vendors used to ship fixes, and the strain has moved to the admins who have to test and deploy 1,000 patches a month without breaking payroll. The month&#39;s lesson is that exploitation, not volume, is still the signal worth chasing, and that one boring Outlook bug deserves more of your Tuesday than the other thousand.</p></div>
+  <section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ol><li><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2026-124194" rel="noopener">Microsoft Security Response Center, CVE-2026-124194 and the November 2026 security update data</a></li><li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">CISA, Known Exploited Vulnerabilities Catalog</a></li><li><a href="https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_018223192.html" rel="noopener">Google, Chrome Releases: Stable Channel Update for Desktop, 9 November 2026</a></li><li><a href="https://www.tenable.com/blog/microsoft-november-2026-patch-tuesday-addresses-1093-cves-cve-2026-124194" rel="noopener">Tenable, Microsoft&#39;s November 2026 Patch Tuesday addresses 1,093 CVEs</a></li><li><a href="https://www.rapid7.com/blog/post/em-patch-tuesday-november-2026/" rel="noopener">Rapid7, Patch Tuesday, November 2026</a></li><li><a href="https://www.bleepingcomputer.com/news/microsoft/microsoft-november-2026-patch-tuesday-fixes-1-235-flaws-outlook-zero-day/" rel="noopener">BleepingComputer, Microsoft November 2026 Patch Tuesday fixes 1,235 flaws, Outlook zero-day</a></li></ol></section>
+  <p class="made">Written with AI for Bade&#39;s Mod Shop. Facts are checked against the sources above on the day of publishing; if one is wrong, <a href="https://github.com/Badeifer/badeifer.github.io/issues/new">open an issue</a>.</p>
+  <p class="tags"><span>Microsoft</span><span>Patch Tuesday</span><span>Outlook</span><span>NTLM</span><span>zero-day</span><span>CVE-2026-124194</span><span>Chrome</span><span>CVE-2026-125350</span><span>CISA KEV</span><span>vulnerability management</span></p>
+  <nav class="story-nav" aria-label="More stories"><a class="next-story" href="../../news/nvidia-huang-resigns-kress-interim/"><span>Newer</span>Nvidia&#39;s Jensen Huang is out after 33 years, and the CFO now runs the company</a><a class="next-story" href="../../news/claude-fable-5-2-breaking-changes/"><span>Older</span>Claude Fable 5.2 is 20% cheaper, and four API changes will break code that ran on 5.1</a></nav>
+</main>
+<footer class="foot">
+  <p>Bade&#39;s Mod Shop, 2026. Updates and issues on <a href="https://github.com/Badeifer">GitHub</a>. Stuck? <a href="../../#help">Get help</a>.</p>
+  <p class="fine">Privacy: no cookies, no analytics, nothing loaded from other sites. Your Night or Day choice is saved in your own browser. The site is hosted on GitHub Pages, which keeps standard server logs under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+  <p class="fine">Corsair, iCUE, Xeneon, Elgato, Stream Deck, NVIDIA, Obsidian and Claude are trademarks of their owners. These are independent projects, not made by or endorsed by them.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>
