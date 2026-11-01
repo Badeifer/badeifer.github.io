@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Termination fees in the Marvell and Lumentum merger agreement</title>
+  <rect width="1600" height="700" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Who pays if it falls apart</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Termination fees in the merger agreement, in billions of US dollars. Source: Reuters.</text>
+
+  <!-- axis -->
+  <line x1="560" y1="170" x2="560" y2="560" stroke="#a9aecf" stroke-width="2"/>
+  <g font-size="20" fill="#a9aecf" text-anchor="middle">
+    <line x1="560" y1="560" x2="1480" y2="560" stroke="#a9aecf" stroke-width="2"/>
+    <text x="560" y="592">$0</text>
+    <text x="713" y="592">$1B</text>
+    <text x="867" y="592">$2B</text>
+    <text x="1020" y="592">$3B</text>
+    <text x="1173" y="592">$4B</text>
+    <text x="1327" y="592">$5B</text>
+    <text x="1480" y="592">$6B</text>
+  </g>
+  <g stroke="#a9aecf" stroke-opacity="0.25" stroke-width="1">
+    <line x1="713" y1="170" x2="713" y2="560"/>
+    <line x1="867" y1="170" x2="867" y2="560"/>
+    <line x1="1020" y1="170" x2="1020" y2="560"/>
+    <line x1="1173" y1="170" x2="1173" y2="560"/>
+    <line x1="1327" y1="170" x2="1327" y2="560"/>
+    <line x1="1480" y1="170" x2="1480" y2="560"/>
+  </g>
+
+  <g font-size="22">
+    <text x="80" y="226" fill="#ede6d3" font-weight="700">Marvell pays Lumentum</text>
+    <text x="80" y="256" fill="#a9aecf">if Marvell's board walks away</text>
+    <text x="80" y="284" fill="#a9aecf">or it takes another offer</text>
+    <rect x="560" y="200" width="889" height="76" fill="#c59bff"/>
+    <text x="1430" y="248" fill="#0b0e26" font-weight="700" text-anchor="end">$5.8B</text>
+
+    <text x="80" y="346" fill="#ede6d3" font-weight="700">Marvell pays Lumentum</text>
+    <text x="80" y="376" fill="#a9aecf">if regulators block the deal</text>
+    <rect x="560" y="322" width="491" height="76" fill="none" stroke="#c59bff" stroke-width="3"/>
+    <text x="1070" y="370" fill="#ede6d3" font-weight="700">$3.2B</text>
+
+    <text x="80" y="466" fill="#ede6d3" font-weight="700">Lumentum pays Marvell</text>
+    <text x="80" y="496" fill="#a9aecf">if Lumentum's board walks away</text>
+    <text x="80" y="524" fill="#a9aecf">or it takes another offer</text>
+    <rect x="560" y="444" width="445" height="76" fill="#a9aecf"/>
+    <text x="1024" y="492" fill="#ede6d3" font-weight="700">$2.9B</text>
+  </g>
+
+  <text x="80" y="652" fill="#ede6d3" font-size="24">The buyer carries most of the risk: it owes more for changing its mind, and it owes for a regulatory block.</text>
+</svg>

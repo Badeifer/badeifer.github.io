@@ -1,0 +1,6 @@
+{
+ "title": "Google's best model goes to cyber defenders first",
+ "short": "Google's strongest model goes to cyber defenders first.\nGemini 4 Carbon got much better at writing exploits, so the public waits.\nFull story: https://badeifer.github.io/news/gemini-4-carbon-defenders-first/\n#AI #Cybersecurity #Gemini #Google",
+ "x": "Gemini 4 Carbon's biggest jump is at writing exploits: 42.0 to 54.8 on ExploitGym. So Google is giving it to vetted defenders first, with no public date. https://badeifer.github.io/news/gemini-4-carbon-defenders-first/",
+ "linkedin": "Google calls Gemini 4 Carbon the strongest model it has built, and most of us cannot use it yet. Its largest gain over Gemini 4 Argon is in turning bugs into working exploits, so access starts with a subset of the more than 650 organizations in Google's Fairwind program.\n\nThe caveats matter: the cyber scores were run with guardrails off, most comparisons are Google's own, and no date is given for wider release. What the numbers say, what they leave out, and what to do today: https://badeifer.github.io/news/gemini-4-carbon-defenders-first/"
+}

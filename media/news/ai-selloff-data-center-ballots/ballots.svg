@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Local data center ballot measures in the 2026 US midterms: all but one went against data centers</title>
+  <rect width="1600" height="760" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">41 local ballot measures on data centers. Voters sided against 40.</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Each square is one measure, by CNBC's count from Ballotpedia data after the 3 November vote.</text>
+  <g id="grid">
+    <rect x="80" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="180" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="280" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="380" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="480" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="580" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="680" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="780" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="880" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="980" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="1080" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="1180" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="1280" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="1380" y="170" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="80" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="180" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="280" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="380" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="480" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="580" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="680" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="1"/>
+    <rect x="780" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="880" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="980" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="1080" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="1180" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="1280" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="1380" y="270" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="80" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="180" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="280" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="380" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="480" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="580" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="680" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="780" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="880" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="980" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="1080" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="1180" y="370" width="80" height="80" rx="8" fill="#c59bff" opacity="0.45"/>
+    <rect x="1280" y="370" width="80" height="80" rx="8" fill="#ede6d3" opacity="1"/>
+  </g>
+  <g font-size="24">
+    <rect x="80" y="500" width="32" height="32" rx="4" fill="#c59bff"/>
+    <text x="128" y="525" fill="#ede6d3">21 in Ohio, all against data centers</text>
+    <rect x="80" y="556" width="32" height="32" rx="4" fill="#c59bff" opacity="0.45"/>
+    <text x="128" y="581" fill="#ede6d3">19 in other states, all against: bans, moratoriums, size limits and the like</text>
+    <rect x="80" y="612" width="32" height="32" rx="4" fill="#ede6d3"/>
+    <text x="128" y="637" fill="#ede6d3">1 exception: Harwood, North Dakota, rejected extra review of industrial projects</text>
+  </g>
+  <text x="80" y="704" fill="#a9aecf" font-size="22">Results as of 5 November. Counts differ by tracker (others run from 38 to 45). Sources: CNBC, CBS News.</text>
+</svg>

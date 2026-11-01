@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A fake Claude Code build in Cursor&#39;s store planted SSH backdoors for 11 hours | The Dispatch</title>
+<meta name="description" content="For eleven hours on Thursday, Cursor&#39;s extension marketplace served a tampered Claude Code build that planted a backdoor key and stayed behind after removal. Here is what it did, why the failed parts still matter, and the five-minute check every Cursor user should run.">
+<link rel="canonical" href="https://badeifer.github.io/news/cursor-claude-code-extension-backdoor/">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-11-01">
+<meta property="og:site_name" content="Bade&#39;s Mod Shop">
+<meta property="og:title" content="A fake Claude Code build in Cursor&#39;s store planted SSH backdoors for 11 hours">
+<meta property="og:description" content="For eleven hours on Thursday, Cursor&#39;s extension marketplace served a tampered Claude Code build that planted a backdoor key and stayed behind after removal. Here is what it did, why the failed parts still matter, and the five-minute check every Cursor user should run.">
+<meta property="og:url" content="https://badeifer.github.io/news/cursor-claude-code-extension-backdoor/">
+<meta property="og:image" content="https://badeifer.github.io/media/og/home.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A fake Claude Code build in Cursor&#39;s store planted SSH backdoors for 11 hours: For eleven hours on Thursday, Cursor&#39;s extension marketplace served a tampered Claude Code build that planted a backdoor key and stayed behind after removal. Here is what it did, why the failed parts still matter, and the five-minute check every Cursor user should run.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A fake Claude Code build in Cursor&#39;s store planted SSH backdoors for 11 hours">
+<meta name="twitter:description" content="For eleven hours on Thursday, Cursor&#39;s extension marketplace served a tampered Claude Code build that planted a backdoor key and stayed behind after removal. Here is what it did, why the failed parts still matter, and the five-minute check every Cursor user should run.">
+<meta name="twitter:image" content="https://badeifer.github.io/media/og/home.jpg">
+<meta name="theme-color" content="#141833">
+<link rel="icon" href="../../assets/avatar.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../media/avatar-512.png">
+<link rel="preload" href="../../assets/fonts/atkinson-hyperlegible-next.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/chakra-petch-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"A fake Claude Code build in Cursor's store planted SSH backdoors for 11 hours","description":"For eleven hours on Thursday, Cursor's extension marketplace served a tampered Claude Code build that planted a backdoor key and stayed behind after removal. Here is what it did, why the failed parts still matter, and the five-minute check every Cursor user should run.","datePublished":"2026-11-01","dateModified":"2026-11-01","url":"https://badeifer.github.io/news/cursor-claude-code-extension-backdoor/","image":"https://badeifer.github.io/media/og/news-cursor-claude-code-extension-backdoor.jpg","author":{"@type":"Organization","name":"Bade's Mod Shop","url":"https://badeifer.github.io/"},"publisher":{"@type":"Organization","name":"Bade's Mod Shop","logo":{"@type":"ImageObject","url":"https://badeifer.github.io/media/avatar-512.png"}},"keywords":"Cursor, Claude Code, supply chain, extensions, SSH, malware","video":{"@type":"VideoObject","name":"A fake Claude Code build in Cursor's store planted SSH backdoors for 11 hours","description":"For eleven hours on Thursday, Cursor's extension marketplace served a tampered Claude Code build that planted a backdoor key and stayed behind after removal. Here is what it did, why the failed parts still matter, and the five-minute check every Cursor user should run.","uploadDate":"2026-11-01","contentUrl":"https://badeifer.github.io/media/news/cursor-claude-code-extension-backdoor/video.mp4","thumbnailUrl":["https://badeifer.github.io/media/news/cursor-claude-code-extension-backdoor/video-poster.jpg"],"duration":"PT1M17S"}}</script>
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('theme');document.documentElement.dataset.theme=t==='day'?'day':'night'}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="mark" href="../../"><img src="../../assets/avatar.svg" alt="" width="40" height="40">Bade&#39;s Mod Shop</a>
+  <nav class="nav" aria-label="Sections"><a href="../../news/">News</a><a href="../../#edge">Widgets</a><a href="../../#streamdeck">Stream Deck keys</a><a href="../../#skills">Skills</a><a href="../../#plugins">Plugins</a><a href="../../#claude">Claude mods</a><a href="../../#obsidian">Obsidian</a><a href="../../#toolbox">Toolbox</a><a href="../../#support">Support</a></nav>
+  <div class="theme" role="group" aria-label="Colour mode">
+    <button type="button" data-mode="night" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>Night</button>
+    <button type="button" data-mode="day" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>Day</button>
+  </div>
+</header>
+<main id="main" class="article t-cyber">
+  <p class="crumb"><a href="../../news/">The Dispatch</a></p>
+  <header class="article-head">
+    <h1>A fake Claude Code build in Cursor&#39;s store planted SSH backdoors for 11 hours</h1>
+    <p class="article-dek">For eleven hours on Thursday, Cursor&#39;s extension marketplace served a tampered Claude Code build that planted a backdoor key and stayed behind after removal. Here is what it did, why the failed parts still matter, and the five-minute check every Cursor user should run.</p>
+    <p class="story-meta"><span class="topic t-cyber">Cyber</span><time datetime="2026-11-01">November 1, 2026</time><span>5 min read</span></p>
+  </header>
+  <figure class="article-video">
+    <video controls playsinline preload="metadata" poster="../../media/news/cursor-claude-code-extension-backdoor/video-poster.jpg" aria-label="A fake Claude Code build in Cursor&#39;s store planted SSH backdoors for 11 hours: video summary">
+      <source src="../../media/news/cursor-claude-code-extension-backdoor/video.mp4" type="video/mp4">
+      <track kind="captions" src="../../media/news/cursor-claude-code-extension-backdoor/video.vtt" srclang="en" label="English">
+    </video>
+    <figcaption><b>1:17 video</b> The short version, captioned. The full story is below.</figcaption>
+  </figure>
+  <div class="prose"><p>If you use Cursor and had the Claude Code extension installed on Thursday, check your SSH keys today. A tampered copy of the extension sat in Cursor&#39;s own marketplace from 2:27 am to 1:35 pm Pacific on 29 October, and anyone who picked it up may still be carrying an attacker&#39;s key and a set of startup scripts that outlived the extension itself.</p>
+<p>Cursor says the build was not made by Anthropic, that the official Claude Code distribution is clean, and that at most 5,000 users were exposed. It has pulled the package, taken its whole marketplace offline for an audit, rotated its access keys and had the attacker&#39;s server shut down. That last step blunts the immediate danger. It does not undo what landed on disk.</p>
+<h2>How a trusted name became the delivery truck</h2>
+<p>Cursor is a fork of Microsoft&#39;s VS Code, and since it cannot use Microsoft&#39;s store it runs its own extension marketplace. That is where the poisoned package appeared, listed under the publisher name <code>Anthropic.claude-code</code> with version numbers that looked like the next routine updates. Cursor&#39;s notice, revised on Friday, names 2.1.312 and 2.1.313 for Windows and macOS. Early reports mentioned only 2.1.313.</p>
+<p>The attackers did not rewrite the extension. They prepended a block of JavaScript to the top of its main file, <code>extension.js</code>, and left the rest alone, so the extension still did its normal job. The extra code ran the moment the editor loaded the file, before the extension&#39;s own startup routine and without the user opening a chat or typing a thing.</p>
+<p>How someone got a package published under Anthropic&#39;s name is the question nobody has answered. Cursor has not said, and neither outlet that covered the story got an explanation from Cursor or Anthropic. There was also a short dispute over where else the build spread. Phorion, the macOS security firm that analysed the payload, first reported seeing it on Open VSX, the open registry many VS Code forks draw from. Cursor later said its marketplace was the only distribution point, and Ax Sharma of Manifold Security backed that account. Treat Cursor as confirmed and Open VSX as unproven.</p>
+<h2>What the loader did on your machine</h2>
+<p>The figure below follows the five steps in order. In plain terms: it phoned home with a profile of the machine, planted a door key, tried and mostly failed to open the door, set itself up to keep trying, and kept dialling out.</p>
+<figure class="fig"><img src="../../media/news/cursor-claude-code-extension-backdoor/what-it-did.svg" alt="Flow of the tampered extension: Cursor loads extension.js, then recon is sent, an SSH key labelled svc-telemetry is added, the SSH server is switched on if possible, persistence is installed for macOS, Windows and Linux, and a reverse tunnel is retried every 60 seconds" loading="lazy" decoding="async"><figcaption>Steps two and four succeeded on most machines even where step three failed. Figure: The Dispatch, from Cursor&#39;s notice and reporting by BleepingComputer and Help Net Security.</figcaption></figure>
+<p>The reconnaissance covered the hostname, username, operating system, home and working directories, Git email address and public IP. It also listed the names of credential-style environment variables, such as the ones AWS and Google Cloud use, though not their values. Nothing in the script stole secrets directly. A list of which secrets live on a machine is a shopping list, though, and BleepingComputer suggests the plan was to come back by hand.</p>
+<p>The key went into the user&#39;s <code>authorized_keys</code> file, the list of keys SSH accepts as proof of identity, labelled <code>svc-telemetry</code> to look like boring plumbing. Turning on the SSH server needs administrator rights, and here the malware tripped over itself. On macOS it checked the Remote Login setting without privileges, got an error instead of the word &quot;Off&quot;, and gave up. On Windows it tried to start OpenSSH through a Unix shell that Windows does not ship.</p>
+<blockquote><p>A backdoor that fails to open the door has still left the key under the mat.</p></blockquote>
+<p>That is why the failures are cold comfort. Phorion&#39;s warning, relayed by Help Net Security, is simple: if Remote Login is already on, or anyone turns it on later for an unrelated reason, the planted key works. Developers switch SSH on all the time.</p>
+<h2>The five-minute check</h2>
+<p>Uninstalling the extension does not remove any of this. Do these steps on any machine that ran Cursor with Claude Code installed on 29 October.</p>
+<ol><li>Look for the key. On macOS or Linux, run <code>grep -n svc-telemetry ~/.ssh/authorized_keys</code>. On Windows, run <code>findstr svc-telemetry %USERPROFILE%\.ssh\authorized_keys</code>. Any match means the payload ran.</li><li>Look for the startup hooks. On macOS, a LaunchAgent named <code>com.apple.sysmond</code>. On Windows, a scheduled task called <code>SysMon</code> (<code>schtasks /query /tn SysMon</code>) or a <code>sysmon.cmd</code> in your Startup folder. On Linux, an <code>@reboot</code> line in <code>crontab -l</code>. Cursor also lists dropped files: <code>.smt</code> and <code>.smtk</code> in <code>~/.config</code> on macOS and Linux, <code>smt.cmd</code> and <code>smtk</code> in a <code>.config</code> folder under your user profile on Windows.</li><li>If you find either, treat the machine as compromised. Disconnect it, then delete the key line, the startup entries and the dropped files. Cursor&#39;s notice has cleanup scripts for macOS and Windows; read them before you run them, as you should with any script.</li><li>Check your SSH logs for logins with that key, which would mean someone actually got in.</li><li>From a different, trusted computer, rotate the credentials the affected machine could reach: cloud keys, Git tokens, API keys and browser sessions. If you cannot be sure the machine is clean, rebuild it.</li></ol>
+<p>If you find nothing, update Claude Code to the current release from Cursor&#39;s rebuilt marketplace and carry on.</p>
+<h2>The editor is now the soft target</h2>
+<p>Coding tools have quietly become some of the most privileged software on a developer&#39;s laptop. They hold repository access, cloud credentials and, increasingly, agents that run commands on your behalf. Their extension stores were built for convenience, and the forks that cannot use Microsoft&#39;s store each run their own, with their own publishing controls and their own gaps. Attackers have noticed. Until marketplaces can prove a package came from the publisher it names, the practical defence is dull and effective: pin the extensions you rely on, turn off silent auto-updates for the ones with deep access, and know what your <code>authorized_keys</code> file is supposed to contain.</p></div>
+  <section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ol><li><a href="https://cursor.com/blog/claude-code-extension-security-notice" rel="noopener">Cursor: Security notice, malicious Anthropic.claude-code extension in the Cursor VS Code Extension Marketplace</a></li><li><a href="https://www.bleepingcomputer.com/news/security/malicious-claude-code-extension-on-cursor-planted-ssh-backdoors/" rel="noopener">BleepingComputer: Malicious Claude Code extension on Cursor planted SSH backdoors</a></li><li><a href="https://www.helpnetsecurity.com/2026/10/30/claude-code-extension-ssh-backdoor/" rel="noopener">Help Net Security: Claude Code extension poisoned with persistent SSH backdoor</a></li></ol></section>
+  <p class="made">Written with AI for Bade&#39;s Mod Shop. Facts are checked against the sources above on the day of publishing; if one is wrong, <a href="https://github.com/Badeifer/badeifer.github.io/issues/new">open an issue</a>.</p>
+  <p class="tags"><span>Cursor</span><span>Claude Code</span><span>supply chain</span><span>extensions</span><span>SSH</span><span>malware</span></p>
+  <nav class="story-nav" aria-label="More stories"><a class="next-story" href="../../news/marvell-lumentum-115-billion-optics/"><span>Newer</span>Marvell&#39;s $115 billion Lumentum deal is a bet that AI&#39;s next bottleneck is light</a><a class="next-story" href="../../news/mistral-large-4-open-weights/"><span>Older</span>Mistral just gave away a trillion-parameter model. Here is what it takes to run it</a></nav>
+</main>
+<footer class="foot">
+  <p>Bade&#39;s Mod Shop, 2026. Updates and issues on <a href="https://github.com/Badeifer">GitHub</a>. Stuck? <a href="../../#help">Get help</a>.</p>
+  <p class="fine">Privacy: no cookies, no analytics, nothing loaded from other sites. Your Night or Day choice is saved in your own browser. The site is hosted on GitHub Pages, which keeps standard server logs under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+  <p class="fine">Corsair, iCUE, Xeneon, Elgato, Stream Deck, NVIDIA, Obsidian and Claude are trademarks of their owners. These are independent projects, not made by or endorsed by them.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

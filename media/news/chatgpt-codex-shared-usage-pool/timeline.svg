@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="620" viewBox="0 0 1600 620" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Timeline of OpenAI usage limit changes, August to December 2026</title>
+  <rect width="1600" height="620" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Three months of moving limits</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Changes to ChatGPT and Codex usage, 2026. Sources: 9to5Mac, BleepingComputer, The New Stack, ARY News.</text>
+
+  <line x1="120" y1="300" x2="1500" y2="300" stroke="#a9aecf" stroke-width="3"/>
+  <g font-size="22">
+    <circle cx="180" cy="300" r="14" fill="#a9aecf"/>
+    <text x="180" y="260" fill="#ede6d3" font-weight="700" text-anchor="middle">25 Aug</text>
+    <text x="120" y="350" fill="#ede6d3">5-hour limit returns for</text>
+    <text x="120" y="380" fill="#ede6d3">Plus on Codex and Work</text>
+    <text x="120" y="410" fill="#a9aecf">Weekly cap stays</text>
+
+    <circle cx="560" cy="300" r="14" fill="#a9aecf"/>
+    <text x="560" y="260" fill="#ede6d3" font-weight="700" text-anchor="middle">29 Oct</text>
+    <text x="470" y="350" fill="#ede6d3">Planned Pro 200 cut</text>
+    <text x="470" y="380" fill="#ede6d3">dropped; limits doubled</text>
+    <text x="470" y="410" fill="#a9aecf">Pro 100, 200, 500 and</text>
+    <text x="470" y="440" fill="#a9aecf">Business Premium</text>
+
+    <circle cx="940" cy="300" r="14" fill="#a9aecf"/>
+    <text x="940" y="260" fill="#ede6d3" font-weight="700" text-anchor="middle">31 Oct to 2 Nov</text>
+    <text x="850" y="350" fill="#ede6d3">Help article says chat and</text>
+    <text x="850" y="380" fill="#ede6d3">Codex will share one pool</text>
+    <text x="850" y="410" fill="#a9aecf">Forum thread against it</text>
+    <text x="850" y="440" fill="#a9aecf">passes 100 posts</text>
+
+    <circle cx="1400" cy="300" r="18" fill="#74d6bb"/>
+    <text x="1400" y="260" fill="#74d6bb" font-weight="700" text-anchor="middle">December</text>
+    <text x="1230" y="350" fill="#ede6d3">Shared token allowance</text>
+    <text x="1230" y="380" fill="#ede6d3">starts for Plus, Pro, Business</text>
+    <text x="1230" y="410" fill="#a9aecf">Exact date and per-plan</text>
+    <text x="1230" y="440" fill="#a9aecf">sizes not published</text>
+  </g>
+  <text x="80" y="560" fill="#a9aecf" font-size="20">Dates are when each change was announced or takes effect. The help article's exact publication date varies by report.</text>
+</svg>

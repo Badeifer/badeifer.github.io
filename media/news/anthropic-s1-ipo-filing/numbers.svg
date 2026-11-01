@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Anthropic first-half revenue and the makeup of its first-half 2026 net loss</title>
+  <rect width="1600" height="760" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Revenue up more than 13 times, and a loss that is mostly paperwork</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Six months to 30 June, billions of US dollars, from Anthropic's S-1. Bars in each panel share one scale.</text>
+
+  <!-- Left panel: revenue. scale 20px per $1B, baseline y=640 -->
+  <text x="80" y="190" fill="#ede6d3" font-size="28" font-weight="700">Revenue</text>
+  <line x1="80" y1="640" x2="700" y2="640" stroke="#a9aecf" stroke-width="2"/>
+  <rect x="150" y="616" width="160" height="24" fill="#a9aecf"/>
+  <text x="230" y="600" fill="#ede6d3" font-size="26" text-anchor="middle" font-weight="700">$1.2B</text>
+  <text x="230" y="680" fill="#a9aecf" font-size="22" text-anchor="middle">H1 2025</text>
+  <rect x="440" y="314" width="160" height="326" fill="#c59bff"/>
+  <text x="520" y="298" fill="#ede6d3" font-size="26" text-anchor="middle" font-weight="700">$16.3B</text>
+  <text x="520" y="680" fill="#a9aecf" font-size="22" text-anchor="middle">H1 2026</text>
+
+  <!-- Right panel: net loss H1 2026. scale 5px per $1B, baseline y=640 -->
+  <text x="840" y="190" fill="#ede6d3" font-size="28" font-weight="700">Net loss, H1 2026: $80.7B</text>
+  <line x1="840" y1="640" x2="1520" y2="640" stroke="#a9aecf" stroke-width="2"/>
+  <rect x="880" y="278" width="240" height="362" fill="#c59bff" fill-opacity="0.35" stroke="#c59bff" stroke-width="2"/>
+  <text x="1000" y="440" fill="#ede6d3" font-size="26" text-anchor="middle" font-weight="700">$72.4B</text>
+  <text x="1000" y="474" fill="#ede6d3" font-size="20" text-anchor="middle">non-cash charge:</text>
+  <text x="1000" y="500" fill="#ede6d3" font-size="20" text-anchor="middle">convertible notes and</text>
+  <text x="1000" y="526" fill="#ede6d3" font-size="20" text-anchor="middle">other instruments</text>
+  <text x="1000" y="552" fill="#ede6d3" font-size="20" text-anchor="middle">marked up in value</text>
+  <rect x="880" y="236" width="240" height="42" fill="#a9aecf"/>
+  <text x="1140" y="264" fill="#ede6d3" font-size="22">$8.3B everything else</text>
+  <rect x="1240" y="637" width="200" height="3" fill="#ede6d3"/>
+  <text x="1340" y="600" fill="#ede6d3" font-size="26" text-anchor="middle" font-weight="700">$0.69B</text>
+  <text x="1340" y="680" fill="#a9aecf" font-size="22" text-anchor="middle">operating loss</text>
+  <text x="1000" y="680" fill="#a9aecf" font-size="22" text-anchor="middle">net loss</text>
+  <text x="1340" y="712" fill="#a9aecf" font-size="18" text-anchor="middle">($2.1B a year earlier)</text>
+
+  <text x="80" y="740" fill="#a9aecf" font-size="18">"Everything else" is the net loss minus the non-cash charge. Source: Anthropic Form S-1, 26 October 2026; Fortune; TechCrunch.</text>
+</svg>

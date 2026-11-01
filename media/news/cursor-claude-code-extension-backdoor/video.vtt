@@ -1,0 +1,140 @@
+WEBVTT
+
+00:00:00.250 --> 00:00:01.697
+For eleven hours,
+
+00:00:01.497 --> 00:00:03.899
+Cursor's own extension store served
+
+00:00:03.699 --> 00:00:05.367
+a fake Claude Code that
+
+00:00:05.167 --> 00:00:06.761
+planted backdoor keys.
+
+00:00:06.801 --> 00:00:09.258
+Uninstalling the extension leaves those
+
+00:00:09.058 --> 00:00:09.967
+keys in place.
+
+00:00:10.667 --> 00:00:12.115
+Cursor says up to five
+
+00:00:11.915 --> 00:00:13.916
+thousand users were exposed on
+
+00:00:13.716 --> 00:00:15.926
+October twenty-ninth, and it has
+
+00:00:15.726 --> 00:00:17.035
+pulled the package.
+
+00:00:17.075 --> 00:00:19.056
+Anthropic did not make the build.
+
+00:00:19.606 --> 00:00:21.102
+It looked like a routine
+
+00:00:20.902 --> 00:00:22.646
+update under Anthropic's name.
+
+00:00:22.686 --> 00:00:24.529
+Hidden code ran as Cursor
+
+00:00:24.329 --> 00:00:26.173
+loaded it, sent home a
+
+00:00:25.973 --> 00:00:27.894
+profile of the machine,
+
+00:00:27.694 --> 00:00:29.772
+planted an attacker's SSH key
+
+00:00:29.572 --> 00:00:31.337
+and added startup hooks.
+
+00:00:31.887 --> 00:00:33.646
+Turning on the SSH server
+
+00:00:33.446 --> 00:00:35.057
+needs admin rights,
+
+00:00:34.857 --> 00:00:36.765
+and that step mostly failed.
+
+00:00:36.805 --> 00:00:38.124
+The key and the hooks
+
+00:00:37.924 --> 00:00:39.572
+needed none, so they ran
+
+00:00:39.372 --> 00:00:40.494
+on most machines.
+
+00:00:41.044 --> 00:00:42.644
+If Remote Login is on,
+
+00:00:42.444 --> 00:00:43.904
+or someone turns it on
+
+00:00:43.704 --> 00:00:45.724
+later, the planted key works.
+
+00:00:45.764 --> 00:00:47.799
+Developers switch SSH on all
+
+00:00:47.599 --> 00:00:48.334
+the time.
+
+00:00:48.884 --> 00:00:50.445
+Search your SSH key list
+
+00:00:50.245 --> 00:00:51.670
+for the label shown on
+
+00:00:51.470 --> 00:00:53.235
+screen, then look for the
+
+00:00:53.035 --> 00:00:54.051
+startup hooks.
+
+00:00:54.091 --> 00:00:55.463
+If you find either,
+
+00:00:55.263 --> 00:00:57.676
+disconnect and rotate credentials from
+
+00:00:57.476 --> 00:00:58.783
+a trusted computer.
+
+00:00:59.333 --> 00:01:01.332
+Coding tools now hold deep
+
+00:01:01.132 --> 00:01:02.641
+access on a laptop.
+
+00:01:02.681 --> 00:01:04.496
+Pin the extensions you rely
+
+00:01:04.296 --> 00:01:05.971
+on, and turn off silent
+
+00:01:05.771 --> 00:01:07.937
+auto-updates for deep-access ones.
+
+00:01:08.487 --> 00:01:10.704
+The complete five-minute check for
+
+00:01:10.504 --> 00:01:12.303
+Mac, Windows and Linux is
+
+00:01:12.103 --> 00:01:13.416
+in the full story on
+
+00:01:13.216 --> 00:01:14.181
+The Dispatch.
+
+00:01:14.221 --> 00:01:15.582
+Check your keys today.
+

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="560" viewBox="0 0 1600 560" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Timeline of Google gating Gemini 4 models to cyber defenders before public release, September to October 2026</title>
+  <rect width="1600" height="560" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Defenders first, everyone else later</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">How Google has released its Gemini 4 models in 2026. Dates from Google and VentureBeat.</text>
+  <line x1="120" y1="300" x2="1180" y2="300" stroke="#a9aecf" stroke-width="3"/>
+  <line x1="1180" y1="300" x2="1500" y2="300" stroke="#a9aecf" stroke-width="3" stroke-dasharray="4 12"/>
+  <circle cx="200" cy="300" r="12" fill="#ede6d3"/>
+  <text x="200" y="230" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="middle">30 Sep</text>
+  <text x="200" y="370" fill="#a9aecf" font-size="22" text-anchor="middle">Argon announced;</text>
+  <text x="200" y="400" fill="#a9aecf" font-size="22" text-anchor="middle">Fairwind partners first</text>
+  <circle cx="560" cy="300" r="12" fill="#ede6d3"/>
+  <text x="560" y="230" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="middle">13 Oct</text>
+  <text x="560" y="370" fill="#a9aecf" font-size="22" text-anchor="middle">Argon opens to API</text>
+  <text x="560" y="400" fill="#a9aecf" font-size="22" text-anchor="middle">and paid Gemini apps</text>
+  <circle cx="920" cy="300" r="16" fill="#e8b64c"/>
+  <text x="920" y="230" fill="#e8b64c" font-size="28" font-weight="700" text-anchor="middle">28 Oct</text>
+  <text x="920" y="370" fill="#a9aecf" font-size="22" text-anchor="middle">Carbon announced;</text>
+  <text x="920" y="400" fill="#a9aecf" font-size="22" text-anchor="middle">subset of defenders</text>
+  <circle cx="1340" cy="300" r="12" fill="none" stroke="#a9aecf" stroke-width="3"/>
+  <text x="1340" y="230" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="middle">Next</text>
+  <text x="1340" y="370" fill="#a9aecf" font-size="22" text-anchor="middle">Wider Fairwind, then</text>
+  <text x="1340" y="400" fill="#a9aecf" font-size="22" text-anchor="middle">public: no date given</text>
+  <text x="80" y="490" fill="#a9aecf" font-size="22">Fairwind: Google's early-access program for governments, critical infrastructure and big platforms, 650+ organizations.</text>
+</svg>

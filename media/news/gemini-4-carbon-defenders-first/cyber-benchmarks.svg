@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Gemini 4 Carbon versus Gemini 4 Argon on three cybersecurity benchmarks, as reported by Google</title>
+  <rect width="1600" height="760" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">The biggest jump is in writing exploits</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Score in percent, Gemini 4 Argon vs Gemini 4 Carbon. Google-reported, run without guardrails, October 2026.</text>
+  <rect x="80" y="150" width="22" height="22" fill="#a9aecf"/><text x="114" y="169" fill="#a9aecf" font-size="22">Argon (public since 13 Oct)</text>
+  <rect x="440" y="150" width="22" height="22" fill="#e8b64c"/><text x="474" y="169" fill="#ede6d3" font-size="22">Carbon (defenders only)</text>
+  <line x1="520.0" y1="210" x2="520.0" y2="690" stroke="#a9aecf" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="520.0" y="722" fill="#a9aecf" font-size="20" text-anchor="middle">0%</text>
+  <line x1="760.0" y1="210" x2="760.0" y2="690" stroke="#a9aecf" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="760.0" y="722" fill="#a9aecf" font-size="20" text-anchor="middle">25%</text>
+  <line x1="1000.0" y1="210" x2="1000.0" y2="690" stroke="#a9aecf" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1000.0" y="722" fill="#a9aecf" font-size="20" text-anchor="middle">50%</text>
+  <line x1="1240.0" y1="210" x2="1240.0" y2="690" stroke="#a9aecf" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1240.0" y="722" fill="#a9aecf" font-size="20" text-anchor="middle">75%</text>
+  <line x1="1480.0" y1="210" x2="1480.0" y2="690" stroke="#a9aecf" stroke-opacity="0.25" stroke-width="1"/>
+  <text x="1480.0" y="722" fill="#a9aecf" font-size="20" text-anchor="middle">100%</text>
+  <text x="80" y="268" fill="#ede6d3" font-size="28" font-weight="700">SEC-bench Pro</text>
+  <text x="80" y="304" fill="#a9aecf" font-size="22">finding vulnerabilities</text>
+  <rect x="520" y="240" width="800.6" height="44" rx="4" fill="#a9aecf"/>
+  <text x="1334.6" y="271" fill="#a9aecf" font-size="24">83.4</text>
+  <rect x="520" y="292" width="846.7" height="44" rx="4" fill="#e8b64c"/>
+  <text x="1380.7" y="323" fill="#e8b64c" font-size="24" font-weight="700">88.2  (+4.8)</text>
+  <text x="80" y="418" fill="#ede6d3" font-size="28" font-weight="700">CWE-bench</text>
+  <text x="80" y="454" fill="#a9aecf" font-size="22">writing the patch</text>
+  <rect x="520" y="390" width="652.8" height="44" rx="4" fill="#a9aecf"/>
+  <text x="1186.8" y="421" fill="#a9aecf" font-size="24">68.0</text>
+  <rect x="520" y="442" width="681.6" height="44" rx="4" fill="#e8b64c"/>
+  <text x="1215.6" y="473" fill="#e8b64c" font-size="24" font-weight="700">71.0  (+3.0)</text>
+  <text x="80" y="568" fill="#ede6d3" font-size="28" font-weight="700">ExploitGym</text>
+  <text x="80" y="604" fill="#a9aecf" font-size="22">turning a bug into an exploit</text>
+  <rect x="520" y="540" width="403.2" height="44" rx="4" fill="#a9aecf"/>
+  <text x="937.2" y="571" fill="#a9aecf" font-size="24">42.0</text>
+  <rect x="520" y="592" width="526.1" height="44" rx="4" fill="#e8b64c"/>
+  <text x="1060.1" y="623" fill="#e8b64c" font-size="24" font-weight="700">54.8  (+12.8)</text>
+</svg>
