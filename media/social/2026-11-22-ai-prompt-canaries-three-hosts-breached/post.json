@@ -1,0 +1,6 @@
+{
+ "title": "Two million bait prompts caught three AI hosts breached",
+ "short": "Two million bait prompts caught attackers inside at least three AI hosts. Some stolen keys were tested within hours. Full story: https://badeifer.github.io/news/ai-prompt-canaries-three-hosts-breached/ #cybersecurity #AI #infosec #LLM",
+ "x": "Fake secrets hidden in two million AI prompts showed attackers inside at least three inference hosts. OpenRouter has pulled 125 endpoints from zero data retention. https://badeifer.github.io/news/ai-prompt-canaries-three-hosts-breached/",
+ "linkedin": "Dragos sent about two million prompts carrying unique fake secrets to popular AI services. At least three inference hosts had attackers copying requests, marketplace sellers logged traffic, and OpenRouter has dropped three providers.\n\nIf you sent keys or passwords through a router or small host since May, rotate them. Keep live secrets out of prompts and plant your own canaries. https://badeifer.github.io/news/ai-prompt-canaries-three-hosts-breached/"
+}

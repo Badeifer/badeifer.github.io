@@ -1,0 +1,6 @@
+{
+ "title": "Signal now blinds Siri AI and Gemini to your chats",
+ "short": "Signal blocks the AI assistants on your phone from reading your chats. It uses screenshot blocking, and Signal admits the fix has holes. Full story: https://badeifer.github.io/news/signal-blocks-siri-ai-gemini-screen/ #Signal #Privacy #AI #Cybersecurity",
+ "x": "Signal now uses screenshot blocking to keep Siri AI and Gemini out of your chats. It cannot do the same on a Mac, and it names the gaps itself. Settings to check today: https://badeifer.github.io/news/signal-blocks-siri-ai-gemini-screen/",
+ "linkedin": "Signal has turned screenshot blocking into a wall against the AI assistants built into phones. On iPhone it blocks screenshots, on Android it reacts when it spots an assistant, and on a Mac it can do nothing. Signal calls the protection incomplete and lists the gaps itself.\n\nEncryption still holds on the network. The weak point has moved to the screen, where app developers have almost no say. The platform makers decide whether a real opt-out arrives. https://badeifer.github.io/news/signal-blocks-siri-ai-gemini-screen/"
+}

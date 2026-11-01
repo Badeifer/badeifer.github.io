@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1180" viewBox="0 0 1600 1180" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>How the November 2026 US remote-access chip rule decides whether a data center needs a licence, and its key dates</title>
+  <rect width="1600" height="1180" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">Does this data center need a US licence?</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">The new remote-access test in section 744.24, simplified. Purple marks the answers that trigger a licence.</text>
+
+  <g font-size="26">
+    <rect x="80" y="170" width="900" height="110" rx="14" fill="none" stroke="#a9aecf" stroke-width="3"/>
+    <text x="110" y="215" fill="#ede6d3" font-weight="700">1. Does it hold advanced US AI chips or servers?</text>
+    <text x="110" y="253" fill="#a9aecf" font-size="22">Export classes 3A090 and 4A090, such as Nvidia H100 and H200 parts</text>
+    <text x="1020" y="235" fill="#a9aecf">No: this rule does not apply</text>
+    <line x1="530" y1="280" x2="530" y2="330" stroke="#a9aecf" stroke-width="3"/>
+    <text x="550" y="315" fill="#a9aecf" font-size="22">Yes</text>
+
+    <rect x="80" y="330" width="900" height="110" rx="14" fill="none" stroke="#a9aecf" stroke-width="3"/>
+    <text x="110" y="375" fill="#ede6d3" font-weight="700">2. Can it supply more than 12,000,000 aggregate TPP?</text>
+    <text x="110" y="413" fill="#a9aecf" font-size="22">Counted across linked sites, digital links included. Roughly 750 H100s.</text>
+    <text x="1020" y="395" fill="#a9aecf">No: below the threshold</text>
+    <line x1="530" y1="440" x2="530" y2="490" stroke="#a9aecf" stroke-width="3"/>
+    <text x="550" y="475" fill="#a9aecf" font-size="22">Yes</text>
+
+    <rect x="80" y="490" width="900" height="130" rx="14" fill="none" stroke="#a9aecf" stroke-width="3"/>
+    <text x="110" y="535" fill="#ede6d3" font-weight="700">3. Is any of that compute for a company headquartered</text>
+    <text x="110" y="570" fill="#ede6d3" font-weight="700">in China, Macau or another D:5 country?</text>
+    <text x="110" y="605" fill="#a9aecf" font-size="22">Directly, through a parent company, or via a middleman training models for one</text>
+    <text x="1020" y="565" fill="#a9aecf">No: no licence under this test</text>
+    <line x1="530" y1="620" x2="530" y2="670" stroke="#a9aecf" stroke-width="3"/>
+    <text x="550" y="655" fill="#a9aecf" font-size="22">Yes</text>
+
+    <rect x="80" y="670" width="900" height="110" rx="14" fill="none" stroke="#a9aecf" stroke-width="3"/>
+    <text x="110" y="715" fill="#ede6d3" font-weight="700">4. Is it used only for a commercial recommender?</text>
+    <text x="110" y="753" fill="#a9aecf" font-size="22">Ranking products or content. Generating text, code or images does not count.</text>
+    <text x="1020" y="725" fill="#a9aecf">Yes: exempt, but must report to BIS</text>
+    <line x1="530" y1="780" x2="530" y2="830" stroke="#c59bff" stroke-width="3"/>
+    <text x="550" y="815" fill="#c59bff" font-size="22">No</text>
+
+    <rect x="80" y="830" width="900" height="100" rx="14" fill="#c59bff" fill-opacity="0.14" stroke="#c59bff" stroke-width="3"/>
+    <text x="110" y="875" fill="#c59bff" font-weight="700">Licence required, reviewed case by case</text>
+    <text x="110" y="910" fill="#ede6d3" font-size="22">Operators already serving such customers get 90 days from the effective date</text>
+  </g>
+
+  <text x="80" y="1000" fill="#ede6d3" font-size="28" font-weight="700">Separately: any advanced chip shipped to Brazil, Indonesia, Malaysia, Singapore or Thailand</text>
+  <text x="80" y="1040" fill="#a9aecf" font-size="24">now needs a licence too, unless the buyer is a US-headquartered company that files the new reports.</text>
+  <text x="80" y="1110" fill="#a9aecf" font-size="22">Source: BIS interim final rule RIN 0694-AK50, released 16 November 2026. Simplified; not legal advice.</text>
+</svg>

@@ -1,0 +1,184 @@
+1
+00:00:00,250 --> 00:00:01,875
+Signal now blocks the AI
+
+2
+00:00:01,675 --> 00:00:03,941
+assistants inside your phone from
+
+3
+00:00:03,741 --> 00:00:05,295
+reading your chats,
+
+4
+00:00:05,095 --> 00:00:06,933
+and admits the fix has holes.
+
+5
+00:00:07,633 --> 00:00:09,531
+The tool is screenshot blocking.
+
+6
+00:00:09,571 --> 00:00:12,431
+Signal president Meredith Whittaker announced
+
+7
+00:00:12,231 --> 00:00:13,988
+it on November twentieth,
+
+8
+00:00:13,788 --> 00:00:15,285
+and calls it incomplete.
+
+9
+00:00:15,835 --> 00:00:18,207
+Encryption still protects messages on
+
+10
+00:00:18,007 --> 00:00:18,865
+the network.
+
+11
+00:00:18,905 --> 00:00:20,476
+But on screen they are
+
+12
+00:00:20,276 --> 00:00:22,151
+just pixels, and Siri AI
+
+13
+00:00:21,951 --> 00:00:23,825
+and Gemini read the screen.
+
+14
+00:00:24,375 --> 00:00:26,217
+On iPhone, Block Siri AI
+
+15
+00:00:26,017 --> 00:00:28,977
+stops screenshots, and reportedly ships
+
+16
+00:00:28,777 --> 00:00:29,723
+switched on.
+
+17
+00:00:29,763 --> 00:00:31,842
+On Android, Signal reacts when
+
+18
+00:00:31,642 --> 00:00:33,050
+it spots an assistant.
+
+19
+00:00:33,090 --> 00:00:33,899
+On a Mac,
+
+20
+00:00:33,699 --> 00:00:34,751
+it can do nothing.
+
+21
+00:00:35,301 --> 00:00:36,932
+Update Signal everywhere.
+
+22
+00:00:36,972 --> 00:00:38,448
+On iPhone and Mac,
+
+23
+00:00:38,248 --> 00:00:40,175
+add Signal to Excluded Apps
+
+24
+00:00:39,975 --> 00:00:41,452
+in the Siri settings.
+
+25
+00:00:41,492 --> 00:00:43,396
+On Android, switch on Screen
+
+26
+00:00:43,196 --> 00:00:44,445
+security yourself.
+
+27
+00:00:44,995 --> 00:00:46,910
+Signal names the holes itself.
+
+28
+00:00:46,950 --> 00:00:48,866
+Saved files stay exposed,
+
+29
+00:00:48,666 --> 00:00:50,297
+and so do Android phones
+
+30
+00:00:50,097 --> 00:00:52,085
+where it misses the assistant.
+
+31
+00:00:52,125 --> 00:00:54,506
+Agents with accessibility access can
+
+32
+00:00:54,306 --> 00:00:55,733
+still read the screen.
+
+33
+00:00:56,283 --> 00:00:58,793
+Whittaker calls it an existential threat.
+
+34
+00:00:58,833 --> 00:01:00,271
+She asks Apple,
+
+35
+00:01:00,071 --> 00:01:02,169
+Google and Microsoft for a
+
+36
+00:01:01,969 --> 00:01:03,985
+documented way for any app
+
+37
+00:01:03,785 --> 00:01:05,471
+to opt out of AI access.
+
+38
+00:01:06,021 --> 00:01:07,490
+The fight over the pipe
+
+39
+00:01:07,290 --> 00:01:09,227
+between phones was largely won.
+
+40
+00:01:09,267 --> 00:01:11,280
+Built-in assistants reopen it on
+
+41
+00:01:11,080 --> 00:01:12,958
+the device, where apps have
+
+42
+00:01:12,758 --> 00:01:13,697
+almost no say.
+
+43
+00:01:14,247 --> 00:01:16,235
+Every setting and every gap,
+
+44
+00:01:16,035 --> 00:01:17,679
+platform by platform,
+
+45
+00:01:17,479 --> 00:01:18,779
+is in the full story
+
+46
+00:01:18,579 --> 00:01:19,673
+on The Dispatch.
+

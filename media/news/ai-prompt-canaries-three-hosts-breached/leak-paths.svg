@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Where bait secrets in AI prompts leaked, by hop</title>
+  <rect width="1600" height="980" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">A prompt passes through more hands than you think</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">Where Dragos's bait secrets surfaced, July to November 2026. Red marks a confirmed leak path. Sources: Dragos, Novita.</text>
+
+  <g font-size="24">
+    <rect x="80" y="200" width="300" height="130" rx="14" fill="none" stroke="#ede6d3" stroke-width="3"/>
+    <text x="230" y="255" fill="#ede6d3" font-weight="700" text-anchor="middle">Your app</text>
+    <text x="230" y="292" fill="#a9aecf" text-anchor="middle">prompt + secrets</text>
+
+    <line x1="380" y1="265" x2="540" y2="265" stroke="#a9aecf" stroke-width="3"/>
+    <polygon points="540,255 560,265 540,275" fill="#a9aecf"/>
+
+    <rect x="560" y="200" width="320" height="130" rx="14" fill="none" stroke="#ede6d3" stroke-width="3"/>
+    <text x="720" y="255" fill="#ede6d3" font-weight="700" text-anchor="middle">Router</text>
+    <text x="720" y="292" fill="#a9aecf" text-anchor="middle">picks a host for you</text>
+
+    <line x1="880" y1="265" x2="1040" y2="265" stroke="#a9aecf" stroke-width="3"/>
+    <polygon points="1040,255 1060,265 1040,275" fill="#a9aecf"/>
+
+    <rect x="1060" y="200" width="460" height="130" rx="14" fill="none" stroke="#ede6d3" stroke-width="3"/>
+    <text x="1290" y="255" fill="#ede6d3" font-weight="700" text-anchor="middle">Inference host or reseller</text>
+    <text x="1290" y="292" fill="#a9aecf" text-anchor="middle">runs the model</text>
+
+    <text x="720" y="380" fill="#a9aecf" text-anchor="middle" font-size="21">Privacy flags such as zero data retention</text>
+    <text x="720" y="408" fill="#a9aecf" text-anchor="middle" font-size="21">bind only this first hop</text>
+  </g>
+
+  <g font-size="22">
+    <line x1="1290" y1="330" x2="1290" y2="470" stroke="#ff6b6b" stroke-width="3"/>
+    <line x1="230" y1="470" x2="1450" y2="470" stroke="#ff6b6b" stroke-width="3"/>
+    <line x1="230" y1="470" x2="230" y2="520" stroke="#ff6b6b" stroke-width="3"/>
+    <line x1="630" y1="470" x2="630" y2="520" stroke="#ff6b6b" stroke-width="3"/>
+    <line x1="1040" y1="470" x2="1040" y2="520" stroke="#ff6b6b" stroke-width="3"/>
+    <line x1="1450" y1="470" x2="1450" y2="520" stroke="#ff6b6b" stroke-width="3"/>
+
+    <rect x="80" y="520" width="320" height="330" rx="14" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+    <text x="100" y="568" fill="#ff6b6b" font-size="26" font-weight="700">Breached hosts</text>
+    <text x="100" y="610" fill="#ede6d3">At least three.</text>
+    <text x="100" y="644" fill="#ede6d3">Attackers copied</text>
+    <text x="100" y="678" fill="#ede6d3">requests, then used</text>
+    <text x="100" y="712" fill="#ede6d3">a couple hundred</text>
+    <text x="100" y="746" fill="#ede6d3">bait AWS keys for</text>
+    <text x="100" y="780" fill="#ede6d3">tens of thousands</text>
+    <text x="100" y="814" fill="#ede6d3">of API calls.</text>
+
+    <rect x="470" y="520" width="320" height="330" rx="14" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+    <text x="490" y="568" fill="#ff6b6b" font-size="26" font-weight="700">Marketplace sellers</text>
+    <text x="490" y="610" fill="#ede6d3">List a model cheap,</text>
+    <text x="490" y="644" fill="#ede6d3">turn on request</text>
+    <text x="490" y="678" fill="#ede6d3">logging, read what</text>
+    <text x="490" y="712" fill="#ede6d3">arrives. One logged</text>
+    <text x="490" y="746" fill="#ede6d3">in with passwords</text>
+    <text x="490" y="780" fill="#ede6d3">from two prompts.</text>
+
+    <rect x="860" y="520" width="360" height="330" rx="14" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+    <text x="880" y="568" fill="#ff6b6b" font-size="26" font-weight="700">Quiet forwarding</text>
+    <text x="880" y="610" fill="#ede6d3">A router sent some</text>
+    <text x="880" y="644" fill="#ede6d3">traffic on to a</text>
+    <text x="880" y="678" fill="#ede6d3">marketplace. A host</text>
+    <text x="880" y="712" fill="#ede6d3">passed requests to</text>
+    <text x="880" y="746" fill="#ede6d3">the model maker's</text>
+    <text x="880" y="780" fill="#ede6d3">own API (Novita).</text>
+
+    <rect x="1290" y="520" width="250" height="330" rx="14" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+    <text x="1310" y="568" fill="#ff6b6b" font-size="26" font-weight="700">Model lab</text>
+    <text x="1310" y="610" fill="#ede6d3">A Chinese lab</text>
+    <text x="1310" y="644" fill="#ede6d3">fetched links in</text>
+    <text x="1310" y="678" fill="#ede6d3">over half of the</text>
+    <text x="1310" y="712" fill="#ede6d3">prompts sent to</text>
+    <text x="1310" y="746" fill="#ede6d3">it, including</text>
+    <text x="1310" y="780" fill="#ede6d3">~2 in 3 marked</text>
+    <text x="1310" y="814" fill="#ede6d3">no data collection.</text>
+  </g>
+
+  <text x="80" y="920" fill="#a9aecf" font-size="22">About 2 million seeded prompts; each bait secret was sent once, to one destination, so every hit traces back to a single hop.</text>
+</svg>

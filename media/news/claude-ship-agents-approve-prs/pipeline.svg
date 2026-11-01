@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="960" viewBox="0 0 1600 960" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>How a pull request moves through Claude Ship's three agents and GitHub's branch rules</title>
+  <rect width="1600" height="960" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">Three agents, one pull request, and GitHub still decides</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">The Claude Ship flow as Anthropic documents it. Green marks Claude's agents. Source: Claude Code docs, 23 Nov 2026.</text>
+
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#a9aecf"/></marker>
+  </defs>
+
+  <g font-size="24">
+    <!-- PR opened -->
+    <rect x="80" y="190" width="330" height="130" rx="10" fill="none" stroke="#a9aecf" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="245" y="245" fill="#ede6d3" font-weight="700" text-anchor="middle">Pull request opens</text>
+    <text x="245" y="282" fill="#a9aecf" font-size="21" text-anchor="middle">by a person, or by</text>
+    <text x="245" y="310" fill="#a9aecf" font-size="21" text-anchor="middle">/ship in Claude Code</text>
+
+    <!-- Code Review -->
+    <rect x="450" y="190" width="330" height="130" rx="10" fill="#74d6bb" fill-opacity="0.12" stroke="#74d6bb" stroke-width="3"/>
+    <text x="615" y="240" fill="#74d6bb" font-weight="700" text-anchor="middle">Code Review</text>
+    <text x="615" y="276" fill="#ede6d3" font-size="21" text-anchor="middle">inline findings ranked</text>
+    <text x="615" y="304" fill="#ede6d3" font-size="21" text-anchor="middle">by severity · GA</text>
+
+    <!-- PR Steward -->
+    <rect x="820" y="190" width="330" height="130" rx="10" fill="#74d6bb" fill-opacity="0.12" stroke="#74d6bb" stroke-width="3"/>
+    <text x="985" y="240" fill="#74d6bb" font-weight="700" text-anchor="middle">PR Steward</text>
+    <text x="985" y="276" fill="#ede6d3" font-size="21" text-anchor="middle">pushes fixes for checks,</text>
+    <text x="985" y="304" fill="#ede6d3" font-size="21" text-anchor="middle">conflicts, comments · beta</text>
+
+    <!-- Approvals -->
+    <rect x="1190" y="190" width="330" height="130" rx="10" fill="#74d6bb" fill-opacity="0.12" stroke="#74d6bb" stroke-width="3"/>
+    <text x="1355" y="240" fill="#74d6bb" font-weight="700" text-anchor="middle">Claude Approvals</text>
+    <text x="1355" y="276" fill="#ede6d3" font-size="21" text-anchor="middle">applies your policy file</text>
+    <text x="1355" y="304" fill="#ede6d3" font-size="21" text-anchor="middle">.claude/approvals.yml · beta</text>
+
+    <line x1="410" y1="255" x2="442" y2="255" stroke="#a9aecf" stroke-width="3" marker-end="url(#a)"/>
+    <line x1="780" y1="255" x2="812" y2="255" stroke="#a9aecf" stroke-width="3" marker-end="url(#a)"/>
+    <line x1="1150" y1="255" x2="1182" y2="255" stroke="#a9aecf" stroke-width="3" marker-end="url(#a)"/>
+
+    <!-- loop back -->
+    <path d="M985 190 C985 168 615 168 615 182" fill="none" stroke="#a9aecf" stroke-width="2" stroke-dasharray="8 6" marker-end="url(#a)"/>
+    <text x="800" y="158" fill="#a9aecf" font-size="20" text-anchor="middle">a fix can start another review</text>
+
+    <!-- GitHub branch rules -->
+    <line x1="1355" y1="320" x2="1355" y2="402" stroke="#a9aecf" stroke-width="3" marker-end="url(#a)"/>
+    <rect x="80" y="410" width="1440" height="130" rx="10" fill="none" stroke="#ede6d3" stroke-width="2"/>
+    <text x="110" y="460" fill="#ede6d3" font-weight="700">GitHub branch rules decide what merges</text>
+    <text x="110" y="498" fill="#a9aecf">The Claude Approvals check blocks a merge only if you make it a required check, and normally not in observe mode.</text>
+    <text x="110" y="526" fill="#a9aecf">Claude's approving review can count as the one approval a branch rule asks for.</text>
+
+    <!-- risks -->
+    <text x="80" y="610" fill="#ede6d3" font-size="28" font-weight="700">Ways a change can merge with no second person, per Anthropic's own docs</text>
+    <g fill="#ede6d3">
+      <circle cx="96" cy="660" r="7" fill="#74d6bb"/><text x="120" y="668">seats: 1, which the author can fill, or seats: 0 on a bot's pull request</text>
+      <circle cx="96" cy="710" r="7" fill="#74d6bb"/><text x="120" y="718">A rule with claude: approves, which starts no Code Review by itself</text>
+      <circle cx="96" cy="760" r="7" fill="#74d6bb"/><text x="120" y="768">A machine user, an account a script or agent drives, counted as a person</text>
+      <circle cx="96" cy="810" r="7" fill="#74d6bb"/><text x="120" y="818">A rule that reads a classifier's answer, which the pull request's own text can steer</text>
+      <circle cx="96" cy="860" r="7" fill="#74d6bb"/><text x="120" y="868">GitHub auto-merge or a merge queue with a policy that never asks for a person</text>
+    </g>
+    <text x="80" y="920" fill="#a9aecf" font-size="20">Fix: require the check, and add a rule with seats from [humans, "!pr/authors"] on every path. Chart: The Dispatch.</text>
+  </g>
+</svg>

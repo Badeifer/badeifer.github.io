@@ -1,0 +1,140 @@
+WEBVTT
+
+00:00:00.250 --> 00:00:02.347
+Google's new Gemini model costs
+
+00:00:02.147 --> 00:00:03.587
+double per token,
+
+00:00:03.387 --> 00:00:05.265
+and the cheaper one catches
+
+00:00:05.065 --> 00:00:06.067
+up in January.
+
+00:00:06.767 --> 00:00:08.864
+Hydrogen costs a dollar fifty
+
+00:00:08.664 --> 00:00:10.615
+per million input tokens,
+
+00:00:10.415 --> 00:00:12.219
+and seven fifty for output.
+
+00:00:12.259 --> 00:00:13.648
+That is twice the price
+
+00:00:13.448 --> 00:00:15.024
+of three point eight Flash.
+
+00:00:15.574 --> 00:00:17.225
+It launched November twelfth.
+
+00:00:17.265 --> 00:00:18.671
+Flash keeps its old price
+
+00:00:18.471 --> 00:00:19.532
+through December.
+
+00:00:19.572 --> 00:00:21.104
+From January first,
+
+00:00:20.904 --> 00:00:22.156
+both cost the same.
+
+00:00:22.706 --> 00:00:24.823
+On Google's command line agent
+
+00:00:24.623 --> 00:00:27.737
+test, Hydrogen scores fifty-seven percent
+
+00:00:27.537 --> 00:00:29.577
+to Flash's eighteen point two.
+
+00:00:29.617 --> 00:00:31.671
+An independent index rates it
+
+00:00:31.471 --> 00:00:33.154
+fifty-four to thirty-one.
+
+00:00:33.704 --> 00:00:34.970
+Per finished task,
+
+00:00:34.770 --> 00:00:36.154
+it is already cheaper on
+
+00:00:35.954 --> 00:00:36.924
+this benchmark.
+
+00:00:36.964 --> 00:00:38.601
+Three dollars sixteen,
+
+00:00:38.401 --> 00:00:40.690
+against seven seventy-seven for Flash.
+
+00:00:41.240 --> 00:00:43.125
+Short calls can simply cost
+
+00:00:42.925 --> 00:00:44.444
+double until January.
+
+00:00:44.484 --> 00:00:46.208
+Long agent runs with many
+
+00:00:46.008 --> 00:00:48.095
+tool calls should save the most.
+
+00:00:48.645 --> 00:00:50.323
+Before you swap models,
+
+00:00:50.123 --> 00:00:51.801
+set thinking to medium,
+
+00:00:51.601 --> 00:00:53.548
+because the default is now high.
+
+00:00:53.588 --> 00:00:55.573
+The old thinking budget returns
+
+00:00:55.373 --> 00:00:56.036
+an error.
+
+00:00:56.076 --> 00:00:57.988
+Thinking also counts toward your
+
+00:00:57.788 --> 00:00:58.661
+output limit.
+
+00:00:59.211 --> 00:01:01.010
+Explicit caching is gone,
+
+00:01:00.810 --> 00:01:03.077
+and temperature is silently ignored.
+
+00:01:03.117 --> 00:01:05.624
+Hydrogen is a short-term release,
+
+00:01:05.424 --> 00:01:06.740
+so pin the model ID.
+
+00:01:07.290 --> 00:01:08.896
+Cost per finished task now
+
+00:01:08.696 --> 00:01:10.112
+tells you more than the
+
+00:01:09.912 --> 00:01:10.687
+price list.
+
+00:01:10.727 --> 00:01:13.352
+Test both models before January first.
+
+00:01:13.902 --> 00:01:15.678
+The full story has every
+
+00:01:15.478 --> 00:01:17.411
+API change to check before
+
+00:01:17.211 --> 00:01:18.120
+you switch.
+

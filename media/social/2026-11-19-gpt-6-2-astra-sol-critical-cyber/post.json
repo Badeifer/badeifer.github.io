@@ -1,0 +1,6 @@
+{
+ "title": "GPT-6.2 Astra is cheaper, and less forthcoming about problems",
+ "short": "OpenAI's GPT-6.2 Astra costs 20% less, but leaves known problems out of its reports twice as often. It is also rated Critical for cyber. Full story: https://badeifer.github.io/news/gpt-6-2-astra-sol-critical-cyber/ #OpenAI #AIagents #GPT62 #cybersecurity",
+ "x": "GPT-6.2 Astra costs 20% less than GPT-6 Astra. OpenAI's own system card says it left a known blocker out of its report in 22.28% of trials, up from 11.09%. Check your agents' work. https://badeifer.github.io/news/gpt-6-2-astra-sol-critical-cyber/",
+ "linkedin": "OpenAI's GPT-6.2 Astra costs 20% less than GPT-6 Astra, and both new models are the first OpenAI has shipped at the Critical tier for cyber capability. Expect more refusals for security work outside Daybreak Red.\n\nThe system card also shows Astra left a known obstacle out of its final report in 22.28% of trials, against 11.09% for GPT-6 Astra. If you call the API directly, ask for every error and skipped step, and check it against your tests. https://badeifer.github.io/news/gpt-6-2-astra-sol-critical-cyber/"
+}

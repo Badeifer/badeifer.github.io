@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Anthropic's share price from marketing range to first close</title>
+  <rect width="1600" height="820" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">From $70 range to $97 close in eight days</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">Dollars per Class A share. Sources: Anthropic, AP, CBS News. First trading day 19 November 2026.</text>
+
+  <!-- axis: y = 700 - (price-60)*9 -->
+  <line x1="160" y1="700" x2="1520" y2="700" stroke="#a9aecf" stroke-width="2"/>
+  <g fill="#a9aecf" font-size="20" text-anchor="end">
+    <text x="140" y="707">$60</text>
+    <text x="140" y="527">$80</text>
+    <text x="140" y="347">$100</text>
+    <text x="140" y="257">$110</text>
+  </g>
+  <g stroke="#a9aecf" stroke-opacity="0.25" stroke-width="1">
+    <line x1="160" y1="520" x2="1520" y2="520"/>
+    <line x1="160" y1="340" x2="1520" y2="340"/>
+    <line x1="160" y1="250" x2="1520" y2="250"/>
+  </g>
+
+  <!-- range bar 70-78: y 610 to 538 -->
+  <rect x="230" y="538" width="160" height="72" fill="#a9aecf" fill-opacity="0.35" stroke="#a9aecf" stroke-width="2"/>
+  <text x="310" y="510" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">$70 to $78</text>
+  <text x="310" y="750" fill="#a9aecf" font-size="22" text-anchor="middle">Marketing range</text>
+  <text x="310" y="780" fill="#a9aecf" font-size="20" text-anchor="middle">825M shares</text>
+
+  <!-- offer 83: y=493 -->
+  <circle cx="560" cy="493" r="14" fill="#c59bff"/>
+  <text x="560" y="460" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">$83</text>
+  <text x="560" y="750" fill="#a9aecf" font-size="22" text-anchor="middle">IPO price, 18 Nov</text>
+  <text x="560" y="780" fill="#a9aecf" font-size="20" text-anchor="middle">980M shares</text>
+
+  <!-- open 111.50: y=236.5 -->
+  <circle cx="840" cy="236" r="14" fill="#c59bff"/>
+  <text x="840" y="204" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">$111.50</text>
+  <text x="840" y="750" fill="#a9aecf" font-size="22" text-anchor="middle">First trade, 19 Nov</text>
+  <text x="840" y="780" fill="#a9aecf" font-size="20" text-anchor="middle">+34%</text>
+
+  <!-- high ~115: y=205 -->
+  <circle cx="1100" cy="205" r="14" fill="#c59bff"/>
+  <text x="1100" y="173" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">about $115</text>
+  <text x="1100" y="750" fill="#a9aecf" font-size="22" text-anchor="middle">Day's high</text>
+
+  <!-- close 97.17: y=365.5 -->
+  <circle cx="1360" cy="365" r="18" fill="#c59bff"/>
+  <text x="1360" y="330" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">$97.17</text>
+  <text x="1360" y="750" fill="#a9aecf" font-size="22" text-anchor="middle">First close</text>
+  <text x="1360" y="780" fill="#a9aecf" font-size="20" text-anchor="middle">+17%, Nasdaq fell 2.3%</text>
+
+  <polyline points="560,493 840,236 1100,205 1360,365" fill="none" stroke="#c59bff" stroke-width="4"/>
+</svg>

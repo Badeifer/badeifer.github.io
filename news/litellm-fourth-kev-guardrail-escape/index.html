@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LiteLLM&#39;s guardrail tester is under attack, its fourth exploited bug of 2026 | The Dispatch</title>
+<meta name="description" content="CISA says attackers are using a sandbox escape in the popular LLM gateway&#39;s custom guardrail endpoint. Here is what the bug does, why an admin-only flaw still matters, and the one upgrade that closes all four of this year&#39;s exploited holes.">
+<link rel="canonical" href="https://badeifer.github.io/news/litellm-fourth-kev-guardrail-escape/">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-11-20">
+<meta property="og:site_name" content="Bade&#39;s Mod Shop">
+<meta property="og:title" content="LiteLLM&#39;s guardrail tester is under attack, its fourth exploited bug of 2026">
+<meta property="og:description" content="CISA says attackers are using a sandbox escape in the popular LLM gateway&#39;s custom guardrail endpoint. Here is what the bug does, why an admin-only flaw still matters, and the one upgrade that closes all four of this year&#39;s exploited holes.">
+<meta property="og:url" content="https://badeifer.github.io/news/litellm-fourth-kev-guardrail-escape/">
+<meta property="og:image" content="https://badeifer.github.io/media/og/news-litellm-fourth-kev-guardrail-escape.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LiteLLM&#39;s guardrail tester is under attack, its fourth exploited bug of 2026: CISA says attackers are using a sandbox escape in the popular LLM gateway&#39;s custom guardrail endpoint. Here is what the bug does, why an admin-only flaw still matters, and the one upgrade that closes all four of this year&#39;s exploited holes.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LiteLLM&#39;s guardrail tester is under attack, its fourth exploited bug of 2026">
+<meta name="twitter:description" content="CISA says attackers are using a sandbox escape in the popular LLM gateway&#39;s custom guardrail endpoint. Here is what the bug does, why an admin-only flaw still matters, and the one upgrade that closes all four of this year&#39;s exploited holes.">
+<meta name="twitter:image" content="https://badeifer.github.io/media/og/news-litellm-fourth-kev-guardrail-escape.jpg">
+<meta name="theme-color" content="#141833">
+<link rel="icon" href="../../assets/avatar.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../media/avatar-512.png">
+<link rel="preload" href="../../assets/fonts/atkinson-hyperlegible-next.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/chakra-petch-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"LiteLLM's guardrail tester is under attack, its fourth exploited bug of 2026","description":"CISA says attackers are using a sandbox escape in the popular LLM gateway's custom guardrail endpoint. Here is what the bug does, why an admin-only flaw still matters, and the one upgrade that closes all four of this year's exploited holes.","datePublished":"2026-11-20","dateModified":"2026-11-20","url":"https://badeifer.github.io/news/litellm-fourth-kev-guardrail-escape/","image":"https://badeifer.github.io/media/og/news-litellm-fourth-kev-guardrail-escape.jpg","author":{"@type":"Organization","name":"Bade's Mod Shop","url":"https://badeifer.github.io/"},"publisher":{"@type":"Organization","name":"Bade's Mod Shop","logo":{"@type":"ImageObject","url":"https://badeifer.github.io/media/avatar-512.png"}},"keywords":"LiteLLM, BerriAI, CISA, KEV, CVE-2026-40217, AI gateway, guardrails, MCP, sandbox escape, patching","video":{"@type":"VideoObject","name":"LiteLLM's guardrail tester is under attack, its fourth exploited bug of 2026","description":"CISA says attackers are using a sandbox escape in the popular LLM gateway's custom guardrail endpoint. Here is what the bug does, why an admin-only flaw still matters, and the one upgrade that closes all four of this year's exploited holes.","uploadDate":"2026-11-20","contentUrl":"https://badeifer.github.io/media/news/litellm-fourth-kev-guardrail-escape/video.mp4","thumbnailUrl":["https://badeifer.github.io/media/news/litellm-fourth-kev-guardrail-escape/video-poster.jpg"],"duration":"PT1M16S"}}</script>
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('theme');document.documentElement.dataset.theme=t==='day'?'day':'night'}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="mark" href="../../"><img src="../../assets/avatar.svg" alt="" width="40" height="40">Bade&#39;s Mod Shop</a>
+  <nav class="nav" aria-label="Sections"><a href="../../news/">News</a><a href="../../#edge">Widgets</a><a href="../../#streamdeck">Stream Deck keys</a><a href="../../#skills">Skills</a><a href="../../#plugins">Plugins</a><a href="../../#claude">Claude mods</a><a href="../../#obsidian">Obsidian</a><a href="../../#toolbox">Toolbox</a><a href="../../#support">Support</a></nav>
+  <div class="theme" role="group" aria-label="Colour mode">
+    <button type="button" data-mode="night" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>Night</button>
+    <button type="button" data-mode="day" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>Day</button>
+  </div>
+</header>
+<main id="main" class="article t-cyber">
+  <p class="crumb"><a href="../../news/">The Dispatch</a></p>
+  <header class="article-head">
+    <h1>LiteLLM&#39;s guardrail tester is under attack, its fourth exploited bug of 2026</h1>
+    <p class="article-dek">CISA says attackers are using a sandbox escape in the popular LLM gateway&#39;s custom guardrail endpoint. Here is what the bug does, why an admin-only flaw still matters, and the one upgrade that closes all four of this year&#39;s exploited holes.</p>
+    <p class="story-meta"><span class="topic t-cyber">Cyber</span><time datetime="2026-11-20">November 20, 2026</time><span>5 min read</span></p>
+  </header>
+  <figure class="article-video">
+    <video controls playsinline preload="metadata" poster="../../media/news/litellm-fourth-kev-guardrail-escape/video-poster.jpg" aria-label="LiteLLM&#39;s guardrail tester is under attack, its fourth exploited bug of 2026: video summary">
+      <source src="../../media/news/litellm-fourth-kev-guardrail-escape/video.mp4" type="video/mp4">
+      <track kind="captions" src="../../media/news/litellm-fourth-kev-guardrail-escape/video.vtt" srclang="en" label="English">
+    </video>
+    <figcaption><b>1:16 video</b> The short version, captioned. The full story is below.</figcaption>
+  </figure>
+  <div class="prose"><p>CISA added a LiteLLM sandbox escape to its list of actively exploited vulnerabilities on Wednesday, and it is the fourth LiteLLM bug to land there this year. If you run LiteLLM as the gateway in front of your model providers, the box that holds all your API keys has been a steady target since May, and you should be on 1.84.0 or later today.</p>
+<p>The new entry is CVE-2026-40217. It lets someone with an admin key run code on the proxy server. That sounds narrow. In practice, on a machine whose whole job is to hold OpenAI, Anthropic and cloud credentials, it is not.</p>
+<h2>What the guardrail tester got wrong</h2>
+<p>LiteLLM is an open-source proxy from BerriAI that gives teams one OpenAI-style API in front of dozens of model providers, with key management, spend tracking and guardrails on top. One guardrail option lets you write your own check in Python. To help you debug it, the proxy offers a test endpoint, <code>POST /guardrails/test_custom_code</code>, that runs the code you send.</p>
+<p>The problem was the sandbox around that code. Researchers at X41 D-Sec found in February that it worked by scanning the submitted source text for forbidden names. A text filter only sees what is literally written, so code that builds those names at runtime walks straight past it. From there an attacker can reach Python&#39;s unrestricted built-ins and run whatever they like inside the proxy process. In LiteLLM&#39;s default Docker image, that process runs as root.</p>
+<p>X41&#39;s timeline is not flattering. It reported the issue on 13 February, chased the vendor through March, had an email bounce, and published on 8 April when its embargo ran out with no patch available. LiteLLM&#39;s own advisory followed in May. The fix replaced the hand-rolled filter with RestrictedPython, a library built for exactly this job.</p>
+<p>There is one wrinkle to know about. The advisory&#39;s metadata lists 1.83.10 as patched, while its text says the fix landed in 1.83.11. Heise and several other write-ups use 1.83.11. Treat 1.83.11 as the floor, and since the other bugs below need a later release anyway, it is moot if you go to 1.84.0.</p>
+<h2>Why an admin-only bug still gets exploited</h2>
+<p>In a default setup you need a proxy admin credential to reach the endpoint. LiteLLM&#39;s maintainers scored it 5.9 for that reason, while the CVSS 3.1 score in public vulnerability databases is 8.8. CISA does not say who is exploiting it or how, and no public report yet describes the attacks.</p>
+<p>The history of this product suggests a reason the admin requirement is a weak wall. Admin keys on gateways tend to be long-lived, shared across a team and pasted into scripts. And earlier this year LiteLLM shipped bugs that hand out access without any key at all.</p>
+<figure class="fig"><img src="../../media/news/litellm-fourth-kev-guardrail-escape/kev-timeline.svg" alt="Timeline of LiteLLM&#39;s four entries in CISA&#39;s Known Exploited Vulnerabilities catalog in 2026. 8 May: CVE-2026-42208, SQL injection in API key checks, no login needed, fixed in 1.83.7. 8 June: CVE-2026-42271, command injection in MCP test endpoints, any valid key, fixed in 1.83.7. 2 September: CVE-2026-59822, MCP endpoint accepts any Bearer token, no login needed, fixed in 1.84.0. 18 November: CVE-2026-40217, guardrail test endpoint sandbox escape, admin key needed, fixed in 1.83.11. A box says one upgrade covers all four, LiteLLM 1.84.0 or later, and lists the paths to block if you cannot upgrade." loading="lazy" decoding="async"><figcaption>Four exploited LiteLLM bugs in six months. Chart: The Dispatch, from the CISA KEV catalog and LiteLLM&#39;s advisories.</figcaption></figure>
+<p>The pattern is plain in CISA&#39;s catalog:</p>
+<ul><li><strong>May:</strong> an SQL injection in the code that checks API keys, reachable by anyone who can send a request with a crafted <code>Authorization</code> header. CISA&#39;s entry warns it can expose the proxy&#39;s database and the credentials it manages.</li><li><strong>June:</strong> command injection in two MCP test endpoints. Any valid key worked, including low-privilege internal ones. The Hacker News reported that Horizon3.ai chained it with a host-header bypass in the Starlette web framework to reach it with no key at all.</li><li><strong>September:</strong> the MCP endpoint accepted any made-up Bearer token as a logged-in session.</li><li><strong>November:</strong> the guardrail tester.</li></ul>
+<p>Nothing public ties this week&#39;s attacks to those earlier bugs, so do not read the list as one campaign. Read it as a description of the risk. A gateway that has leaked keys before is a gateway where an attacker may already hold an admin key, and an admin key plus this bug is root on the server.</p>
+<blockquote><p>Two of the four were test endpoints: features that exist to run code you hand them.</p></blockquote>
+<h2>What to do this morning</h2>
+<ol><li><strong>Find every LiteLLM you run.</strong> Check container images, Helm charts and <code>requirements</code> files, including the forgotten one a teammate set up for a hackathon. <code>pip show litellm</code> or the image tag tells you the version.</li><li><strong>Upgrade to 1.84.0 or later.</strong> That single step clears all four exploited bugs. If you pin Starlette yourself, make sure it is 1.0.1 or newer.</li><li><strong>If you cannot upgrade today, block the risky paths</strong> at your reverse proxy: <code>POST /guardrails/test_custom_code</code>, <code>POST /mcp-rest/test/connection</code>, <code>POST /mcp-rest/test/tools/list</code>, and the <code>/mcp/</code> routes if you do not use MCP. That is the vendor&#39;s own advice.</li><li><strong>Take the admin UI off the internet.</strong> Put the management interface behind a VPN or an allowlist, and limit the master key to the people who need it. X41 also recommends running the container as a non-root user.</li><li><strong>Rotate what the proxy holds</strong> if you were on an affected version with any exposure: the master key, virtual keys, and every upstream provider key stored in its database or environment. Then look at provider billing for usage you do not recognise.</li></ol>
+<p>Federal agencies have until 2 December to fix this one. Nobody else has a deadline, which is not the same as having time.</p>
+<h2>The bigger picture</h2>
+<p>AI gateways have quietly become the most valuable box in a lot of companies: one service that holds every model key, sees every prompt and often talks to internal tools over MCP. LiteLLM is popular because it is quick to stand up, and that speed shows in features like code-running test endpoints that would never pass a design review at a bank. Whatever gateway you use, give it the treatment you give a password vault: private network, short-lived keys, fast upgrades and a log someone actually reads.</p></div>
+  <section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ol><li><a href="https://www.cisa.gov/known-exploited-vulnerabilities-catalog" rel="noopener">CISA, Known Exploited Vulnerabilities catalog entry for CVE-2026-40217</a></li><li><a href="https://github.com/BerriAI/litellm/security/advisories/GHSA-wxxx-gvqv-xp7p" rel="noopener">LiteLLM, security advisory GHSA-wxxx-gvqv-xp7p</a></li><li><a href="https://www.x41-dsec.de/lab/advisories/x41-2026-001-litellm" rel="noopener">X41 D-Sec, advisory X41-2026-001 on the LiteLLM guardrail sandbox</a></li><li><a href="https://www.heise.de/en/news/Attacks-target-flaws-in-Apache-Axis-and-Roller-LiteLLM-Synology-and-more-11530710.html" rel="noopener">heise online, Attacks target flaws in Apache Axis and Roller, LiteLLM, Synology and more</a></li><li><a href="https://thehackernews.com/2026/06/litellm-flaw-cve-2026-42271-exploited.html" rel="noopener">The Hacker News, LiteLLM flaw CVE-2026-42271 exploited in the wild</a></li></ol></section>
+  <p class="made">Written with AI for Bade&#39;s Mod Shop. Facts are checked against the sources above on the day of publishing; if one is wrong, <a href="https://github.com/Badeifer/badeifer.github.io/issues/new">open an issue</a>.</p>
+  <p class="tags"><span>LiteLLM</span><span>BerriAI</span><span>CISA</span><span>KEV</span><span>CVE-2026-40217</span><span>AI gateway</span><span>guardrails</span><span>MCP</span><span>sandbox escape</span><span>patching</span></p>
+  <nav class="story-nav" aria-label="More stories"><a class="next-story" href="../../news/anthropic-ipo-119-billion-chipmakers/"><span>Newer</span>Anthropic&#39;s IPO closed at $119.5 billion, and $26 billion came from its own suppliers</a><a class="next-story" href="../../news/gpt-6-2-astra-sol-critical-cyber/"><span>Older</span>GPT-6.2 Astra costs 20% less and omits known problems from its reports twice as often</a></nav>
+</main>
+<footer class="foot">
+  <p>Bade&#39;s Mod Shop, 2026. Updates and issues on <a href="https://github.com/Badeifer">GitHub</a>. Stuck? <a href="../../#help">Get help</a>.</p>
+  <p class="fine">Privacy: no cookies, no analytics, nothing loaded from other sites. Your Night or Day choice is saved in your own browser. The site is hosted on GitHub Pages, which keeps standard server logs under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+  <p class="fine">Corsair, iCUE, Xeneon, Elgato, Stream Deck, NVIDIA, Obsidian and Claude are trademarks of their owners. These are independent projects, not made by or endorsed by them.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

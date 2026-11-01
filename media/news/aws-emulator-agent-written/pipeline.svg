@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>How agents build AWS Emulator: three agent teams feed a four-stage merge gate before code reaches the public repository</title>
+  <rect width="1600" height="900" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">No human writes the code. A merge gate decides what ships.</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">How AWS Emulator is built, as described by AWS on 11 November 2026.</text>
+
+  <text x="80" y="190" fill="#a9aecf" font-size="22" font-weight="700">INPUTS</text>
+  <rect x="80" y="210" width="300" height="120" rx="14" fill="none" stroke="#a9aecf" stroke-width="2"/>
+  <text x="230" y="258" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">438 AWS API models</text>
+  <text x="230" y="294" fill="#a9aecf" font-size="21" text-anchor="middle">public Smithy specs</text>
+  <rect x="80" y="360" width="300" height="120" rx="14" fill="none" stroke="#a9aecf" stroke-width="2"/>
+  <text x="230" y="408" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">Real AWS</text>
+  <text x="230" y="444" fill="#a9aecf" font-size="21" text-anchor="middle">the ground truth</text>
+
+  <text x="470" y="190" fill="#a9aecf" font-size="22" font-weight="700">AGENT TEAMS</text>
+  <rect x="470" y="210" width="380" height="110" rx="14" fill="none" stroke="#74d6bb" stroke-width="3"/>
+  <text x="660" y="255" fill="#74d6bb" font-size="26" font-weight="700" text-anchor="middle">1. Test writers</text>
+  <text x="660" y="290" fill="#ede6d3" font-size="21" text-anchor="middle">tests checked against real AWS</text>
+  <rect x="470" y="350" width="380" height="110" rx="14" fill="none" stroke="#74d6bb" stroke-width="3"/>
+  <text x="660" y="395" fill="#74d6bb" font-size="26" font-weight="700" text-anchor="middle">2. Issue finders</text>
+  <text x="660" y="430" fill="#ede6d3" font-size="21" text-anchor="middle">replay tests, file every mismatch</text>
+  <rect x="470" y="490" width="380" height="110" rx="14" fill="none" stroke="#74d6bb" stroke-width="3"/>
+  <text x="660" y="535" fill="#74d6bb" font-size="26" font-weight="700" text-anchor="middle">3. Fixers</text>
+  <text x="660" y="570" fill="#ede6d3" font-size="21" text-anchor="middle">one issue each, edit, submit</text>
+
+  <line x1="380" y1="270" x2="462" y2="265" stroke="#a9aecf" stroke-width="3"/>
+  <line x1="380" y1="420" x2="462" y2="280" stroke="#a9aecf" stroke-width="3"/>
+  <line x1="660" y1="320" x2="660" y2="342" stroke="#a9aecf" stroke-width="3"/>
+  <line x1="660" y1="460" x2="660" y2="482" stroke="#a9aecf" stroke-width="3"/>
+
+  <text x="925" y="190" fill="#a9aecf" font-size="22" font-weight="700">MERGE GATE, IN ORDER</text>
+  <rect x="925" y="210" width="370" height="80" rx="14" fill="none" stroke="#ede6d3" stroke-width="2"/>
+  <text x="1110" y="260" fill="#ede6d3" font-size="24" text-anchor="middle">Build: does it compile</text>
+  <rect x="925" y="310" width="370" height="80" rx="14" fill="none" stroke="#ede6d3" stroke-width="2"/>
+  <text x="1110" y="360" fill="#ede6d3" font-size="24" text-anchor="middle">Review: coding standards</text>
+  <rect x="925" y="410" width="370" height="80" rx="14" fill="none" stroke="#ede6d3" stroke-width="2"/>
+  <text x="1110" y="460" fill="#ede6d3" font-size="24" text-anchor="middle">Security: adversarial agents</text>
+  <rect x="925" y="510" width="370" height="80" rx="14" fill="none" stroke="#ede6d3" stroke-width="2"/>
+  <text x="1110" y="560" fill="#ede6d3" font-size="24" text-anchor="middle">Fidelity: no regressions</text>
+  <line x1="850" y1="545" x2="917" y2="250" stroke="#a9aecf" stroke-width="3"/>
+
+  <path d="M940 600 C 900 700, 760 700, 700 610" fill="none" stroke="#a9aecf" stroke-width="3" stroke-dasharray="10 8"/>
+  <text x="830" y="728" fill="#a9aecf" font-size="21" text-anchor="middle">fails any stage: back to the agent</text>
+
+  <line x1="1295" y1="550" x2="1340" y2="550" stroke="#74d6bb" stroke-width="3"/>
+  <rect x="1340" y="430" width="200" height="240" rx="14" fill="none" stroke="#74d6bb" stroke-width="3"/>
+  <text x="1440" y="490" fill="#74d6bb" font-size="24" font-weight="700" text-anchor="middle">Mainline</text>
+  <text x="1440" y="540" fill="#ede6d3" font-size="21" text-anchor="middle">release binary</text>
+  <text x="1440" y="575" fill="#ede6d3" font-size="21" text-anchor="middle">then GitHub,</text>
+  <text x="1440" y="610" fill="#ede6d3" font-size="21" text-anchor="middle">CC0 licence,</text>
+  <text x="1440" y="645" fill="#ede6d3" font-size="21" text-anchor="middle">no outside PRs</text>
+
+  <text x="80" y="810" fill="#a9aecf" font-size="22">Humans wrote the specs, the test machinery, the gate and the release pipeline. AWS says</text>
+  <text x="80" y="845" fill="#a9aecf" font-size="22">hundreds of agents work at once and fix thousands of issues a day. Sources: AWS, Amazon, GitHub.</text>
+</svg>

@@ -1,0 +1,6 @@
+{
+ "title": "AI agents found a medical imaging zero-day in about 11 minutes",
+ "short": "AI agents found an unknown bug in MONAI Label and got root. CISA lists it as exploited. Full story: https://badeifer.github.io/news/monai-label-cairn-agents-zero-day/ #cybersecurity #AI #zeroday #infosec",
+ "x": "Attackers' AI agents found an unknown bug in MONAI Label, a medical scan annotation server, and got root. If your lab runs it, upgrade to 0.8.6. https://badeifer.github.io/news/monai-label-cairn-agents-zero-day/",
+ "linkedin": "Amazon Threat Intelligence caught attackers' Cairn AI agents breaking into a university server through an unknown MONAI Label bug, now CVE-2026-133968 and rated 9.8. It took the agents about 11 minutes to go from mapping the API to writing arbitrary files, and a later session turned that into root.\n\nThe fix, 0.8.6, reached PyPI four days after the advisory. If your research groups run MONAI Label, upgrade, turn on authentication and take it off the public internet. https://badeifer.github.io/news/monai-label-cairn-agents-zero-day/"
+}

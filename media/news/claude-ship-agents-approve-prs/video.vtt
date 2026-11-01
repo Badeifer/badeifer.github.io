@@ -1,0 +1,143 @@
+WEBVTT
+
+00:00:00.250 --> 00:00:02.466
+Anthropic's new GitHub agents can
+
+00:00:02.266 --> 00:00:04.122
+approve your pull requests.
+
+00:00:04.162 --> 00:00:05.426
+Set them up wrong,
+
+00:00:05.226 --> 00:00:06.803
+and nobody else ever looks.
+
+00:00:07.503 --> 00:00:10.075
+Claude Ship launched on November twenty-third.
+
+00:00:10.115 --> 00:00:11.652
+Its agents take a pull
+
+00:00:11.452 --> 00:00:13.339
+request from first review to
+
+00:00:13.139 --> 00:00:14.605
+an approval decision.
+
+00:00:15.155 --> 00:00:17.767
+Code Review ranks findings by severity.
+
+00:00:17.807 --> 00:00:19.326
+Steward pushes fixes,
+
+00:00:19.126 --> 00:00:20.331
+but never approves.
+
+00:00:20.371 --> 00:00:22.497
+Approvals follows a policy file
+
+00:00:22.297 --> 00:00:23.116
+you commit.
+
+00:00:23.666 --> 00:00:25.578
+That file sets rules by path.
+
+00:00:25.618 --> 00:00:27.438
+Billing code might need two
+
+00:00:27.238 --> 00:00:29.410
+humans, and test fixtures just
+
+00:00:29.210 --> 00:00:31.030
+one, after review passes.
+
+00:00:31.580 --> 00:00:33.834
+Anthropic's own docs list the gaps.
+
+00:00:33.874 --> 00:00:36.233
+The check blocks nothing unless required.
+
+00:00:36.273 --> 00:00:37.791
+The author can fill the
+
+00:00:37.591 --> 00:00:38.346
+only seat.
+
+00:00:38.386 --> 00:00:40.131
+Pull request text can steer
+
+00:00:39.931 --> 00:00:40.938
+a classifier.
+
+00:00:41.488 --> 00:00:43.265
+Start with Code Review on
+
+00:00:43.065 --> 00:00:44.241
+one repository.
+
+00:00:44.281 --> 00:00:46.636
+Run Approvals in observe mode first.
+
+00:00:46.676 --> 00:00:48.993
+Before enforcing, require a human
+
+00:00:48.793 --> 00:00:50.117
+who is not the author.
+
+00:00:50.667 --> 00:00:52.896
+Everything is billed by tokens,
+
+00:00:52.696 --> 00:00:53.946
+even observe mode.
+
+00:00:53.986 --> 00:00:56.846
+Eligible Enterprise organizations can claim
+
+00:00:56.646 --> 00:00:58.552
+at least ten thousand dollars
+
+00:00:58.352 --> 00:00:59.166
+in credits.
+
+00:00:59.716 --> 00:01:02.089
+Anthropic says merged pull requests
+
+00:01:01.889 --> 00:01:03.491
+more than doubled on its
+
+00:01:03.291 --> 00:01:04.963
+own team, and the share
+
+00:01:04.763 --> 00:01:06.716
+of reverted changes fell over
+
+00:01:06.516 --> 00:01:07.557
+forty percent.
+
+00:01:07.597 --> 00:01:09.750
+Nobody has checked that independently.
+
+00:01:10.300 --> 00:01:11.814
+Review is how a second
+
+00:01:11.614 --> 00:01:13.543
+person agrees to own a change.
+
+00:01:13.583 --> 00:01:15.387
+Write the policy loosely,
+
+00:01:15.187 --> 00:01:16.590
+and the only reader of
+
+00:01:16.390 --> 00:01:17.860
+payment code may be the
+
+00:01:17.660 --> 00:01:18.929
+model that wrote it.
+
+00:01:19.479 --> 00:01:21.004
+The full story has every
+
+00:01:20.804 --> 00:01:22.593
+setting and the safe rollout.
+

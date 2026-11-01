@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Xen Orchestra attack chain: empty-object cookie to XCP-ng host compromise</title>
+  <rect width="1600" height="1000" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">From an empty cookie to the hypervisor</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">How the November 2026 Xen Orchestra attacks worked. Source: Vates advisories VSA-2026-062 and VSA-2026-063.</text>
+
+  <g font-size="24">
+    <rect x="80" y="180" width="1440" height="120" rx="10" fill="none" stroke="#a9aecf" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="110" y="250" fill="#a9aecf" font-size="34" font-weight="700">1</text>
+    <text x="170" y="228" fill="#ede6d3" font-weight="700">Send a cookie holding an empty JSON object</text>
+    <text x="170" y="266" fill="#a9aecf">authenticationToken=j:{}  (or URL-encoded, j:%7B%7D) to the Xen Orchestra REST API. No password needed.</text>
+
+    <rect x="80" y="320" width="1440" height="120" rx="10" fill="none" stroke="#a9aecf" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="110" y="390" fill="#a9aecf" font-size="34" font-weight="700">2</text>
+    <text x="170" y="368" fill="#ede6d3" font-weight="700">The empty object matches every stored token</text>
+    <text x="170" y="406" fill="#a9aecf">The server returns the first one. If it has not expired, the attacker is logged in as that token's owner.</text>
+
+    <rect x="80" y="460" width="1440" height="120" rx="10" fill="none" stroke="#a9aecf" stroke-opacity="0.5" stroke-width="2"/>
+    <text x="110" y="530" fill="#a9aecf" font-size="34" font-weight="700">3</text>
+    <text x="170" y="508" fill="#ede6d3" font-weight="700">Harvest reusable login tokens</text>
+    <text x="170" y="546" fill="#a9aecf">The route /rest/v0/users/me/authentication_tokens hands back token IDs that keep working.</text>
+
+    <rect x="80" y="620" width="1440" height="140" rx="10" fill="#ff6b6b" fill-opacity="0.10" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="110" y="700" fill="#ff6b6b" font-size="34" font-weight="700">4</text>
+    <text x="170" y="668" fill="#ede6d3" font-weight="700">Import a VM with crafted keys to reach the XCP-ng host (VSA-2026-063)</text>
+    <text x="170" y="706" fill="#a9aecf">Xen Orchestra forwards VM imports to the hypervisor with pool-admin rights and does not inspect them,</text>
+    <text x="170" y="740" fill="#a9aecf">so settings like a serial console pointed at a host file get through.</text>
+  </g>
+
+  <g font-size="24">
+    <line x1="80" y1="810" x2="1520" y2="810" stroke="#a9aecf" stroke-opacity="0.4" stroke-width="2"/>
+    <rect x="80" y="840" width="28" height="28" rx="4" fill="none" stroke="#a9aecf" stroke-width="2"/>
+    <text x="124" y="863" fill="#ede6d3">Steps 1 to 3: CVE-2026-133469, rated 9.8. Fixed in Xen Orchestra 6.9.2 (stable) and 6.10.1 (latest).</text>
+    <rect x="80" y="900" width="28" height="28" rx="4" fill="#ff6b6b" fill-opacity="0.2" stroke="#ff6b6b" stroke-width="2"/>
+    <text x="124" y="923" fill="#ede6d3">Step 4: no fix in either channel at Vates's last update (10 Nov). Remove import and network permissions.</text>
+  </g>
+</svg>

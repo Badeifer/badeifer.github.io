@@ -1,0 +1,137 @@
+WEBVTT
+
+00:00:00.250 --> 00:00:02.784
+Nineteen of the twenty-one hijacked
+
+00:00:02.584 --> 00:00:05.352
+N-central servers were already running
+
+00:00:05.152 --> 00:00:07.530
+the vendor's newest emergency fix.
+
+00:00:08.230 --> 00:00:10.406
+A public exploit gave attackers
+
+00:00:10.206 --> 00:00:11.465
+root with no login.
+
+00:00:11.505 --> 00:00:13.908
+Within hours, twenty-one servers were
+
+00:00:13.708 --> 00:00:15.204
+mining cryptocurrency.
+
+00:00:15.754 --> 00:00:18.002
+N-central is the console service
+
+00:00:17.802 --> 00:00:19.671
+providers use to run every
+
+00:00:19.471 --> 00:00:20.657
+client machine.
+
+00:00:20.697 --> 00:00:21.757
+Root on it is a
+
+00:00:21.557 --> 00:00:23.334
+skeleton key to all of them.
+
+00:00:23.884 --> 00:00:25.910
+On Monday, a researcher dumped
+
+00:00:25.710 --> 00:00:27.106
+more than thirty flaws.
+
+00:00:27.146 --> 00:00:28.810
+Tuesday brought Hotfix 2.
+
+00:00:28.850 --> 00:00:30.593
+On Thursday, a new chain
+
+00:00:30.393 --> 00:00:30.996
+beat it.
+
+00:00:31.036 --> 00:00:32.773
+Friday, still no patch.
+
+00:00:33.323 --> 00:00:34.914
+The first attacks came at
+
+00:00:34.714 --> 00:00:36.504
+eight twenty-four, U T C.
+
+00:00:36.544 --> 00:00:37.824
+By twelve fifty,
+
+00:00:37.624 --> 00:00:39.850
+twenty-one mining rigs had appeared
+
+00:00:39.650 --> 00:00:40.457
+in one pool.
+
+00:00:41.007 --> 00:00:42.746
+It needs the Legacy API
+
+00:00:42.546 --> 00:00:44.365
+switched on and exposed.
+
+00:00:44.405 --> 00:00:45.946
+An old Apache Axis bug
+
+00:00:45.746 --> 00:00:47.510
+runs code, then a root
+
+00:00:47.310 --> 00:00:49.447
+helper script finishes the job.
+
+00:00:49.997 --> 00:00:51.695
+One firm watching the attacks
+
+00:00:51.495 --> 00:00:52.415
+put it plainly.
+
+00:00:52.455 --> 00:00:54.293
+So far the only payload
+
+00:00:54.093 --> 00:00:55.587
+is a Monero miner.
+
+00:00:55.627 --> 00:00:57.230
+That is the lucky version.
+
+00:00:57.780 --> 00:01:00.269
+If you host N-central yourself,
+
+00:01:00.069 --> 00:01:01.822
+turn off the Legacy API
+
+00:01:01.622 --> 00:01:03.538
+today, or put it behind
+
+00:01:03.338 --> 00:01:03.947
+a VPN.
+
+00:01:03.987 --> 00:01:05.563
+Then hunt for the miner,
+
+00:01:05.363 --> 00:01:06.876
+and rebuild if you find it.
+
+00:01:07.426 --> 00:01:09.388
+The real change is the tempo.
+
+00:01:09.428 --> 00:01:11.015
+A fix, a bypass two
+
+00:01:10.815 --> 00:01:13.060
+days later, and miners running
+
+00:01:12.860 --> 00:01:15.324
+before most admins read the advisory.
+
+00:01:15.874 --> 00:01:17.749
+The full hunting checklist is
+
+00:01:17.549 --> 00:01:19.425
+in the article on The Dispatch.
+

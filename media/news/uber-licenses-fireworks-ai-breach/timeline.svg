@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Timeline of the Fireworks AI incidents and the Uber driver notices, 6 October to 16 November 2026</title>
+  <rect width="1600" height="980" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">Six weeks from stolen keys to stolen licences</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">What Fireworks AI, Uber and Notion disclosed, and when (2026). Red marks a point where the known damage grew.</text>
+  <line x1="160" y1="190" x2="160" y2="910" stroke="#a9aecf" stroke-width="3"/>
+
+  <circle cx="160" cy="210" r="13" fill="#ff6b6b"/>
+  <text x="200" y="205" fill="#ede6d3" font-size="28" font-weight="700">6 Oct</text>
+  <text x="340" y="205" fill="#ede6d3" font-size="26">Fireworks spots stolen internal credentials in use</text>
+  <text x="340" y="240" fill="#a9aecf" font-size="22">Secrets stored in customers' evaluation jobs, such as API keys and tokens, are read</text>
+
+  <circle cx="160" cy="315" r="13" fill="#ff6b6b"/>
+  <text x="200" y="310" fill="#ede6d3" font-size="28" font-weight="700">7 Oct</text>
+  <text x="340" y="310" fill="#ede6d3" font-size="26">Uber data reached with a vendor's valid credentials</text>
+  <text x="340" y="345" fill="#a9aecf" font-size="22">Driver's licence images and text pulled from a cloud storage area; no alert fires</text>
+
+  <circle cx="160" cy="420" r="11" fill="#a9aecf"/>
+  <text x="200" y="415" fill="#ede6d3" font-size="28" font-weight="700">9 Oct</text>
+  <text x="340" y="415" fill="#ede6d3" font-size="26">Fireworks tells Uber and posts its first bulletin</text>
+  <text x="340" y="450" fill="#a9aecf" font-size="22">"No evidence" then of access to customer models, datasets or personal information</text>
+
+  <circle cx="160" cy="525" r="13" fill="#ff6b6b"/>
+  <text x="200" y="520" fill="#ede6d3" font-size="28" font-weight="700">23–24 Oct</text>
+  <text x="380" y="520" fill="#ede6d3" font-size="26">Second intrusion through a cloud host for R&amp;D machines</text>
+  <text x="380" y="555" fill="#a9aecf" font-size="22">Attacker runs a workload on Fireworks development machines; caught the same day</text>
+
+  <circle cx="160" cy="630" r="13" fill="#ff6b6b"/>
+  <text x="200" y="625" fill="#ede6d3" font-size="28" font-weight="700">9 Nov</text>
+  <text x="340" y="625" fill="#ede6d3" font-size="26">Bulletin update widens the damage</text>
+  <text x="340" y="660" fill="#a9aecf" font-size="22">Billing details for accounts; datasets and incomplete model weights for some customers</text>
+
+  <circle cx="160" cy="735" r="11" fill="#a9aecf"/>
+  <text x="200" y="730" fill="#ede6d3" font-size="28" font-weight="700">10 Nov</text>
+  <text x="340" y="730" fill="#ede6d3" font-size="26">Notion confirms AI chat transcripts were in the data</text>
+  <text x="340" y="765" fill="#a9aecf" font-size="22">Under 1% of workspaces; Insights feature switched off</text>
+
+  <circle cx="160" cy="840" r="13" fill="#ff6b6b"/>
+  <text x="200" y="835" fill="#ede6d3" font-size="28" font-weight="700">13–16 Nov</text>
+  <text x="380" y="835" fill="#ede6d3" font-size="26">Uber's state breach notices go public</text>
+  <text x="380" y="870" fill="#a9aecf" font-size="22">Thousands of US drivers per filing so far; no national total from Uber</text>
+
+  <text x="80" y="945" fill="#a9aecf" font-size="20">Sources: Fireworks AI security bulletins (9 Oct, updated 9 Nov), Uber state filings as reported by ITPro and TechTimes, The Hacker News.</text>
+</svg>

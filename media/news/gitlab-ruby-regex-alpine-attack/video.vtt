@@ -1,0 +1,143 @@
+WEBVTT
+
+00:00:00.250 --> 00:00:02.685
+Alpine Linux upgraded GitLab twice
+
+00:00:02.485 --> 00:00:04.771
+after a critical fix shipped,
+
+00:00:04.571 --> 00:00:06.783
+and stayed exposed for two weeks.
+
+00:00:07.483 --> 00:00:09.185
+The GitLab bug scores a
+
+00:00:08.985 --> 00:00:10.536
+maximum ten out of ten.
+
+00:00:10.576 --> 00:00:12.596
+On Thursday, CISA listed it
+
+00:00:12.396 --> 00:00:13.396
+as exploited.
+
+00:00:13.946 --> 00:00:15.722
+GitLab CI files can use
+
+00:00:15.522 --> 00:00:18.457
+regex patterns, which Ruby's built-in
+
+00:00:18.257 --> 00:00:19.618
+engine compiles.
+
+00:00:19.658 --> 00:00:21.602
+A crafted pattern triggers an
+
+00:00:21.402 --> 00:00:23.279
+overflow and runs commands on
+
+00:00:23.079 --> 00:00:23.882
+the server.
+
+00:00:24.432 --> 00:00:26.398
+GitLab patched only the Ruby
+
+00:00:26.198 --> 00:00:27.870
+inside its own packages.
+
+00:00:27.910 --> 00:00:29.981
+Custom builds kept the broken
+
+00:00:29.781 --> 00:00:31.627
+engine until Ruby's own fix
+
+00:00:31.427 --> 00:00:33.124
+on October twenty-third.
+
+00:00:33.674 --> 00:00:35.308
+On October thirteenth,
+
+00:00:35.108 --> 00:00:37.197
+Alpine installed a build briefly
+
+00:00:36.997 --> 00:00:38.045
+listed as fixed.
+
+00:00:38.085 --> 00:00:40.240
+Attacks began on the twentieth,
+
+00:00:40.040 --> 00:00:41.724
+and a second upgrade kept
+
+00:00:41.524 --> 00:00:43.275
+stock Ruby until a rebuild
+
+00:00:43.075 --> 00:00:44.489
+on the twenty-seventh.
+
+00:00:45.039 --> 00:00:47.393
+The attacks crashed GitLab's workers
+
+00:00:47.193 --> 00:00:48.921
+eight times in two days,
+
+00:00:48.721 --> 00:00:51.004
+and four got partway before failing.
+
+00:00:51.554 --> 00:00:53.601
+Alpine says the attack failed,
+
+00:00:53.401 --> 00:00:54.986
+but it cannot prove it,
+
+00:00:54.786 --> 00:00:56.436
+because a clean hit would
+
+00:00:56.236 --> 00:00:57.228
+leave no crash.
+
+00:00:57.778 --> 00:00:59.624
+Check your GitLab version,
+
+00:00:59.424 --> 00:01:01.599
+because nineteen point three point
+
+00:01:01.399 --> 00:01:02.521
+four is not fixed.
+
+00:01:02.561 --> 00:01:04.356
+Custom builds also need a
+
+00:01:04.156 --> 00:01:06.604
+fixed Ruby and freshly pulled images.
+
+00:01:07.154 --> 00:01:08.904
+If you cannot patch yet,
+
+00:01:08.704 --> 00:01:11.159
+block anonymous access and untrusted
+
+00:01:10.959 --> 00:01:12.710
+writes to public projects.
+
+00:01:12.750 --> 00:01:14.490
+Then look for traces and
+
+00:01:14.290 --> 00:01:15.491
+rotate secrets.
+
+00:01:16.041 --> 00:01:17.895
+Fixes increasingly live in a
+
+00:01:17.695 --> 00:01:19.749
+dependency, not in the product
+
+00:01:19.549 --> 00:01:21.073
+whose version you check.
+
+00:01:21.113 --> 00:01:22.520
+Read the full story on
+
+00:01:22.320 --> 00:01:23.258
+The Dispatch.
+

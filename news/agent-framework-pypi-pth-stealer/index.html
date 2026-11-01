@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Microsoft&#39;s agent-framework shipped a credential stealer that runs even if you never import it | The Dispatch</title>
+<meta name="description" content="Two hijacked releases of Microsoft&#39;s Python agent library sat on PyPI for under an hour and planted a startup hook that grabs Azure, CI and AI keys. Here is how the trick works, how to check your machines without setting it off, and what to rotate.">
+<link rel="canonical" href="https://badeifer.github.io/news/agent-framework-pypi-pth-stealer/">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2026-11-18">
+<meta property="og:site_name" content="Bade&#39;s Mod Shop">
+<meta property="og:title" content="Microsoft&#39;s agent-framework shipped a credential stealer that runs even if you never import it">
+<meta property="og:description" content="Two hijacked releases of Microsoft&#39;s Python agent library sat on PyPI for under an hour and planted a startup hook that grabs Azure, CI and AI keys. Here is how the trick works, how to check your machines without setting it off, and what to rotate.">
+<meta property="og:url" content="https://badeifer.github.io/news/agent-framework-pypi-pth-stealer/">
+<meta property="og:image" content="https://badeifer.github.io/media/og/news-agent-framework-pypi-pth-stealer.jpg">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Microsoft&#39;s agent-framework shipped a credential stealer that runs even if you never import it: Two hijacked releases of Microsoft&#39;s Python agent library sat on PyPI for under an hour and planted a startup hook that grabs Azure, CI and AI keys. Here is how the trick works, how to check your machines without setting it off, and what to rotate.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Microsoft&#39;s agent-framework shipped a credential stealer that runs even if you never import it">
+<meta name="twitter:description" content="Two hijacked releases of Microsoft&#39;s Python agent library sat on PyPI for under an hour and planted a startup hook that grabs Azure, CI and AI keys. Here is how the trick works, how to check your machines without setting it off, and what to rotate.">
+<meta name="twitter:image" content="https://badeifer.github.io/media/og/news-agent-framework-pypi-pth-stealer.jpg">
+<meta name="theme-color" content="#141833">
+<link rel="icon" href="../../assets/avatar.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../../media/avatar-512.png">
+<link rel="preload" href="../../assets/fonts/atkinson-hyperlegible-next.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../../assets/fonts/chakra-petch-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../../assets/site.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Microsoft's agent-framework shipped a credential stealer that runs even if you never import it","description":"Two hijacked releases of Microsoft's Python agent library sat on PyPI for under an hour and planted a startup hook that grabs Azure, CI and AI keys. Here is how the trick works, how to check your machines without setting it off, and what to rotate.","datePublished":"2026-11-18","dateModified":"2026-11-18","url":"https://badeifer.github.io/news/agent-framework-pypi-pth-stealer/","image":"https://badeifer.github.io/media/og/news-agent-framework-pypi-pth-stealer.jpg","author":{"@type":"Organization","name":"Bade's Mod Shop","url":"https://badeifer.github.io/"},"publisher":{"@type":"Organization","name":"Bade's Mod Shop","logo":{"@type":"ImageObject","url":"https://badeifer.github.io/media/avatar-512.png"}},"keywords":"supply chain, PyPI, Python, Microsoft, agent-framework, Azure, GitHub Actions, Azure DevOps, OIDC, credential theft, .pth","video":{"@type":"VideoObject","name":"Microsoft's agent-framework shipped a credential stealer that runs even if you never import it","description":"Two hijacked releases of Microsoft's Python agent library sat on PyPI for under an hour and planted a startup hook that grabs Azure, CI and AI keys. Here is how the trick works, how to check your machines without setting it off, and what to rotate.","uploadDate":"2026-11-18","contentUrl":"https://badeifer.github.io/media/news/agent-framework-pypi-pth-stealer/video.mp4","thumbnailUrl":["https://badeifer.github.io/media/news/agent-framework-pypi-pth-stealer/video-poster.jpg"],"duration":"PT1M18S"}}</script>
+<script>try{var t=new URLSearchParams(location.search).get('theme')||localStorage.getItem('theme');document.documentElement.dataset.theme=t==='day'?'day':'night'}catch(e){}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <a class="mark" href="../../"><img src="../../assets/avatar.svg" alt="" width="40" height="40">Bade&#39;s Mod Shop</a>
+  <nav class="nav" aria-label="Sections"><a href="../../news/">News</a><a href="../../#edge">Widgets</a><a href="../../#streamdeck">Stream Deck keys</a><a href="../../#skills">Skills</a><a href="../../#plugins">Plugins</a><a href="../../#claude">Claude mods</a><a href="../../#obsidian">Obsidian</a><a href="../../#toolbox">Toolbox</a><a href="../../#support">Support</a></nav>
+  <div class="theme" role="group" aria-label="Colour mode">
+    <button type="button" data-mode="night" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>Night</button>
+    <button type="button" data-mode="day" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path stroke="currentColor" stroke-width="2.2" stroke-linecap="square" d="M12 1.5v3M12 19.5v3M1.5 12h3M19.5 12h3M4.6 4.6l2.1 2.1M17.3 17.3l2.1 2.1M4.6 19.4l2.1-2.1M17.3 6.7l2.1-2.1"/></svg>Day</button>
+  </div>
+</header>
+<main id="main" class="article t-cyber">
+  <p class="crumb"><a href="../../news/">The Dispatch</a></p>
+  <header class="article-head">
+    <h1>Microsoft&#39;s agent-framework shipped a credential stealer that runs even if you never import it</h1>
+    <p class="article-dek">Two hijacked releases of Microsoft&#39;s Python agent library sat on PyPI for under an hour and planted a startup hook that grabs Azure, CI and AI keys. Here is how the trick works, how to check your machines without setting it off, and what to rotate.</p>
+    <p class="story-meta"><span class="topic t-cyber">Cyber</span><time datetime="2026-11-18">November 18, 2026</time><span>5 min read</span></p>
+  </header>
+  <figure class="article-video">
+    <video controls playsinline preload="metadata" poster="../../media/news/agent-framework-pypi-pth-stealer/video-poster.jpg" aria-label="Microsoft&#39;s agent-framework shipped a credential stealer that runs even if you never import it: video summary">
+      <source src="../../media/news/agent-framework-pypi-pth-stealer/video.mp4" type="video/mp4">
+      <track kind="captions" src="../../media/news/agent-framework-pypi-pth-stealer/video.vtt" srclang="en" label="English">
+    </video>
+    <figcaption><b>1:18 video</b> The short version, captioned. The full story is below.</figcaption>
+  </figure>
+  <div class="prose"><p>Someone published two poisoned versions of Microsoft&#39;s <code>agent-framework</code> package to PyPI on Tuesday evening, and both carried a credential stealer that fires every time Python starts. If any laptop, container or build agent of yours ran <code>pip install agent-framework</code> without a pinned version between 20:35 and roughly 21:30 UTC on 17 November, treat every secret it could reach as stolen.</p>
+<p>The package is Microsoft&#39;s official Python library for building AI agents, the successor to Semantic Kernel and AutoGen, and it pulls around 190,000 downloads a month. The bad releases are 1.26.1 and 1.26.2. PyPI has removed both, and 1.26.0 from 12 November is once again the latest version.</p>
+<h2>A hook that does not wait for an import</h2>
+<p>The clever part is where the code lives. Each malicious wheel dropped a small <code>.pth</code> file into <code>site-packages</code>. Python reads those files when the interpreter boots, mostly to extend the import path, but any line that starts with <code>import</code> is executed. That turns them into a startup hook for every Python process in the environment.</p>
+<p>So the stealer did not need you to use the library. Running a test suite, a linter, a notebook or an unrelated script in the same virtual environment was enough. Version 1.26.1 used <code>agent_framework_meta.pth</code>. When 1.26.2 arrived 33 minutes later, the payload had moved to <code>af_runtime_diag.pth</code> and a new top-level module, and the original <code>agent_framework_meta/__init__.py</code> was restored byte for byte to the clean 1.26.0 copy. Endor Labs points out that anyone diffing only the library&#39;s own folder would have seen nothing.</p>
+<p>Both wheels also pinned the genuine <code>agent-framework-core</code> 1.26.0, so applications installed and ran normally. Nothing broke, which is the point.</p>
+<figure class="fig"><img src="../../media/news/agent-framework-pypi-pth-stealer/timeline.svg" alt="Timeline of 17 November 2026 in UTC. 1.26.0, the last clean release, was published on 12 November. Malicious 1.26.1 was uploaded at 20:35 as a wheel only, adding agent_framework_meta.pth. Scanners flagged it within about three minutes. Malicious 1.26.2 was uploaded at 21:08, moving the payload to af_runtime_diag.pth and adding GitHub Actions OIDC token theft. Both were gone from PyPI by about 21:30. A box at the bottom says to check without starting Python, by searching lockfiles for 1.26.1 or 1.26.2 and site-packages for agent_framework_meta.pth, agent_framework_meta/_telemetry.py, af_runtime_diag.pth and af_runtime_diag.py." loading="lazy" decoding="async"><figcaption>The hijack window on PyPI. Chart: The Dispatch, from PyPI, Wiz and Endor Labs.</figcaption></figure>
+<h2>What it went looking for</h2>
+<p>The target list reads like a CI pipeline&#39;s pockets. According to Wiz and Endor Labs, the collector grabbed environment variables with names containing words like TOKEN, SECRET, KEY, AZURE, AWS, GITHUB and OPENAI, and it read the environments of other running processes through <code>/proc</code>. It swept dozens of credential files: Azure CLI tokens, <code>.npmrc</code>, <code>pip.conf</code>, <code>.netrc</code>, <code>.git-credentials</code>, Docker and Hugging Face configs, Azure DevOps agent credentials, plus <code>.env</code> and JSON files under <code>/app</code> and <code>/workspace</code>.</p>
+<p>On cloud machines it asked the Azure metadata service for managed identity tokens for 12 resources. Inside Azure DevOps it requested a pipeline OIDC token, and 1.26.2 added the same for GitHub Actions jobs that have <code>id-token: write</code>, the setting that lets a workflow log in to Azure without a stored secret. Everything went out in one compressed POST to a throwaway webhook.site address.</p>
+<p>Wiz noticed something the attacker probably did not intend: the free webhook tier caps out at 100 requests, and the operator&#39;s own tooling reported progress to the same URL. By Wiz&#39;s count on Wednesday, the endpoint logged 50 requests, of which 17 carried real victim data from three distinct sources. Most of the rest were scanners and sandboxes. That is a small blast radius, but it only counts what reached that one URL, and stolen cloud tokens can stay valid for up to a day.</p>
+<h2>How it got published is still open</h2>
+<p>Nobody has explained how an outsider pushed to Microsoft&#39;s package. Neither release has a matching tag in the GitHub repository, neither shipped a source archive the way real releases do, and PyPI shows no provenance attestation for them. Wiz says the attacker appears to have obtained a certificate and private key used by Microsoft&#39;s internal release signing service, and that a first upload attempt from AWS was blocked by IP filtering before a second one from Microsoft-owned address space went through. SecurityWeek reports that SafeDep spotted a PyPI maintainer account created the same day with rights to the package; its role is unconfirmed.</p>
+<p>Microsoft has said little in public. A maintainer told users on GitHub that the releases were pulled and an investigation was under way, and the repository itself was offline on Wednesday. This is also the second Microsoft PyPI package hijacked this year, after three trojanised <code>durabletask</code> releases in May. No researcher has linked the two.</p>
+<h2>Check and clean up</h2>
+<blockquote><p>The first rule here is odd but important: do not start the suspect Python to find out.</p></blockquote>
+<p>Every interpreter launch in an infected environment runs the stealer again. Work from the outside.</p>
+<ol><li><strong>Search your records.</strong> Grep lockfiles, <code>requirements*.txt</code>, CI logs, dependency caches and container images built after 20:35 UTC on 17 November for <code>agent-framework</code> 1.26.1 or 1.26.2.</li><li><strong>Look for the files.</strong> In each environment&#39;s <code>site-packages</code>, check for <code>agent_framework_meta.pth</code>, <code>agent_framework_meta/_telemetry.py</code>, <code>af_runtime_diag.pth</code> and <code>af_runtime_diag.py</code>. Use <code>find</code> or your file manager, not Python.</li><li><strong>Rebuild, do not repair.</strong> Throw away affected virtual environments and images and rebuild from a pin: <code>agent-framework==1.26.0</code>, ideally with <code>--require-hashes</code>. Block 1.26.1 and 1.26.2 in any package proxy.</li><li><strong>Rotate everything reachable.</strong> Azure service principals and CLI sessions, Azure DevOps PATs and service connections, GitHub tokens and federated credentials, npm, PyPI, NuGet, Docker and Hugging Face tokens, and model provider keys such as OpenAI&#39;s.</li><li><strong>Read the logs.</strong> Search proxy and DNS logs for webhook.site and the user agents <code>af-runtime-diagnostics/1</code> and <code>runtime-diagnostics/1</code>, and review Azure sign-in logs for managed identities used from affected hosts since the install.</li></ol>
+<p>If your builds use a lockfile with hashes and nobody refreshed it on Tuesday night, you were almost certainly fine.</p>
+<h2>The bigger picture</h2>
+<p>Agent libraries are a rich target because of what sits next to them. A machine that builds AI agents tends to hold cloud identities, model API keys and the CI tokens that deploy everything else. The <code>.pth</code> trick is not new, but it fits this moment: a package you never import can still own your interpreter. Pinning with hashes and waiting a day before taking fresh releases would have stopped this one cold, and that is cheaper than any rotation weekend.</p></div>
+  <section class="sources" aria-labelledby="src-h"><h2 id="src-h">Sources</h2><ol><li><a href="https://pypi.org/project/agent-framework/#history" rel="noopener">PyPI, agent-framework release history</a></li><li><a href="https://www.wiz.io/blog/malicious-version-of-microsofts-agent-framework-published-to-pypi" rel="noopener">Wiz Research, Microsoft agent-framework compromised: credential stealer targets Azure and CI pipelines</a></li><li><a href="https://www.endorlabs.com/learn/agent-framework-compromised-software-supply-chain-attack" rel="noopener">Endor Labs, agent-framework compromised: Python startup hooks steal Azure and CI credentials</a></li><li><a href="https://www.securityweek.com/microsoft-agent-framework-releases-poisoned-with-credential-stealer/" rel="noopener">SecurityWeek, Microsoft Agent Framework releases poisoned with credential stealer</a></li><li><a href="https://www.csoonline.com/article/4250156/attackers-hijack-microsofts-agent-framework-package-to-steal-azure-and-ci-credentials.html" rel="noopener">CSO Online, Attackers hijack Microsoft&#39;s agent-framework package to steal Azure and CI credentials</a></li></ol></section>
+  <p class="made">Written with AI for Bade&#39;s Mod Shop. Facts are checked against the sources above on the day of publishing; if one is wrong, <a href="https://github.com/Badeifer/badeifer.github.io/issues/new">open an issue</a>.</p>
+  <p class="tags"><span>supply chain</span><span>PyPI</span><span>Python</span><span>Microsoft</span><span>agent-framework</span><span>Azure</span><span>GitHub Actions</span><span>Azure DevOps</span><span>OIDC</span><span>credential theft</span><span>.pth</span></p>
+  <nav class="story-nav" aria-label="More stories"><a class="next-story" href="../../news/gpt-6-2-astra-sol-critical-cyber/"><span>Newer</span>GPT-6.2 Astra costs 20% less and omits known problems from its reports twice as often</a><a class="next-story" href="../../news/us-remote-chip-access-license-rule/"><span>Older</span>The US now licenses cloud GPUs abroad, and renting compute to China gets 90 days to stop</a></nav>
+</main>
+<footer class="foot">
+  <p>Bade&#39;s Mod Shop, 2026. Updates and issues on <a href="https://github.com/Badeifer">GitHub</a>. Stuck? <a href="../../#help">Get help</a>.</p>
+  <p class="fine">Privacy: no cookies, no analytics, nothing loaded from other sites. Your Night or Day choice is saved in your own browser. The site is hosted on GitHub Pages, which keeps standard server logs under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.</p>
+  <p class="fine">Corsair, iCUE, Xeneon, Elgato, Stream Deck, NVIDIA, Obsidian and Claude are trademarks of their owners. These are independent projects, not made by or endorsed by them.</p>
+</footer>
+<script src="../../assets/site.js" defer></script>
+</body>
+</html>

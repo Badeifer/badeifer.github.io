@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Claude Code releases from 2.1.311 to 2.1.319 and the security fixes in each</title>
+  <rect width="1600" height="760" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">The stable channel stopped at 2.1.311. The fixes kept coming.</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Claude Code releases with security-relevant fixes, publish dates on npm (UTC), 2026.</text>
+
+  <line x1="120" y1="330" x2="1500" y2="330" stroke="#a9aecf" stroke-width="3"/>
+
+  <circle cx="180" cy="330" r="18" fill="#a9aecf"/>
+  <text x="180" y="262" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="middle">26 Oct</text>
+  <text x="180" y="295" fill="#a9aecf" font-size="22" text-anchor="middle">2.1.311</text>
+  <text x="180" y="395" fill="#ede6d3" font-size="22" text-anchor="middle">Stable channel</text>
+  <text x="180" y="425" fill="#ede6d3" font-size="22" text-anchor="middle">is still here</text>
+
+  <circle cx="470" cy="330" r="14" fill="#74d6bb"/>
+  <text x="470" y="262" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="middle">30 Oct</text>
+  <text x="470" y="295" fill="#a9aecf" font-size="22" text-anchor="middle">2.1.314</text>
+  <text x="470" y="395" fill="#ede6d3" font-size="22" text-anchor="middle">Sandbox now applies to</text>
+  <text x="470" y="425" fill="#ede6d3" font-size="22" text-anchor="middle">worktrees on --resume</text>
+
+  <circle cx="760" cy="330" r="14" fill="#74d6bb"/>
+  <text x="760" y="262" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="middle">31 Oct</text>
+  <text x="760" y="295" fill="#a9aecf" font-size="22" text-anchor="middle">2.1.316</text>
+  <text x="760" y="395" fill="#ede6d3" font-size="22" text-anchor="middle">--restricted no longer</text>
+  <text x="760" y="425" fill="#ede6d3" font-size="22" text-anchor="middle">uploads outside files</text>
+
+  <circle cx="1070" cy="330" r="14" fill="#74d6bb"/>
+  <text x="1070" y="262" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="middle">2 Nov</text>
+  <text x="1070" y="295" fill="#a9aecf" font-size="22" text-anchor="middle">2.1.317</text>
+  <text x="1070" y="395" fill="#ede6d3" font-size="22" text-anchor="middle">Asks before a tool call</text>
+  <text x="1070" y="425" fill="#ede6d3" font-size="22" text-anchor="middle">sends your account email</text>
+
+  <circle cx="1400" cy="330" r="22" fill="#74d6bb"/>
+  <text x="1400" y="262" fill="#74d6bb" font-size="28" font-weight="700" text-anchor="middle">6 Nov</text>
+  <text x="1400" y="295" fill="#74d6bb" font-size="22" text-anchor="middle">2.1.319 (latest)</text>
+  <text x="1400" y="395" fill="#ede6d3" font-size="22" text-anchor="middle">Six permission and</text>
+  <text x="1400" y="425" fill="#ede6d3" font-size="22" text-anchor="middle">sandbox fixes</text>
+
+  <rect x="80" y="500" width="1440" height="150" rx="10" fill="none" stroke="#a9aecf" stroke-width="2"/>
+  <text x="110" y="545" fill="#ede6d3" font-size="24" font-weight="700">In 2.1.319</text>
+  <text x="110" y="583" fill="#a9aecf" font-size="21">Bash env-prefix trick hid part of a command from checks · sandbox escape when creating a worktree · sed skipped the check</text>
+  <text x="110" y="615" fill="#a9aecf" font-size="21">in accept-edits and auto mode · deny and ask rules missed quoted words · /rewind followed directory symlinks · repo hooks on runners</text>
+
+  <text x="80" y="710" fill="#a9aecf" font-size="18">Source: Claude Code CHANGELOG.md, npm registry publish times for @anthropic-ai/claude-code, stable and latest pointers checked 8 Nov 2026.</text>
+</svg>

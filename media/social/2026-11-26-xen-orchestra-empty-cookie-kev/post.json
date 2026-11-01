@@ -1,0 +1,6 @@
+{
+ "title": "An empty cookie unlocks Xen Orchestra, and CISA's deadline is Saturday",
+ "short": "A cookie holding only an empty pair of braces can log attackers into Xen Orchestra. CISA listed it as exploited, with most fixes due Saturday.\nFull story: https://badeifer.github.io/news/xen-orchestra-empty-cookie-kev/\n#cybersecurity #CISA #XenOrchestra #patching",
+ "x": "An empty cookie, j:{}, logs attackers into Xen Orchestra. CISA lists it as exploited. Fixes are in 6.9.2 and 6.10.1, but the host escape from the same attacks had no fix at last report. https://badeifer.github.io/news/xen-orchestra-empty-cookie-kev/",
+ "linkedin": "CISA added ten exploited flaws to its catalog on 25 November, with most due for federal agencies by Saturday. The worst lets an attacker log into Xen Orchestra with a cookie holding an empty pair of braces. Fixes are in 6.9.2 and 6.10.1.\n\nThe same attacker used a second flaw to reach the hosts underneath, and that one had no fix at Vates's last update. Strip VM import rights, keep the console off the internet and hunt for traces. https://badeifer.github.io/news/xen-orchestra-empty-cookie-kev/"
+}

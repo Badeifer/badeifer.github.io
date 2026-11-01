@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>The three verification loops Anthropic used to port its Messages API to Rust</title>
+  <rect width="1600" height="980" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">Three loops, one source of truth: the running Python service</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">How Anthropic organised agents and engineers, per its 25 November 2026 engineering post.</text>
+
+  <g font-size="24">
+    <rect x="80" y="170" width="1440" height="200" rx="12" fill="none" stroke="#8fa2ff" stroke-width="3"/>
+    <text x="110" y="220" fill="#8fa2ff" font-size="30" font-weight="700">Inner loop  ·  seconds to minutes  ·  agent in a sandbox</text>
+    <text x="110" y="262" fill="#ede6d3">Guess a cause, write a request or model reply that triggers it, run it through Python and Rust.</text>
+    <text x="110" y="298" fill="#ede6d3">Input check runs in under a second. Edit Rust until both match, add a test, open a pull request.</text>
+    <text x="110" y="338" fill="#a9aecf">Who decides: the local verifier, then a human reviewer on the pull request.</text>
+
+    <rect x="80" y="400" width="1440" height="230" rx="12" fill="none" stroke="#a9aecf" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="110" y="450" fill="#ede6d3" font-size="30" font-weight="700">Outer loop  ·  hours to days  ·  shadowed production traffic</text>
+    <text x="110" y="492" fill="#ede6d3">Each request runs on both versions; the model is called once and its reply replayed to Rust.</text>
+    <text x="110" y="528" fill="#ede6d3">Differences are logged as fingerprints (step, prompt piece, first differing byte, lengths), never as text.</text>
+    <text x="110" y="564" fill="#ede6d3">A script groups them every 10 to 30 minutes and hands each new kind to a worker agent.</text>
+    <text x="110" y="604" fill="#a9aecf">Fingerprint still there after a fix ships? Back to the inner loop.</text>
+
+    <rect x="80" y="660" width="1440" height="230" rx="12" fill="none" stroke="#a9aecf" stroke-opacity="0.6" stroke-width="2"/>
+    <text x="110" y="710" fill="#ede6d3" font-size="30" font-weight="700">Memory loop  ·  ongoing  ·  engineers' corrections become rules</text>
+    <text x="110" y="752" fill="#ede6d3">Rejected fixes turn into notes later agents read. Repeated review comments become CLAUDE.md rules.</text>
+    <text x="110" y="788" fill="#ede6d3">Some lessons become hard checks: drift tests, lint bans, and a merge check that blocks Python</text>
+    <text x="110" y="824" fill="#ede6d3">changes without a matching Rust change or an exemption.</text>
+    <text x="110" y="864" fill="#a9aecf">Who decides: humans, on what counts as correct.</text>
+  </g>
+  <text x="80" y="940" fill="#a9aecf" font-size="22">Source: Anthropic, "Migrating our Messages API to Rust". Diagram: The Dispatch.</text>
+</svg>

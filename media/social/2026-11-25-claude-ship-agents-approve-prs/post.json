@@ -1,0 +1,6 @@
+{
+ "title": "Claude Ship can approve your pull requests. Check the policy first.",
+ "short": "Anthropic's new GitHub agents can approve a pull request with no second person looking. Its own docs list the settings that allow it.\nFull story: https://badeifer.github.io/news/claude-ship-agents-approve-prs/\n#ClaudeShip #CodeReview #GitHub #AIAgents",
+ "x": "Claude Ship's agents can approve pull requests. Anthropic's own docs list how code can then merge with no second person looking, and the floor rule that stops it. https://badeifer.github.io/news/claude-ship-agents-approve-prs/",
+ "linkedin": "Anthropic launched Claude Ship on 23 November: three GitHub agents that review pull requests, push fixes and, through a policy file, can approve changes. Its documentation openly lists the ways a change can merge with no second person looking.\n\nThe safe path: start with Code Review on one repository, run Approvals in observe mode, then require one human who is not the author before enforcing. Watch the bill too, since observe mode is billed. https://badeifer.github.io/news/claude-ship-agents-approve-prs/"
+}

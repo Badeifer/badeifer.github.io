@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <!-- Profile picture: a keep tower under the moon. Everything that matters sits inside the circle GitHub crops to. -->
+  <rect width="32" height="32" fill="#141833"/>
+  <path fill="#1c2148" d="M9 4h14v1h3v2h2v3h1v4h1v4h-1v4h-1v3h-2v2h-3v1H9v-1H6v-2H4v-3H3v-4H2v-4h1v-4h1V7h2V5h3z"/>
+  <g fill="#c9d0ee"><rect x="6" y="9" width="1" height="1"/><rect x="9" y="6" width="1" height="1"/><rect x="26" y="15" width="1" height="1"/><rect x="5" y="16" width="1" height="1"/><rect x="11" y="9" width="1" height="1"/></g>
+  <path fill="#d6dcf2" d="M22 5h3v1h1v3h-1v1h-3v-1h-1V6h1z"/>
+  <path fill="#9aa3c9" d="M23 7h1v1h-1zM24 6h1v1h-1z"/>
+  <path fill="#232a58" d="M0 26h7v-1h5v1h8v-1h5v1h7v6H0z"/>
+  <rect x="16" y="4" width="1" height="8" fill="#e6dcc0"/>
+  <path fill="#e0485a" d="M17 4h3v1h-1v1h-2z"/>
+  <path fill="#e8b64c" d="M10 11h3v1h2v-1h3v1h2v-1h3v3h-1v13H11V14h-1z"/>
+  <path fill="#b8862f" d="M19 14h3v13h-3zM20 11h3v3h-3z"/>
+  <path fill="#ffc24a" d="M15 17h3v4h-3zM16 16h1v1h-1z"/>
+  <path fill="#1a1530" d="M15 23h3v4h-3zM16 22h1v1h-1z"/>
+  <path fill="#8a6137" d="M13 15h1v1h-1zM20 18h1v1h-1zM12 21h1v1h-1zM21 24h1v1h-1z"/>
+</svg>

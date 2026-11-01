@@ -1,0 +1,143 @@
+WEBVTT
+
+00:00:00.250 --> 00:00:02.268
+Attackers' AI agents found an
+
+00:00:02.068 --> 00:00:04.238
+unknown bug in medical imaging
+
+00:00:04.038 --> 00:00:05.981
+software, then used it to
+
+00:00:05.781 --> 00:00:06.512
+get root.
+
+00:00:07.212 --> 00:00:09.179
+Amazon says the agents took
+
+00:00:08.979 --> 00:00:10.869
+about eleven minutes to go
+
+00:00:10.669 --> 00:00:12.329
+from mapping the API to
+
+00:00:12.129 --> 00:00:13.404
+writing any file.
+
+00:00:13.954 --> 00:00:16.449
+The target helps researchers annotate
+
+00:00:16.249 --> 00:00:17.283
+medical scans.
+
+00:00:17.323 --> 00:00:19.327
+Its uploads never check where
+
+00:00:19.127 --> 00:00:20.915
+files land, and login is
+
+00:00:20.715 --> 00:00:21.781
+off by default.
+
+00:00:22.331 --> 00:00:24.485
+Amazon found it by accident:
+
+00:00:24.285 --> 00:00:26.891
+the attackers' own agent framework,
+
+00:00:26.691 --> 00:00:28.996
+Cairn, was online with no login.
+
+00:00:29.036 --> 00:00:30.955
+Every agent step was readable.
+
+00:00:31.505 --> 00:00:33.109
+The agents hid a reverse
+
+00:00:32.909 --> 00:00:34.379
+shell in a file Python
+
+00:00:34.179 --> 00:00:35.315
+loads at startup.
+
+00:00:35.355 --> 00:00:37.493
+A training call launched Python,
+
+00:00:37.293 --> 00:00:38.494
+which ran it as root.
+
+00:00:39.044 --> 00:00:41.004
+The failures are the scarier part.
+
+00:00:41.044 --> 00:00:42.893
+One run spent sixteen hours
+
+00:00:42.693 --> 00:00:44.184
+on a single database.
+
+00:00:44.224 --> 00:00:46.278
+Another tried over thirty thousand
+
+00:00:46.078 --> 00:00:47.513
+password combinations.
+
+00:00:47.553 --> 00:00:48.741
+Nothing landed.
+
+00:00:49.291 --> 00:00:51.047
+Humans get bored and sleep.
+
+00:00:51.087 --> 00:00:52.813
+These agents keep going,
+
+00:00:52.613 --> 00:00:53.941
+and they only need to
+
+00:00:53.741 --> 00:00:54.405
+win once.
+
+00:00:54.955 --> 00:00:56.945
+The advisory came out November
+
+00:00:56.745 --> 00:00:58.666
+eighteenth, but the fix was
+
+00:00:58.466 --> 00:01:01.007
+not installable until the twenty-second.
+
+00:01:01.047 --> 00:01:02.979
+Federal agencies must act by
+
+00:01:02.779 --> 00:01:04.350
+November twenty-sixth.
+
+00:01:04.900 --> 00:01:06.417
+If your lab runs it,
+
+00:01:06.217 --> 00:01:08.100
+upgrade to zero point eight
+
+00:01:07.900 --> 00:01:08.685
+point six.
+
+00:01:08.725 --> 00:01:09.851
+Turn on login,
+
+00:01:09.651 --> 00:01:11.373
+take it off the internet,
+
+00:01:11.173 --> 00:01:12.829
+and hunt for strange files.
+
+00:01:13.379 --> 00:01:14.866
+The bug was not clever.
+
+00:01:14.906 --> 00:01:17.101
+Cheap, tireless agents are built
+
+00:01:16.901 --> 00:01:18.763
+to work through exactly these
+
+00:01:18.563 --> 00:01:19.693
+forgotten flaws.
+

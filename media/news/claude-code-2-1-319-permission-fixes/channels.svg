@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="720" viewBox="0 0 1600 720" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Which Claude Code version each install method gives you on 8 November 2026</title>
+  <rect width="1600" height="720" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">How you installed it decides whether you have the fixes</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Version served by each install path on 8 November 2026. Fixed means 2.1.319.</text>
+
+  <text x="80" y="180" fill="#a9aecf" font-size="22" font-weight="700">INSTALL PATH</text>
+  <text x="800" y="180" fill="#a9aecf" font-size="22" font-weight="700">CHANNEL</text>
+  <text x="1130" y="180" fill="#a9aecf" font-size="22" font-weight="700">VERSION TODAY</text>
+  <line x1="80" y1="198" x2="1520" y2="198" stroke="#a9aecf" stroke-width="2"/>
+
+  <text x="80" y="250" fill="#ede6d3" font-size="26">Native installer, default settings</text>
+  <text x="800" y="250" fill="#ede6d3" font-size="26">latest, auto-updates</text>
+  <text x="1130" y="250" fill="#74d6bb" font-size="26" font-weight="700">2.1.319 fixed</text>
+
+  <text x="80" y="320" fill="#ede6d3" font-size="26">Homebrew cask claude-code@latest</text>
+  <text x="800" y="320" fill="#ede6d3" font-size="26">latest, manual upgrade</text>
+  <text x="1130" y="320" fill="#74d6bb" font-size="26" font-weight="700">2.1.319 after upgrade</text>
+
+  <text x="80" y="390" fill="#ede6d3" font-size="26">npm, @latest tag</text>
+  <text x="800" y="390" fill="#ede6d3" font-size="26">latest</text>
+  <text x="1130" y="390" fill="#74d6bb" font-size="26" font-weight="700">2.1.319 fixed</text>
+
+  <line x1="80" y1="430" x2="1520" y2="430" stroke="#a9aecf" stroke-width="1" stroke-dasharray="6 8"/>
+
+  <text x="80" y="480" fill="#ede6d3" font-size="26">Native with autoUpdatesChannel "stable"</text>
+  <text x="800" y="480" fill="#ede6d3" font-size="26">stable</text>
+  <text x="1130" y="480" fill="#ede6d3" font-size="26" font-weight="700">2.1.311 not fixed</text>
+
+  <text x="80" y="550" fill="#ede6d3" font-size="26">Homebrew cask claude-code</text>
+  <text x="800" y="550" fill="#ede6d3" font-size="26">stable, manual upgrade</text>
+  <text x="1130" y="550" fill="#ede6d3" font-size="26" font-weight="700">2.1.311 not fixed</text>
+
+  <text x="80" y="620" fill="#ede6d3" font-size="26">apt, dnf, apk (stable repo, the documented default)</text>
+  <text x="800" y="620" fill="#ede6d3" font-size="26">stable, system upgrade</text>
+  <text x="1130" y="620" fill="#ede6d3" font-size="26" font-weight="700">2.1.311 not fixed</text>
+
+  <text x="80" y="690" fill="#a9aecf" font-size="18">Source: Claude Code setup docs, Homebrew cask API, Anthropic's stable and latest release pointers, npm registry. WinGet and pinned installs: check claude --version.</text>
+</svg>

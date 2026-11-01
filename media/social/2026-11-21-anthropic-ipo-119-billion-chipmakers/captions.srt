@@ -1,0 +1,180 @@
+1
+00:00:00,250 --> 00:00:03,097
+Twenty-six billion dollars of Anthropic's
+
+2
+00:00:02,897 --> 00:00:04,610
+record IPO came from the
+
+3
+00:00:04,410 --> 00:00:06,426
+companies that sell it chips
+
+4
+00:00:06,226 --> 00:00:07,031
+and cloud.
+
+5
+00:00:07,731 --> 00:00:09,464
+The record listing closed at
+
+6
+00:00:09,264 --> 00:00:11,252
+about one hundred nineteen point
+
+7
+00:00:11,052 --> 00:00:12,401
+five billion dollars.
+
+8
+00:00:12,441 --> 00:00:14,510
+The base deal alone beat
+
+9
+00:00:14,310 --> 00:00:16,847
+SpaceX as the largest IPO ever.
+
+10
+00:00:17,397 --> 00:00:19,504
+Ninety-one point six billion went
+
+11
+00:00:19,304 --> 00:00:20,253
+to Anthropic.
+
+12
+00:00:20,293 --> 00:00:22,424
+The seven co-founders sold about
+
+13
+00:00:22,224 --> 00:00:23,138
+two billion.
+
+14
+00:00:23,178 --> 00:00:25,739
+Seven suppliers paid twenty-six billion
+
+15
+00:00:25,539 --> 00:00:26,989
+for non-voting shares.
+
+16
+00:00:27,539 --> 00:00:29,355
+Seven chip, memory and cloud
+
+17
+00:00:29,155 --> 00:00:30,970
+companies bought those shares.
+
+18
+00:00:31,010 --> 00:00:33,336
+Amazon, which already owned nearly
+
+19
+00:00:33,136 --> 00:00:35,462
+fifteen percent, is notably absent.
+
+20
+00:00:36,012 --> 00:00:37,873
+Shares were marketed at seventy
+
+21
+00:00:37,673 --> 00:00:39,718
+to seventy-eight dollars and priced
+
+22
+00:00:39,518 --> 00:00:40,518
+at eighty-three.
+
+23
+00:00:40,558 --> 00:00:42,073
+Day one opened at one
+
+24
+00:00:41,873 --> 00:00:43,775
+eleven fifty and closed up
+
+25
+00:00:43,575 --> 00:00:45,012
+seventeen percent.
+
+26
+00:00:45,562 --> 00:00:47,392
+Only about seven point four
+
+27
+00:00:47,192 --> 00:00:49,447
+percent of shares trade freely,
+
+28
+00:00:49,247 --> 00:00:50,794
+one analyst estimates.
+
+29
+00:00:50,834 --> 00:00:52,345
+That thin float can swing
+
+30
+00:00:52,145 --> 00:00:53,656
+the price hard either way.
+
+31
+00:00:54,206 --> 00:00:56,364
+Anthropic expects to spend about
+
+32
+00:00:56,164 --> 00:00:58,253
+nine hundred billion dollars on
+
+33
+00:00:58,053 --> 00:00:59,861
+compute in the coming years.
+
+34
+00:00:59,901 --> 00:01:00,936
+Much of it goes to
+
+35
+00:01:00,736 --> 00:01:02,486
+the companies that just bought
+
+36
+00:01:02,286 --> 00:01:02,963
+its stock.
+
+37
+00:01:03,513 --> 00:01:05,298
+Claude's pricing is now tied
+
+38
+00:01:05,098 --> 00:01:06,608
+to quarterly earnings.
+
+39
+00:01:06,648 --> 00:01:08,953
+Watch the first earnings report,
+
+40
+00:01:08,753 --> 00:01:10,777
+pricing changes, and the day
+
+41
+00:01:10,577 --> 00:01:12,180
+the insider lockup ends.
+
+42
+00:01:12,730 --> 00:01:14,659
+Labs raise from chipmakers and
+
+43
+00:01:14,459 --> 00:01:16,521
+clouds, then spend it with them.
+
+44
+00:01:16,561 --> 00:01:18,064
+Now a public market sits
+
+45
+00:01:17,864 --> 00:01:19,367
+in the middle of that loop.
+

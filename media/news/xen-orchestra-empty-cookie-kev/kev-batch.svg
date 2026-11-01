@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>The ten flaws CISA added to its Known Exploited Vulnerabilities catalog on 25 November 2026</title>
+  <rect width="1600" height="1000" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">Ten exploited flaws, four products</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">CISA KEV additions, 25 November 2026. Red marks a federal deadline of Saturday 28 November.</text>
+
+  <g font-size="22" fill="#a9aecf" font-weight="700">
+    <text x="80" y="190">PRODUCT</text>
+    <text x="520" y="190">FLAWS AND RATING</text>
+    <text x="860" y="190">FIXED IN</text>
+    <text x="1250" y="190">FEDERAL DUE DATE</text>
+  </g>
+  <line x1="80" y1="210" x2="1520" y2="210" stroke="#a9aecf" stroke-opacity="0.5" stroke-width="2"/>
+
+  <g font-size="24">
+    <text x="80" y="270" fill="#ede6d3" font-weight="700">Vates Xen Orchestra</text>
+    <text x="80" y="302" fill="#a9aecf">virtualization console</text>
+    <text x="520" y="270" fill="#ede6d3">1 flaw, 9.8</text>
+    <text x="520" y="302" fill="#a9aecf">auth bypass</text>
+    <text x="860" y="270" fill="#ede6d3">6.9.2 or 6.10.1</text>
+    <text x="1250" y="270" fill="#ff6b6b" font-weight="700">28 Nov</text>
+    <line x1="80" y1="336" x2="1520" y2="336" stroke="#a9aecf" stroke-opacity="0.25" stroke-width="2"/>
+
+    <text x="80" y="396" fill="#ede6d3" font-weight="700">Juniper Session Smart</text>
+    <text x="80" y="428" fill="#a9aecf">SD-WAN Conductor, Router</text>
+    <text x="520" y="396" fill="#ede6d3">1 flaw, 9.8</text>
+    <text x="520" y="428" fill="#a9aecf">root command injection</text>
+    <text x="860" y="396" fill="#ede6d3">7.0.5, 7.1.7 or 7.2.3</text>
+    <text x="860" y="428" fill="#a9aecf">out since 28 Oct</text>
+    <text x="1250" y="396" fill="#ff6b6b" font-weight="700">28 Nov</text>
+    <line x1="80" y1="462" x2="1520" y2="462" stroke="#a9aecf" stroke-opacity="0.25" stroke-width="2"/>
+
+    <text x="80" y="522" fill="#ede6d3" font-weight="700">Mitel MiCollab</text>
+    <text x="80" y="554" fill="#a9aecf">unified communications</text>
+    <text x="520" y="522" fill="#ede6d3">5 flaws, 5.3 to 10.0</text>
+    <text x="520" y="554" fill="#a9aecf">all unauthenticated</text>
+    <text x="860" y="522" fill="#ede6d3">Patch for 10.3.0.18</text>
+    <text x="860" y="554" fill="#a9aecf">(KB000129195) or later</text>
+    <text x="1250" y="522" fill="#ff6b6b" font-weight="700">28 Nov: the 10.0, 9.0</text>
+    <text x="1250" y="554" fill="#a9aecf">9 Dec: one 5.9</text>
+    <line x1="80" y1="588" x2="1520" y2="588" stroke="#a9aecf" stroke-opacity="0.25" stroke-width="2"/>
+
+    <text x="80" y="648" fill="#ede6d3" font-weight="700">Danfoss AK-SM 800A</text>
+    <text x="80" y="680" fill="#a9aecf">refrigeration controller</text>
+    <text x="520" y="648" fill="#ede6d3">3 flaws</text>
+    <text x="520" y="680" fill="#a9aecf">from 2023 and 2025</text>
+    <text x="860" y="648" fill="#ede6d3">Firmware updates</text>
+    <text x="860" y="680" fill="#a9aecf">see Danfoss advisory</text>
+    <text x="1250" y="648" fill="#a9aecf">see CISA catalog</text>
+    <line x1="80" y1="714" x2="1520" y2="714" stroke="#a9aecf" stroke-opacity="0.25" stroke-width="2"/>
+  </g>
+
+  <g font-size="22" fill="#a9aecf">
+    <text x="80" y="790">Ratings are CVSS 3.1 scores out of 10 from vendor advisories and CVE records.</text>
+    <text x="80" y="826">Due dates bind US federal civilian agencies; everyone else should treat them as a hint.</text>
+    <text x="80" y="862">Xen Orchestra's related host-escape flaw, VSA-2026-063, is not on the list and had no fix at last report.</text>
+  </g>
+  <text x="80" y="940" fill="#a9aecf" font-size="20">Sources: CISA, Vates, Juniper CVE record, Mitel MISA-2026-0012.</text>
+</svg>

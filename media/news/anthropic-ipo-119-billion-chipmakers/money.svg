@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="860" viewBox="0 0 1600 860" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Where Anthropic's $119.5 billion came from</title>
+  <rect width="1600" height="860" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">Where the $119.5 billion came from</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">Gross proceeds at $83 a share, before fees. Source: Anthropic closing announcement, 20 November 2026.</text>
+
+  <!-- stacked bar: scale 1200px = 119.5B -->
+  <rect x="120" y="200" width="920" height="110" fill="#c59bff"/>
+  <rect x="1040" y="200" width="20" height="110" fill="#a9aecf"/>
+  <rect x="1060" y="200" width="261" height="110" fill="none" stroke="#c59bff" stroke-width="4"/>
+  <text x="140" y="268" fill="#0b0e26" font-size="30" font-weight="700">IPO, to Anthropic: $91.6B</text>
+  <text x="1190" y="268" fill="#ede6d3" font-size="30" font-weight="700" text-anchor="middle">$26.0B</text>
+  <line x1="1050" y1="320" x2="1050" y2="370" stroke="#a9aecf" stroke-width="2"/>
+  <text x="1040" y="400" fill="#a9aecf" font-size="22" text-anchor="end">Selling stockholders: about $2.0B</text>
+  <text x="1040" y="430" fill="#a9aecf" font-size="22" text-anchor="end">(the seven co-founders, ~3.4M shares each)</text>
+  <line x1="120" y1="180" x2="1060" y2="180" stroke="#a9aecf" stroke-width="2"/>
+  <text x="590" y="168" fill="#a9aecf" font-size="22" text-anchor="middle">Public offering: 1.127 billion Class A shares, $93.5B</text>
+  <line x1="1060" y1="180" x2="1321" y2="180" stroke="#c59bff" stroke-width="2"/>
+  <text x="1190" y="168" fill="#c59bff" font-size="22" text-anchor="middle">Private placement</text>
+
+  <!-- placement buyers -->
+  <rect x="80" y="500" width="1440" height="300" rx="18" fill="none" stroke="#c59bff" stroke-width="3"/>
+  <text x="120" y="556" fill="#c59bff" font-size="30" font-weight="700">The $26.0B private placement: 313 million non-voting Class N shares</text>
+  <text x="120" y="596" fill="#a9aecf" font-size="24">Bought by seven companies that sell Anthropic chips, memory, cloud or manufacturing:</text>
+  <g font-size="28" fill="#ede6d3">
+    <text x="120" y="660">AMD</text>
+    <text x="400" y="660">Broadcom</text>
+    <text x="680" y="660">Google</text>
+    <text x="960" y="660">Micron</text>
+    <text x="120" y="720">Microsoft</text>
+    <text x="400" y="720">Nvidia</text>
+    <text x="680" y="720">TSMC Partners</text>
+  </g>
+  <text x="120" y="776" fill="#a9aecf" font-size="22">Not registered with the SEC and not part of the public float.</text>
+</svg>

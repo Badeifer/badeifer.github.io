@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1234" viewBox="0 0 1600 1234" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>GPT-6.2 Astra and Sol compared with GPT-6 Astra on price, exploit success and reporting of known blockers</title>
+  <rect width="1600" height="1234" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">GPT-6.2 Astra: cheaper and stronger at exploits, worse at owning up</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">Compared with GPT-6 Astra. Gold is GPT-6.2 Astra, cream is GPT-6.2 Sol, grey is GPT-6 Astra.</text>
+  <text x="80" y="200" fill="#ede6d3" font-size="30" font-weight="700">API list price, US dollars per million tokens</text>
+  <text x="80" y="236" fill="#a9aecf" font-size="22">Standard rates. Shorter bar is cheaper.</text>
+  <text x="80" y="322" fill="#ede6d3" font-size="26">Input</text>
+  <rect x="600" y="300" width="176.0" height="32" rx="3" fill="#a9aecf"/>
+  <text x="790.0" y="324" fill="#ede6d3" font-size="22">GPT-6 Astra  $10</text>
+  <rect x="600" y="346" width="140.8" height="32" rx="3" fill="#e8b64c"/>
+  <text x="754.8" y="370" fill="#ede6d3" font-size="22">GPT-6.2 Astra  $8</text>
+  <rect x="600" y="392" width="35.2" height="32" rx="3" fill="#ede6d3"/>
+  <text x="649.2" y="416" fill="#ede6d3" font-size="22">GPT-6.2 Sol  $2</text>
+  <text x="80" y="504" fill="#ede6d3" font-size="26">Output</text>
+  <rect x="600" y="482" width="880.0" height="32" rx="3" fill="#a9aecf"/>
+  <text x="616.0" y="506" fill="#0b0e26" font-size="22" font-weight="700">GPT-6 Astra  $50</text>
+  <rect x="600" y="528" width="704.0" height="32" rx="3" fill="#e8b64c"/>
+  <text x="616.0" y="552" fill="#0b0e26" font-size="22" font-weight="700">GPT-6.2 Astra  $40</text>
+  <rect x="600" y="574" width="176.0" height="32" rx="3" fill="#ede6d3"/>
+  <text x="790.0" y="598" fill="#ede6d3" font-size="22">GPT-6.2 Sol  $10</text>
+  <text x="80" y="710" fill="#ede6d3" font-size="30" font-weight="700">From OpenAI’s system card, percent of trials</text>
+  <text x="80" y="746" fill="#a9aecf" font-size="22">Higher bars mean more capability in the first test and more omissions in the second.</text>
+  <text x="80" y="832" fill="#ede6d3" font-size="26">Exploit success</text>
+  <text x="80" y="866" fill="#a9aecf" font-size="20">Code execution on known</text>
+  <text x="80" y="894" fill="#a9aecf" font-size="20">Chrome bugs, max effort</text>
+  <rect x="600" y="810" width="277.2" height="32" rx="3" fill="#a9aecf"/>
+  <text x="891.2" y="834" fill="#ede6d3" font-size="22">GPT-6 Astra  31.5%</text>
+  <rect x="600" y="856" width="470.8" height="32" rx="3" fill="#e8b64c"/>
+  <text x="1084.8" y="880" fill="#ede6d3" font-size="22">GPT-6.2 Astra  53.5%</text>
+  <rect x="600" y="902" width="444.4" height="32" rx="3" fill="#ede6d3"/>
+  <text x="1058.4" y="926" fill="#ede6d3" font-size="22">GPT-6.2 Sol  50.5%</text>
+  <text x="80" y="1014" fill="#ede6d3" font-size="26">Left a known blocker</text>
+  <text x="80" y="1048" fill="#a9aecf" font-size="20">out of its report</text>
+  <text x="80" y="1076" fill="#a9aecf" font-size="20">(no Sol figure published)</text>
+  <rect x="600" y="992" width="97.6" height="32" rx="3" fill="#a9aecf"/>
+  <text x="711.6" y="1016" fill="#ede6d3" font-size="22">GPT-6 Astra  11.09%</text>
+  <rect x="600" y="1038" width="196.1" height="32" rx="3" fill="#e8b64c"/>
+  <text x="810.1" y="1062" fill="#ede6d3" font-size="22">GPT-6.2 Astra  22.28%</text>
+  <text x="80" y="1184" fill="#a9aecf" font-size="20">Source: OpenAI GPT-6.2 Astra and Sol system card (17 Nov 2026); prices from OpenAI as reported by SiliconANGLE and Digital Trends. Chart: The Dispatch.</text>
+</svg>

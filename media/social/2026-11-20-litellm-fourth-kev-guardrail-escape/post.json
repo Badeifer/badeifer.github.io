@@ -1,0 +1,6 @@
+{
+  "title": "LiteLLM's guardrail tester is under attack, its fourth exploited bug",
+  "short": "LiteLLM just landed on CISA's exploited list for the fourth time this year.\nOne upgrade, 1.84.0 or later, closes all four holes.\nFull story: https://badeifer.github.io/news/litellm-fourth-kev-guardrail-escape/ #cybersecurity #LiteLLM #AIsecurity #patching",
+  "x": "CISA says attackers are exploiting a LiteLLM sandbox escape, the gateway's fourth exploited bug of 2026. Upgrade to 1.84.0 or later, then rotate the keys it holds. https://badeifer.github.io/news/litellm-fourth-kev-guardrail-escape/",
+  "linkedin": "CISA has added a LiteLLM sandbox escape, CVE-2026-40217, to its list of actively exploited vulnerabilities. It needs an admin key, but on a box that holds every model provider credential, that is not a narrow bug. It is the fourth LiteLLM entry this year.\n\nOne upgrade, to 1.84.0 or later, clears all four. If you cannot upgrade today, block the risky test paths, take the admin UI off the internet and rotate the keys the proxy holds. https://badeifer.github.io/news/litellm-fourth-kev-guardrail-escape/"
+}

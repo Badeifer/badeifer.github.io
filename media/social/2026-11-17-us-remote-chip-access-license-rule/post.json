@@ -1,0 +1,6 @@
+{
+ "title": "GPU rentals to China now need a US licence",
+ "short": "Chinese AI labs could rent the Nvidia chips they were banned from buying. A US rule ends that, with about 90 days for existing operators.\nFull story: https://badeifer.github.io/news/us-remote-chip-access-license-rule/\n#AIchips #ExportControls #Nvidia #CloudComputing",
+ "x": "A new US rule means any data center, anywhere, needs a licence to rent more than about 750 H100s of compute to companies headquartered in China. Existing operators get about 90 days. https://badeifer.github.io/news/us-remote-chip-access-license-rule/",
+ "linkedin": "A new Commerce rule requires a US licence for any data center, anywhere, that rents large amounts of advanced US AI compute to companies headquartered in China, Macau or other embargoed countries. The line is roughly 750 H100s, linked sites count together, and middlemen are covered.\n\nAdvanced chip shipments to Brazil, Indonesia, Malaysia, Singapore and Thailand now need a licence too. If you rent out GPU capacity abroad, start with who really owns each account. https://badeifer.github.io/news/us-remote-chip-access-license-rule/"
+}

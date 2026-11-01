@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Share of production inputs where the Rust API matched the Python API, April to August 2026</title>
+  <rect width="1600" height="900" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">Passing tests was not the same as matching production</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">Rust Messages API vs the Python original, 2026. Points are the figures Anthropic states; lines between them are simplified.</text>
+
+  <g stroke="#a9aecf" stroke-opacity="0.25" stroke-width="2">
+    <line x1="200" y1="200" x2="1500" y2="200"/>
+    <line x1="200" y1="350" x2="1500" y2="350"/>
+    <line x1="200" y1="500" x2="1500" y2="500"/>
+    <line x1="200" y1="650" x2="1500" y2="650"/>
+  </g>
+  <line x1="200" y1="800" x2="1500" y2="800" stroke="#a9aecf" stroke-opacity="0.6" stroke-width="2"/>
+  <g fill="#a9aecf" font-size="22" text-anchor="end">
+    <text x="180" y="207">100%</text>
+    <text x="180" y="357">75%</text>
+    <text x="180" y="507">50%</text>
+    <text x="180" y="657">25%</text>
+    <text x="180" y="807">0%</text>
+  </g>
+  <g fill="#a9aecf" font-size="22" text-anchor="middle">
+    <text x="300" y="845">Late April</text>
+    <text x="500" y="845">Early May</text>
+    <text x="1400" y="845">August</text>
+  </g>
+
+  <!-- tests passed reference: 98% -->
+  <line x1="300" y1="212" x2="1500" y2="212" stroke="#ede6d3" stroke-width="2" stroke-dasharray="10 10" stroke-opacity="0.7"/>
+  <text x="560" y="250" fill="#ede6d3" font-size="24">Test suite in April: about 98% passing</text>
+
+  <!-- match rate: 24% -> 6.5% -> 99.6% ; y = 800 - pct*6 -->
+  <polyline points="300,656 500,761 1400,202" fill="none" stroke="#8fa2ff" stroke-width="5"/>
+  <circle cx="300" cy="656" r="12" fill="#8fa2ff"/>
+  <circle cx="500" cy="761" r="12" fill="#8fa2ff"/>
+  <circle cx="1400" cy="202" r="12" fill="#8fa2ff"/>
+  <text x="300" y="620" fill="#8fa2ff" font-size="28" font-weight="700" text-anchor="middle">24%</text>
+  <text x="530" y="770" fill="#8fa2ff" font-size="28" font-weight="700">6.5%</text>
+  <text x="1420" y="262" fill="#8fa2ff" font-size="28" font-weight="700">99.6%</text>
+  <text x="640" y="740" fill="#a9aecf" font-size="22">Comparison widened from internal traffic</text>
+  <text x="640" y="768" fill="#a9aecf" font-size="22">to a broader sample, exposing more gaps</text>
+  <text x="880" y="420" fill="#a9aecf" font-size="22" text-anchor="end">Agents fix one mismatch kind at a time;</text>
+  <text x="880" y="448" fill="#a9aecf" font-size="22" text-anchor="end">public traffic moves to Rust in September</text>
+  <text x="300" y="300" fill="#a9aecf" font-size="22">Blue: share of production inputs where Rust matched Python</text>
+</svg>

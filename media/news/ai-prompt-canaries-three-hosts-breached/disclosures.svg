@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Exposure windows disclosed by AI hosts, 2026</title>
+  <rect width="1600" height="760" fill="#0b0e26"/>
+  <text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">The exposure windows, as the hosts tell it</text>
+  <text x="80" y="122" fill="#a9aecf" font-size="24">Periods each company says requests may have been exposed. Dots: date made public. Sources: company notices, Dragos.</text>
+
+  <g font-size="22" fill="#a9aecf">
+    <!-- axis: May 1 = x 380, Dec 1 = x 1500; 1120px / 214 days = 5.234 px/day -->
+    <line x1="380" y1="620" x2="1500" y2="620" stroke="#a9aecf" stroke-width="2"/>
+    <text x="380" y="660" text-anchor="middle">May</text>
+    <text x="542" y="660" text-anchor="middle">Jun</text>
+    <text x="699" y="660" text-anchor="middle">Jul</text>
+    <text x="861" y="660" text-anchor="middle">Aug</text>
+    <text x="1024" y="660" text-anchor="middle">Sep</text>
+    <text x="1181" y="660" text-anchor="middle">Oct</text>
+    <text x="1343" y="660" text-anchor="middle">Nov</text>
+    <text x="1500" y="660" text-anchor="middle">Dec</text>
+    <g stroke="#a9aecf" stroke-opacity="0.25" stroke-width="1">
+      <line x1="542" y1="180" x2="542" y2="620"/><line x1="699" y1="180" x2="699" y2="620"/>
+      <line x1="861" y1="180" x2="861" y2="620"/><line x1="1024" y1="180" x2="1024" y2="620"/>
+      <line x1="1181" y1="180" x2="1181" y2="620"/><line x1="1343" y1="180" x2="1343" y2="620"/>
+    </g>
+  </g>
+
+  <g font-size="24">
+    <text x="80" y="228" fill="#ede6d3" font-weight="700">Dragos seeding</text>
+    <text x="80" y="256" fill="#a9aecf" font-size="20">about 2M bait prompts</text>
+    <rect x="699" y="210" width="702" height="28" rx="6" fill="#a9aecf" fill-opacity="0.45"/>
+    <circle cx="1437" cy="224" r="11" fill="#ff6b6b"/>
+    <text x="1455" y="232" fill="#ede6d3" font-size="20">19 Nov</text>
+
+    <text x="80" y="328" fill="#ede6d3" font-weight="700">Together AI</text>
+    <text x="80" y="356" fill="#a9aecf" font-size="20">stored prompt samples</text>
+    <rect x="667" y="310" width="105" height="28" rx="6" fill="#ff6b6b"/>
+    <text x="790" y="332" fill="#a9aecf" font-size="20">samples mainly from 24 Jun to 14 Jul</text>
+    <circle cx="1447" cy="324" r="11" fill="#ff6b6b"/>
+    <text x="1465" y="332" fill="#ede6d3" font-size="20">21 Nov</text>
+
+    <text x="80" y="428" fill="#ede6d3" font-weight="700">Phala</text>
+    <text x="80" y="456" fill="#a9aecf" font-size="20">one DeepSeek model</text>
+    <rect x="1291" y="410" width="94" height="28" rx="6" fill="#ff6b6b"/>
+    <text x="1270" y="432" fill="#a9aecf" font-size="20" text-anchor="end">21 Oct to 8 Nov</text>
+    <circle cx="1390" cy="424" r="11" fill="#ff6b6b" stroke="#0b0e26" stroke-width="3"/>
+    <text x="1408" y="432" fill="#ede6d3" font-size="20">10 Nov</text>
+
+    <text x="80" y="528" fill="#ede6d3" font-weight="700">Novita</text>
+    <text x="80" y="556" fill="#a9aecf" font-size="20">MiniMax requests forwarded</text>
+    <rect x="525" y="510" width="854" height="28" rx="6" fill="#ff6b6b" fill-opacity="0.7"/>
+    <text x="545" y="532" fill="#0b0e26" font-size="20" font-weight="700">28 May to 11 Nov</text>
+    <circle cx="1452" cy="524" r="11" fill="#ff6b6b"/>
+    <text x="1470" y="532" fill="#ede6d3" font-size="20">22 Nov</text>
+  </g>
+
+  <text x="80" y="720" fill="#a9aecf" font-size="22">OpenRouter off-boarded three unnamed providers and pulled 125 endpoints from zero data retention on 22 Nov.</text>
+</svg>
