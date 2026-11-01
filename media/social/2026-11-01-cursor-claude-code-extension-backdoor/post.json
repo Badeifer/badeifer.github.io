@@ -1,0 +1,6 @@
+{
+ "title": "A fake Claude Code in Cursor's store planted SSH backdoors",
+ "short": "A fake Claude Code build sat in Cursor's extension store for eleven hours and planted SSH keys. Uninstalling it does not remove them.\nFull story: https://badeifer.github.io/news/cursor-claude-code-extension-backdoor/\n#cybersecurity #Cursor #ClaudeCode #supplychain",
+ "x": "A tampered Claude Code build in Cursor's marketplace planted an attacker's SSH key on up to 5,000 machines on 29 October. Uninstalling does not remove it. The five-minute check: https://badeifer.github.io/news/cursor-claude-code-extension-backdoor/",
+ "linkedin": "For eleven hours on 29 October, Cursor's extension marketplace served a tampered Claude Code build that Anthropic did not make. It planted an attacker's SSH key and startup hooks, and both stay behind after the extension is removed. Cursor puts exposure at up to 5,000 users.\n\nIf you ran Cursor with Claude Code installed that day, search your authorized_keys file for svc-telemetry and look for the startup hooks Cursor lists. Full check: https://badeifer.github.io/news/cursor-claude-code-extension-backdoor/"
+}

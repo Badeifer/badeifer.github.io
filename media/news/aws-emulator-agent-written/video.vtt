@@ -1,0 +1,137 @@
+WEBVTT
+
+00:00:00.250 --> 00:00:02.331
+AWS shipped a free local
+
+00:00:02.131 --> 00:00:04.032
+AWS for your laptop,
+
+00:00:03.832 --> 00:00:05.555
+and no human wrote or
+
+00:00:05.355 --> 00:00:06.898
+reviewed its code.
+
+00:00:07.598 --> 00:00:09.202
+That is the project lead.
+
+00:00:09.242 --> 00:00:11.841
+AWS Emulator came out November
+
+00:00:11.641 --> 00:00:14.332
+eleventh, and AWS says agents
+
+00:00:14.132 --> 00:00:15.440
+wrote all of it.
+
+00:00:15.990 --> 00:00:17.803
+It answers AWS calls on
+
+00:00:17.603 --> 00:00:18.992
+a local port,
+
+00:00:18.792 --> 00:00:20.691
+so your tools and agents
+
+00:00:20.491 --> 00:00:22.389
+can test with no account
+
+00:00:22.189 --> 00:00:23.154
+and no bill.
+
+00:00:23.704 --> 00:00:25.638
+Launch coverage says over two
+
+00:00:25.438 --> 00:00:26.679
+hundred services.
+
+00:00:26.719 --> 00:00:28.735
+Calls it cannot handle return
+
+00:00:28.535 --> 00:00:29.970
+error five oh one,
+
+00:00:29.770 --> 00:00:31.132
+so gaps fail loudly.
+
+00:00:31.682 --> 00:00:33.900
+Install it, unset your real
+
+00:00:33.700 --> 00:00:35.434
+AWS keys so tests never
+
+00:00:35.234 --> 00:00:36.968
+touch your account,
+
+00:00:36.768 --> 00:00:38.582
+then add the agent skill.
+
+00:00:39.132 --> 00:00:40.126
+The catch:
+
+00:00:39.926 --> 00:00:41.929
+it does not check permissions
+
+00:00:41.729 --> 00:00:43.084
+the way AWS does,
+
+00:00:42.884 --> 00:00:44.454
+so a call your account
+
+00:00:44.254 --> 00:00:45.753
+would refuse can pass.
+
+00:00:45.793 --> 00:00:46.939
+Do not use it for
+
+00:00:46.739 --> 00:00:48.031
+security testing.
+
+00:00:48.581 --> 00:00:50.304
+Three agent teams built it.
+
+00:00:50.344 --> 00:00:52.696
+Test writers check real AWS,
+
+00:00:52.496 --> 00:00:55.095
+issue finders file mismatches,
+
+00:00:54.895 --> 00:00:57.164
+and fixers take one issue each.
+
+00:00:57.714 --> 00:00:59.761
+Every change must compile,
+
+00:00:59.561 --> 00:01:01.092
+pass agent review,
+
+00:01:00.892 --> 00:01:03.161
+survive security agents and keep
+
+00:01:02.961 --> 00:01:04.196
+fidelity scores.
+
+00:01:04.236 --> 00:01:05.991
+Fail once, and it goes back.
+
+00:01:06.541 --> 00:01:07.820
+If this holds up,
+
+00:01:07.620 --> 00:01:09.778
+senior engineers read fewer diffs
+
+00:01:09.578 --> 00:01:10.925
+and own the specs,
+
+00:01:10.725 --> 00:01:12.612
+the tests and the gate instead.
+
+00:01:13.162 --> 00:01:14.998
+Setup steps and every limit
+
+00:01:14.798 --> 00:01:16.208
+are in the full story
+
+00:01:16.008 --> 00:01:17.133
+on The Dispatch.
+

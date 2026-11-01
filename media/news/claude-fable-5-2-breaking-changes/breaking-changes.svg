@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="0 0 1600 940" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+<title>The four Claude Fable 5.2 API changes that can break code written for Fable 5.1</title>
+<rect width="1600" height="940" fill="#0b0e26"/>
+<text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Four ways a model-ID swap turns into a 400 error</text>
+<text x="80" y="116" fill="#a9aecf" font-size="24">Fable 5.1 to 5.2, per Anthropic's docs. Claude Code, claude.ai and the Agent SDK handle these for you.</text>
+<rect x="80" y="180" width="1440" height="140" rx="10" fill="none" stroke="#a9aecf" stroke-width="2"/>
+<text x="120" y="242" fill="#e8b64c" font-size="44" font-weight="700">1</text>
+<text x="190" y="230" fill="#ede6d3" font-size="28" font-weight="700">Prefix check on every account</text>
+<text x="190" y="268" fill="#a9aecf" font-size="22">Edit, reorder or drop an earlier message, the system prompt or tools,</text>
+<text x="190" y="298" fill="#a9aecf" font-size="22">and returning thinking blocks fail with a 400. Fable 5.1 only enforced it on newer accounts.</text>
+<rect x="80" y="350" width="1440" height="140" rx="10" fill="none" stroke="#a9aecf" stroke-width="2"/>
+<text x="120" y="412" fill="#e8b64c" font-size="44" font-weight="700">2</text>
+<text x="190" y="400" fill="#ede6d3" font-size="28" font-weight="700">Thinking blocks are one-way</text>
+<text x="190" y="438" fill="#a9aecf" font-size="22">Fable 5.2 reads older models' reasoning, but only Mythos 5.2 reads Fable 5.2's.</text>
+<text x="190" y="468" fill="#a9aecf" font-size="22">Routers that fall back to Opus 5.5 or Fable 5.1 lose that reasoning silently.</text>
+<rect x="80" y="520" width="1440" height="140" rx="10" fill="none" stroke="#a9aecf" stroke-width="2"/>
+<text x="120" y="582" fill="#e8b64c" font-size="44" font-weight="700">3</text>
+<text x="190" y="570" fill="#ede6d3" font-size="28" font-weight="700">computer_20251124 is gone</text>
+<text x="190" y="608" fill="#a9aecf" font-size="22">The old computer use tool returns a 400 everywhere except Amazon Bedrock.</text>
+<text x="190" y="638" fill="#a9aecf" font-size="22">Declare the computer_toolset_20260801 toolset instead.</text>
+<rect x="80" y="690" width="1440" height="140" rx="10" fill="none" stroke="#a9aecf" stroke-width="2"/>
+<text x="120" y="752" fill="#e8b64c" font-size="44" font-weight="700">4</text>
+<text x="190" y="740" fill="#ede6d3" font-size="28" font-weight="700">Advisor must match the executor</text>
+<text x="190" y="778" fill="#a9aecf" font-size="22">A Fable 5.2 executor accepts only a Fable 5.2 or Mythos 5.2 advisor.</text>
+<text x="190" y="808" fill="#a9aecf" font-size="22">Change the advisor model in new conversations, or the prefix check fails.</text>
+<text x="80" y="910" fill="#a9aecf" font-size="20">Also new: adaptive thinking is always on, and forced tool_choice returns a 400. Neither changes anything if you come from Fable 5.1.</text>
+</svg>

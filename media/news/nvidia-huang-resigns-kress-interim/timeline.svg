@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+<title>Timeline of Nvidia's CEO change, 8 to 17 November 2026</title>
+<rect width="1600" height="980" fill="#0b0e26"/>
+<text x="80" y="80" fill="#ede6d3" font-size="40" font-weight="700">Four days from a vote of confidence to a new chief</text>
+<text x="80" y="122" fill="#a9aecf" font-size="24">Nvidia's CEO change as told by its own statements and filings, 8 to 17 November 2026 (US dates).</text>
+<line x1="330" y1="210" x2="330" y2="810" stroke="#a9aecf" stroke-width="3"/>
+<circle cx="330" cy="210" r="13" fill="#0b0e26" stroke="#ede6d3" stroke-width="4"/>
+<text x="290" y="219" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="end">Sun 8 Nov</text>
+<text x="380" y="219" fill="#ede6d3" font-size="28" font-weight="700">Board opens an independent investigation</text>
+<text x="380" y="258" fill="#a9aecf" font-size="24">into reports Huang was targeted by foreign intelligence. Says it has confidence in him.</text>
+<circle cx="330" cy="360" r="13" fill="#0b0e26" stroke="#ede6d3" stroke-width="4"/>
+<text x="290" y="369" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="end">Tue 10 Nov</text>
+<text x="380" y="369" fill="#ede6d3" font-size="28" font-weight="700">Independent directors issue a second statement</text>
+<text x="380" y="408" fill="#a9aecf" font-size="24">Outside counsel brought in to run the review, per NBC News.</text>
+<circle cx="330" cy="510" r="13" fill="#0b0e26" stroke="#ede6d3" stroke-width="4"/>
+<text x="290" y="519" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="end">Wed 11 Nov</text>
+<text x="380" y="519" fill="#ede6d3" font-size="28" font-weight="700">A second relationship is reported; board meets</text>
+<text x="380" y="558" fill="#a9aecf" font-size="24">The Form 8-K later dates the resignation to this day.</text>
+<circle cx="330" cy="660" r="18" fill="#c59bff"/>
+<text x="290" y="669" fill="#c59bff" font-size="28" font-weight="700" text-anchor="end">Thu 12 Nov</text>
+<text x="380" y="669" fill="#c59bff" font-size="28" font-weight="700">Huang resigns, effective immediately</text>
+<text x="380" y="708" fill="#a9aecf" font-size="24">CFO Colette Kress becomes interim CEO; Harvey Jones becomes the first board chair.</text>
+<text x="380" y="747" fill="#a9aecf" font-size="24">Shares fall as much as 13% at the open.</text>
+<circle cx="330" cy="810" r="13" fill="#0b0e26" stroke="#a9aecf" stroke-width="4" stroke-dasharray="6 5"/>
+<text x="290" y="819" fill="#ede6d3" font-size="28" font-weight="700" text-anchor="end">Tue 17 Nov</text>
+<text x="380" y="819" fill="#ede6d3" font-size="28" font-weight="700">Q3 fiscal 2027 results, 1:20 pm PT</text>
+<text x="380" y="858" fill="#a9aecf" font-size="24">Earnings call at 2 pm PT. The first public test for the interim team.</text>
+<text x="80" y="930" fill="#a9aecf" font-size="22">Sources: Nvidia board statement (8 Nov), Nvidia press release and Form 8-K (12 Nov), NBC News, CNBC. Dashed: scheduled.</text>
+</svg>

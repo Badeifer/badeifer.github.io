@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>How ChatGPT and Codex usage is counted today and from December 2026</title>
+  <rect width="1600" height="900" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Two meters become one</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Plus, Pro and Business plans. Sources: OpenAI help center, as reported by The New Stack and ARY News.</text>
+
+  <text x="80" y="190" fill="#ede6d3" font-size="30" font-weight="700">Today</text>
+  <rect x="80" y="220" width="620" height="250" rx="12" fill="#151a3d" stroke="#a9aecf" stroke-width="2"/>
+  <text x="110" y="266" fill="#ede6d3" font-size="26" font-weight="700">Chat allowance</text>
+  <text x="110" y="306" fill="#a9aecf" font-size="22">Regular ChatGPT conversations</text>
+  <text x="110" y="340" fill="#a9aecf" font-size="22">Counted on their own</text>
+  <text x="110" y="420" fill="#a9aecf" font-size="20">A long coding day does not touch it</text>
+
+  <rect x="740" y="220" width="780" height="250" rx="12" fill="#151a3d" stroke="#74d6bb" stroke-width="3"/>
+  <text x="770" y="266" fill="#ede6d3" font-size="26" font-weight="700">Agentic allowance</text>
+  <g font-size="22" fill="#ede6d3">
+    <rect x="770" y="296" width="160" height="50" rx="8" fill="none" stroke="#74d6bb" stroke-width="2"/><text x="850" y="329" text-anchor="middle">Codex</text>
+    <rect x="950" y="296" width="200" height="50" rx="8" fill="none" stroke="#74d6bb" stroke-width="2"/><text x="1050" y="329" text-anchor="middle">ChatGPT Work</text>
+    <rect x="1170" y="296" width="320" height="50" rx="8" fill="none" stroke="#74d6bb" stroke-width="2"/><text x="1330" y="329" text-anchor="middle">ChatGPT for Excel</text>
+    <rect x="770" y="362" width="260" height="50" rx="8" fill="none" stroke="#74d6bb" stroke-width="2"/><text x="900" y="395" text-anchor="middle">Workspace Agents</text>
+  </g>
+  <text x="770" y="448" fill="#a9aecf" font-size="20">Plus also has a 5-hour window and a weekly cap here</text>
+
+  <line x1="800" y1="500" x2="800" y2="560" stroke="#a9aecf" stroke-width="3"/>
+  <polygon points="786,556 814,556 800,580" fill="#a9aecf"/>
+  <text x="830" y="548" fill="#a9aecf" font-size="22">Starting in December (no exact date yet)</text>
+
+  <text x="80" y="630" fill="#ede6d3" font-size="30" font-weight="700">From December</text>
+  <rect x="80" y="660" width="1060" height="190" rx="12" fill="#74d6bb"/>
+  <text x="110" y="708" fill="#0b0e26" font-size="28" font-weight="700">One shared allowance, counted in tokens</text>
+  <text x="110" y="748" fill="#0b0e26" font-size="22">ChatGPT conversations and Codex tasks draw from the same pool.</text>
+  <text x="110" y="782" fill="#0b0e26" font-size="22">Bigger models and harder tasks use more of it.</text>
+  <text x="110" y="816" fill="#0b0e26" font-size="22">Remaining usage and reset times shown in Settings, then Usage.</text>
+
+  <rect x="1180" y="660" width="340" height="190" rx="12" fill="none" stroke="#ede6d3" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="1210" y="708" fill="#ede6d3" font-size="26" font-weight="700">Outside the pool</text>
+  <text x="1210" y="748" fill="#a9aecf" font-size="22">Instant chat, the fast</text>
+  <text x="1210" y="780" fill="#a9aecf" font-size="22">everyday mode, does not</text>
+  <text x="1210" y="812" fill="#a9aecf" font-size="22">draw from usage</text>
+</svg>

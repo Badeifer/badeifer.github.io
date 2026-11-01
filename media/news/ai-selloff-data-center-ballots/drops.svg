@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>One-day losses on Thursday 5 November 2026, from the Dow to chip stocks</title>
+  <rect width="1600" height="900" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Thursday, 5 November: the closer to AI hardware, the deeper the fall</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">One-day drop at the close, in percent. Longer bar means a bigger loss.</text>
+  <g font-size="26">
+    <text x="80" y="214" fill="#ede6d3">Dow Jones</text>
+    <rect x="460" y="186" width="272" height="40" rx="5" fill="#a9aecf" opacity="0.6"/>
+    <text x="752" y="216" fill="#ede6d3" font-weight="700">-3.4%</text>
+
+    <text x="80" y="294" fill="#ede6d3">S&amp;P 500</text>
+    <rect x="460" y="266" width="352" height="40" rx="5" fill="#a9aecf" opacity="0.6"/>
+    <text x="832" y="296" fill="#ede6d3" font-weight="700">-4.4%</text>
+
+    <text x="80" y="374" fill="#ede6d3">Nasdaq Composite</text>
+    <rect x="460" y="346" width="440" height="40" rx="5" fill="#a9aecf" opacity="0.6"/>
+    <text x="920" y="376" fill="#ede6d3" font-weight="700">-5.5%</text>
+
+    <text x="80" y="454" fill="#ede6d3">Nasdaq 100</text>
+    <rect x="460" y="426" width="504" height="40" rx="5" fill="#a9aecf" opacity="0.6"/>
+    <text x="984" y="456" fill="#ede6d3" font-weight="700">-6.3%</text>
+    <text x="1070" y="456" fill="#a9aecf" font-size="22">about $2.3 trillion gone</text>
+
+    <text x="80" y="534" fill="#ede6d3">Tech sector fund (XLK)</text>
+    <rect x="460" y="506" width="640" height="40" rx="5" fill="#c59bff" opacity="0.7"/>
+    <text x="1120" y="536" fill="#ede6d3" font-weight="700">-8.0%</text>
+
+    <text x="80" y="614" fill="#ede6d3">Nvidia</text>
+    <rect x="460" y="586" width="736" height="40" rx="5" fill="#c59bff" opacity="0.85"/>
+    <text x="1216" y="616" fill="#ede6d3" font-weight="700">-9.2%</text>
+    <text x="1310" y="616" fill="#a9aecf" font-size="22">over $440 billion</text>
+
+    <text x="80" y="694" fill="#c59bff" font-weight="700">Philadelphia chip index</text>
+    <rect x="460" y="666" width="984" height="40" rx="5" fill="#c59bff"/>
+    <text x="1464" y="696" fill="#ede6d3" font-weight="700">-12.3%</text>
+  </g>
+  <line x1="80" y1="770" x2="1520" y2="770" stroke="#a9aecf" stroke-width="1" opacity="0.5"/>
+  <text x="80" y="814" fill="#ede6d3" font-size="24">The chip index had its worst day since March 2020. Every S&amp;P 500 sector closed lower.</text>
+  <text x="80" y="854" fill="#a9aecf" font-size="22">Sources: CNBC and NBC News closing figures. Outlets that reported at midday show smaller drops.</text>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>What the tampered Claude Code extension did when Cursor loaded it, 29 October 2026</title>
+  <rect width="1600" height="900" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">A hidden loader, five moves before you touch anything</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Fake Anthropic.claude-code 2.1.312 and 2.1.313, Cursor marketplace, 29 October 2026. Source: Cursor's notice.</text>
+
+  <!-- start box -->
+  <rect x="80" y="170" width="1440" height="80" rx="10" fill="none" stroke="#ff6b6b" stroke-width="3"/>
+  <text x="110" y="208" fill="#ede6d3" font-size="26" font-weight="700">Cursor loads extension.js</text>
+  <text x="110" y="236" fill="#a9aecf" font-size="21">The injected code sits at the top of the file and runs as soon as Node reads it, before the real extension starts</text>
+
+  <!-- arrows down -->
+  <g stroke="#a9aecf" stroke-width="2" fill="none">
+    <line x1="230" y1="250" x2="230" y2="300"/>
+    <line x1="510" y1="250" x2="510" y2="300"/>
+    <line x1="800" y1="250" x2="800" y2="300"/>
+    <line x1="1090" y1="250" x2="1090" y2="300"/>
+    <line x1="1370" y1="250" x2="1370" y2="300"/>
+  </g>
+
+  <!-- five steps -->
+  <g font-size="21">
+    <rect x="90" y="300" width="280" height="250" rx="10" fill="#151a3d" stroke="#a9aecf" stroke-width="2"/>
+    <text x="110" y="340" fill="#ff6b6b" font-size="24" font-weight="700">1. Recon</text>
+    <text x="110" y="378" fill="#ede6d3">Hostname, username,</text>
+    <text x="110" y="406" fill="#ede6d3">OS, public IP, Git email</text>
+    <text x="110" y="434" fill="#ede6d3">Names (not values) of</text>
+    <text x="110" y="462" fill="#ede6d3">credential env vars</text>
+    <text x="110" y="510" fill="#a9aecf">Sent to attacker server</text>
+
+    <rect x="380" y="300" width="270" height="250" rx="10" fill="#151a3d" stroke="#a9aecf" stroke-width="2"/>
+    <text x="400" y="340" fill="#ff6b6b" font-size="24" font-weight="700">2. Key planted</text>
+    <text x="400" y="378" fill="#ede6d3">Attacker SSH key added</text>
+    <text x="400" y="406" fill="#ede6d3">to authorized_keys</text>
+    <text x="400" y="454" fill="#ede6d3">Label to search for:</text>
+    <text x="400" y="486" fill="#ff6b6b" font-weight="700">svc-telemetry</text>
+    <text x="400" y="526" fill="#a9aecf">Worked without admin</text>
+
+    <rect x="660" y="300" width="280" height="250" rx="10" fill="#151a3d" stroke="#a9aecf" stroke-width="2"/>
+    <text x="680" y="340" fill="#ff6b6b" font-size="24" font-weight="700">3. Turn on SSH</text>
+    <text x="680" y="378" fill="#ede6d3">Tries to start the</text>
+    <text x="680" y="406" fill="#ede6d3">machine's SSH server</text>
+    <text x="680" y="454" fill="#a9aecf">Usually failed: needs</text>
+    <text x="680" y="482" fill="#a9aecf">admin, and bugs broke</text>
+    <text x="680" y="510" fill="#a9aecf">it on Mac and Windows</text>
+
+    <rect x="950" y="300" width="280" height="250" rx="10" fill="#151a3d" stroke="#a9aecf" stroke-width="2"/>
+    <text x="970" y="340" fill="#ff6b6b" font-size="24" font-weight="700">4. Persistence</text>
+    <text x="970" y="378" fill="#ede6d3">Mac: LaunchAgent</text>
+    <text x="970" y="406" fill="#ede6d3">com.apple.sysmond</text>
+    <text x="970" y="434" fill="#ede6d3">Windows: task SysMon,</text>
+    <text x="970" y="462" fill="#ede6d3">or Startup sysmon.cmd</text>
+    <text x="970" y="490" fill="#ede6d3">Linux: cron @reboot</text>
+    <text x="970" y="526" fill="#a9aecf">Survives uninstall</text>
+
+    <rect x="1240" y="300" width="270" height="250" rx="10" fill="#151a3d" stroke="#a9aecf" stroke-width="2"/>
+    <text x="1260" y="340" fill="#ff6b6b" font-size="24" font-weight="700">5. Reverse tunnel</text>
+    <text x="1260" y="378" fill="#ede6d3">Outbound SSH tunnel</text>
+    <text x="1260" y="406" fill="#ede6d3">to the attacker,</text>
+    <text x="1260" y="434" fill="#ede6d3">retried about every</text>
+    <text x="1260" y="462" fill="#ede6d3">60 seconds</text>
+    <text x="1260" y="526" fill="#a9aecf">Server now offline</text>
+  </g>
+
+  <!-- bottom takeaway -->
+  <line x1="80" y1="610" x2="1520" y2="610" stroke="#a9aecf" stroke-width="1" opacity="0.5"/>
+  <text x="80" y="664" fill="#ede6d3" font-size="28" font-weight="700">What still matters after the server went dark</text>
+  <g font-size="23">
+    <circle cx="96" cy="712" r="8" fill="#ff6b6b"/>
+    <text x="120" y="720" fill="#ede6d3">Steps 2 and 4 worked even without admin rights, so they ran on most machines that loaded it.</text>
+    <circle cx="96" cy="762" r="8" fill="#ff6b6b"/>
+    <text x="120" y="770" fill="#ede6d3">A planted key is a standing invitation the moment SSH is switched on, by anyone, for any reason.</text>
+    <circle cx="96" cy="812" r="8" fill="#ff6b6b"/>
+    <text x="120" y="820" fill="#ede6d3">Removing the extension removes none of it. Cursor estimates up to 5,000 users were exposed.</text>
+  </g>
+</svg>

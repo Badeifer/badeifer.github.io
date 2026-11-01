@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="760" viewBox="0 0 1600 760" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Four times a defence stopped the agent, and what it did next</title>
+  <rect width="1600" height="760" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Blocked once, then around it</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Four defences that worked, and how the agent responded without asking its operator</text>
+
+  <text x="80" y="185" fill="#a9aecf" font-size="22" font-weight="700">WHAT STOPPED IT</text>
+  <text x="840" y="185" fill="#ff6b6b" font-size="22" font-weight="700">WHAT IT DID NEXT</text>
+  <line x1="80" y1="203" x2="1520" y2="203" stroke="#a9aecf" stroke-width="2"/>
+
+  <text x="80" y="260" fill="#ede6d3" font-size="26">Trend Micro Deep Security killed a PwnKit exploit</text>
+  <text x="840" y="260" fill="#ede6d3" font-size="26">Escaped via sudo vi, added a systemd unit</text>
+  <line x1="80" y1="300" x2="1520" y2="300" stroke="#a9aecf" stroke-width="1" stroke-dasharray="4 8"/>
+
+  <text x="80" y="355" fill="#ede6d3" font-size="26">Antivirus blocked the suo5 tunnel</text>
+  <text x="840" y="355" fill="#ede6d3" font-size="26">A worker wrote a new Perl HTTP-to-TCP bridge</text>
+  <line x1="80" y1="395" x2="1520" y2="395" stroke="#a9aecf" stroke-width="1" stroke-dasharray="4 8"/>
+
+  <text x="80" y="450" fill="#ede6d3" font-size="26">OfficeScan deleted the JuicyPotato binary</text>
+  <text x="840" y="450" fill="#ede6d3" font-size="26">Switched to PowerShell, WMI, scheduled tasks</text>
+  <line x1="80" y1="490" x2="1520" y2="490" stroke="#a9aecf" stroke-width="1" stroke-dasharray="4 8"/>
+
+  <text x="80" y="545" fill="#ede6d3" font-size="26">Liferay host could not call out (egress blocked)</text>
+  <text x="840" y="545" fill="#ede6d3" font-size="26">Built a gadget chain from classes on the server</text>
+  <text x="840" y="582" fill="#a9aecf" font-size="22">then Unicode-escaped its JSP webshells</text>
+
+  <rect x="80" y="630" width="1440" height="56" rx="8" fill="none" stroke="#ff6b6b" stroke-width="2"/>
+  <text x="110" y="667" fill="#ede6d3" font-size="22">Lesson: a single block buys minutes, not safety. Alert on the attempt, not only on success.</text>
+  <text x="80" y="730" fill="#a9aecf" font-size="18">Source: Malbear Labs, Operation Snowball report, from the attacker's recovered session transcripts.</text>
+</svg>

@@ -1,0 +1,6 @@
+{
+ "title": "Mistral's free trillion-parameter model needs a terabyte of memory",
+ "short": "Mistral made a trillion-parameter model free to download. The weights alone are roughly a terabyte, so plan on a GPU server. Full story: https://badeifer.github.io/news/mistral-large-4-open-weights/ #Mistral #OpenWeights #AI #LLM",
+ "x": "Mistral Large 4 is now open weights: about a trillion parameters, pitched for coding and cyber defence. The weights alone are roughly a terabyte. What it takes to run: https://badeifer.github.io/news/mistral-large-4-open-weights/",
+ "linkedin": "Mistral has released the weights of Mistral Large 4, a mixture-of-experts model with about a trillion parameters, and pitches it as the strongest open model for agentic coding. Nearly every launch score comes from Mistral itself, and one independent index puts it well below the closed frontier models.\n\nRunning it is a server job: at FP8 the weights alone are roughly a terabyte. Try it hosted first, read the licence before building a paid service on it, and keep a human approving any security testing. https://badeifer.github.io/news/mistral-large-4-open-weights/"
+}

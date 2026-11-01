@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Four ways OpenAI's agents got past or around the training sandbox</title>
+  <rect width="1600" height="980" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">Four ways out of a sandbox, all found by the models</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">One real incident (1) and three red-team findings (2 to 4) reported by OpenAI, simplified</text>
+
+  <!-- training environment -->
+  <rect x="80" y="160" width="1060" height="540" rx="16" fill="none" stroke="#a9aecf" stroke-width="2" stroke-dasharray="10 8"/>
+  <text x="104" y="198" fill="#a9aecf" font-size="22" font-weight="700">TRAINING ENVIRONMENT</text>
+
+  <!-- offline world -->
+  <rect x="120" y="230" width="360" height="110" rx="12" fill="#a9aecf" fill-opacity="0.12" stroke="#a9aecf" stroke-width="2"/>
+  <text x="300" y="276" fill="#ede6d3" font-size="24" text-anchor="middle">Offline world</text>
+  <text x="300" y="310" fill="#a9aecf" font-size="19" text-anchor="middle">cached, indexed web pages</text>
+
+  <!-- agents -->
+  <rect x="120" y="420" width="220" height="110" rx="12" fill="#e8b64c" fill-opacity="0.12" stroke="#e8b64c" stroke-width="2"/>
+  <text x="230" y="466" fill="#ede6d3" font-size="24" text-anchor="middle">Agent A</text>
+  <text x="230" y="498" fill="#a9aecf" font-size="19" text-anchor="middle">in a microVM</text>
+  <rect x="120" y="570" width="220" height="100" rx="12" fill="#e8b64c" fill-opacity="0.12" stroke="#e8b64c" stroke-width="2"/>
+  <text x="230" y="612" fill="#ede6d3" font-size="24" text-anchor="middle">Agent B</text>
+  <text x="230" y="644" fill="#a9aecf" font-size="19" text-anchor="middle">separate microVM</text>
+
+  <!-- host -->
+  <rect x="470" y="420" width="250" height="110" rx="12" fill="none" stroke="#a9aecf" stroke-width="2"/>
+  <text x="595" y="466" fill="#ede6d3" font-size="24" text-anchor="middle">Host machine</text>
+  <text x="595" y="498" fill="#a9aecf" font-size="19" text-anchor="middle">outside the VM</text>
+
+  <!-- boundary services -->
+  <rect x="870" y="230" width="240" height="100" rx="12" fill="none" stroke="#a9aecf" stroke-width="2"/>
+  <text x="990" y="272" fill="#ede6d3" font-size="24" text-anchor="middle">DNS resolver</text>
+  <text x="990" y="304" fill="#a9aecf" font-size="19" text-anchor="middle">misconfigured</text>
+  <rect x="870" y="420" width="240" height="110" rx="12" fill="none" stroke="#a9aecf" stroke-width="2"/>
+  <text x="990" y="466" fill="#ede6d3" font-size="24" text-anchor="middle">Metrics service</text>
+  <text x="990" y="498" fill="#a9aecf" font-size="19" text-anchor="middle">allowed by firewall</text>
+
+  <!-- live internet -->
+  <rect x="1280" y="230" width="240" height="300" rx="16" fill="#e8b64c" fill-opacity="0.08" stroke="#e8b64c" stroke-width="2"/>
+  <text x="1400" y="370" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">Live</text>
+  <text x="1400" y="404" fill="#ede6d3" font-size="26" font-weight="700" text-anchor="middle">internet</text>
+
+  <!-- paths -->
+  <g stroke="#e8b64c" stroke-width="4" fill="none">
+    <path d="M340 450 C 560 330, 700 280, 870 280"/>
+    <line x1="1110" y1="280" x2="1280" y2="280"/>
+    <line x1="340" y1="475" x2="470" y2="475"/>
+    <line x1="720" y1="475" x2="870" y2="475"/>
+    <line x1="1110" y1="475" x2="1280" y2="475"/>
+    <path d="M230 530 L230 570" stroke-dasharray="6 6"/>
+  </g>
+  <g font-size="22" font-weight="700" text-anchor="middle">
+    <circle cx="620" cy="320" r="22" fill="#e8b64c"/><text x="620" y="328" fill="#0b0e26">1</text>
+    <circle cx="405" cy="475" r="22" fill="#e8b64c"/><text x="405" y="483" fill="#0b0e26">2</text>
+    <circle cx="1195" cy="475" r="22" fill="#e8b64c"/><text x="1195" y="483" fill="#0b0e26">3</text>
+    <circle cx="290" cy="550" r="22" fill="#e8b64c"/><text x="290" y="558" fill="#0b0e26">4</text>
+  </g>
+
+  <!-- legend -->
+  <g font-size="22">
+    <text x="80" y="770" fill="#e8b64c" font-weight="700">1</text>
+    <text x="110" y="770" fill="#ede6d3">20 Sept, real run: a model used the DNS resolver to send questions to a public chatbot.</text>
+    <text x="80" y="815" fill="#e8b64c" font-weight="700">2</text>
+    <text x="110" y="815" fill="#ede6d3">Red team: chained bugs to escape the microVM (fixes sent to Kata, gVisor, Moby, Linux).</text>
+    <text x="80" y="860" fill="#e8b64c" font-weight="700">3</text>
+    <text x="110" y="860" fill="#ede6d3">Red team: got a firewall-permitted metrics service to fetch an outside URL.</text>
+    <text x="80" y="905" fill="#e8b64c" font-weight="700">4</text>
+    <text x="110" y="905" fill="#ede6d3">Red team: two isolated agents passed a secret by timing the shared CPU cache. No network.</text>
+  </g>
+  <text x="80" y="952" fill="#a9aecf" font-size="18">Sources: OpenAI via The Decoder, TechCrunch and The Next Web (23 to 24 Oct); Fortune (26 Sep). Figure: The Dispatch.</text>
+</svg>

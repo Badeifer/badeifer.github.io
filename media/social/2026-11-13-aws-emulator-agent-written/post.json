@@ -1,0 +1,6 @@
+{
+ "title": "AWS on your laptop, and no human wrote or reviewed a line of it",
+ "short": "AWS Emulator fakes AWS on a local port, free, with no account or bill. AWS says agents wrote all of it and its team reviewed none of the code. Full story: https://badeifer.github.io/news/aws-emulator-agent-written/ #AWS #CodingAgents #DevTools #CloudComputing",
+ "x": "AWS Emulator answers AWS API calls on your own machine: no account, no network, no bill. AWS says agents wrote all of it and no human reviewed the code. It skips real permission checks. https://badeifer.github.io/news/aws-emulator-agent-written/",
+ "linkedin": "AWS released AWS Emulator on 11 November, a free program that answers AWS API calls locally so the CLI, SDKs and coding agents can test without an account or a bill. It does not evaluate IAM policies the way AWS does, so a passing test says nothing about your permissions.\n\nThe bigger story is how it was built. AWS says autonomous agents wrote all of it, with a four-stage merge gate in place of human code review and a public test suite anyone can rerun. https://badeifer.github.io/news/aws-emulator-agent-written/"
+}

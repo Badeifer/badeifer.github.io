@@ -1,0 +1,172 @@
+1
+00:00:00,250 --> 00:00:01,825
+Mistral just made a model
+
+2
+00:00:01,625 --> 00:00:03,638
+with about a trillion parameters
+
+3
+00:00:03,438 --> 00:00:04,514
+free to download.
+
+4
+00:00:04,554 --> 00:00:05,952
+The catch is running it.
+
+5
+00:00:06,652 --> 00:00:08,580
+At FP8, the weights alone
+
+6
+00:00:08,380 --> 00:00:10,308
+come to roughly a terabyte.
+
+7
+00:00:10,348 --> 00:00:11,630
+For a home lab,
+
+8
+00:00:11,430 --> 00:00:13,000
+the honest answer is no.
+
+9
+00:00:13,550 --> 00:00:15,166
+A router sends each token
+
+10
+00:00:14,966 --> 00:00:16,581
+through four of a hundred
+
+11
+00:00:16,381 --> 00:00:17,933
+and twenty-eight experts.
+
+12
+00:00:17,973 --> 00:00:20,618
+Only about forty-nine billion parameters
+
+13
+00:00:20,418 --> 00:00:21,316
+work at once.
+
+14
+00:00:21,866 --> 00:00:24,154
+Mistral says it scores forty-eight
+
+15
+00:00:23,954 --> 00:00:25,738
+percent on a coding agent
+
+16
+00:00:25,538 --> 00:00:27,610
+index, level with a leading
+
+17
+00:00:27,410 --> 00:00:30,273
+Chinese model, using forty-seven percent
+
+18
+00:00:30,073 --> 00:00:31,065
+fewer tokens.
+
+19
+00:00:31,615 --> 00:00:33,290
+But nearly every launch score
+
+20
+00:00:33,090 --> 00:00:34,589
+comes from Mistral itself.
+
+21
+00:00:34,629 --> 00:00:36,732
+One independent index rates it
+
+22
+00:00:36,532 --> 00:00:39,734
+twenty-six, well below closed frontier models.
+
+23
+00:00:40,284 --> 00:00:42,713
+Mistral says it refuses ninety-six
+
+24
+00:00:42,513 --> 00:00:44,712
+point six percent of malicious
+
+25
+00:00:44,512 --> 00:00:45,712
+cyber requests.
+
+26
+00:00:45,752 --> 00:00:47,635
+Yet a security vendor still
+
+27
+00:00:47,435 --> 00:00:49,668
+saw potential to help real attacks.
+
+28
+00:00:50,218 --> 00:00:51,958
+Once weights are public,
+
+29
+00:00:51,758 --> 00:00:54,100
+anyone can fine-tune the refusals away.
+
+30
+00:00:54,140 --> 00:00:56,330
+Guardrail updates only reach people
+
+31
+00:00:56,130 --> 00:00:57,294
+who download them.
+
+32
+00:00:57,844 --> 00:00:59,294
+Try it hosted first,
+
+33
+00:00:59,094 --> 00:01:00,150
+on your own code.
+
+34
+00:01:00,190 --> 00:01:01,516
+Read the licence,
+
+35
+00:01:01,316 --> 00:01:02,708
+since selling it as a
+
+36
+00:01:02,508 --> 00:01:04,497
+paid model service needs a deal.
+
+37
+00:01:04,537 --> 00:01:06,934
+Keep a human approving security tests.
+
+38
+00:01:07,484 --> 00:01:09,080
+It is the first Western
+
+39
+00:01:08,880 --> 00:01:10,917
+open model that credibly sits
+
+40
+00:01:10,717 --> 00:01:12,167
+at the top for coding.
+
+41
+00:01:12,207 --> 00:01:14,090
+Independent tests in the coming
+
+42
+00:01:13,890 --> 00:01:15,150
+weeks will show if it
+
+43
+00:01:14,950 --> 00:01:15,773
+stays there.
+

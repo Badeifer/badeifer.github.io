@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="860" viewBox="0 0 1600 860" font-family="Atkinson Hyperlegible Next, system-ui, sans-serif">
+  <title>Marvell and Lumentum deal terms and timeline, announced 2 November 2026</title>
+  <rect width="1600" height="860" fill="#0b0e26"/>
+  <text x="80" y="76" fill="#ede6d3" font-size="40" font-weight="700">The deal in numbers, and the 18-month wait to close</text>
+  <text x="80" y="116" fill="#a9aecf" font-size="24">Marvell buys Lumentum for stock. Sources: joint release filed with the SEC (Form 8-K, Exhibit 99.1); equity value from Reuters.</text>
+
+  <g font-size="22">
+    <rect x="80" y="160" width="340" height="190" rx="10" fill="#151a3d" stroke="#a9aecf" stroke-width="2"/>
+    <text x="104" y="200" fill="#a9aecf">Exchange ratio</text>
+    <text x="104" y="262" fill="#c59bff" font-size="54" font-weight="700">4.5</text>
+    <text x="104" y="310" fill="#ede6d3">Marvell shares for each</text>
+    <text x="104" y="336" fill="#ede6d3">Lumentum share, fixed</text>
+
+    <rect x="440" y="160" width="340" height="190" rx="10" fill="#151a3d" stroke="#a9aecf" stroke-width="2"/>
+    <text x="464" y="200" fill="#a9aecf">Value per Lumentum share</text>
+    <text x="464" y="262" fill="#c59bff" font-size="54" font-weight="700">$1,132</text>
+    <text x="464" y="310" fill="#ede6d3">23.9% over the 28 Oct</text>
+    <text x="464" y="336" fill="#ede6d3">close, before the leaks</text>
+
+    <rect x="800" y="160" width="340" height="190" rx="10" fill="#151a3d" stroke="#a9aecf" stroke-width="2"/>
+    <text x="824" y="200" fill="#a9aecf">Headline price</text>
+    <text x="824" y="262" fill="#c59bff" font-size="54" font-weight="700">$115B</text>
+    <text x="824" y="310" fill="#ede6d3">Enterprise value, with debt</text>
+    <text x="824" y="336" fill="#ede6d3">Equity alone: $102.54B</text>
+
+    <rect x="1160" y="160" width="360" height="190" rx="10" fill="#151a3d" stroke="#a9aecf" stroke-width="2"/>
+    <text x="1184" y="200" fill="#a9aecf">Who owns the result</text>
+    <rect x="1184" y="228" width="208" height="44" fill="#c59bff"/>
+    <rect x="1392" y="228" width="104" height="44" fill="none" stroke="#c59bff" stroke-width="3"/>
+    <text x="1196" y="258" fill="#0b0e26" font-weight="700">Marvell 67%</text>
+    <text x="1402" y="258" fill="#ede6d3" font-size="20">Lum. 33%</text>
+    <text x="1184" y="310" fill="#ede6d3">Fully diluted, after</text>
+    <text x="1184" y="336" fill="#ede6d3">the deal closes</text>
+  </g>
+
+  <!-- timeline -->
+  <line x1="120" y1="520" x2="1480" y2="520" stroke="#a9aecf" stroke-width="3"/>
+  <line x1="1180" y1="520" x2="1480" y2="520" stroke="#c59bff" stroke-width="3" stroke-dasharray="10 8"/>
+  <g font-size="22">
+    <circle cx="160" cy="520" r="12" fill="#ede6d3"/>
+    <text x="160" y="480" fill="#ede6d3" text-anchor="middle" font-weight="700">28 Oct 2026</text>
+    <text x="160" y="568" fill="#a9aecf" text-anchor="middle">Last "unaffected"</text>
+    <text x="160" y="596" fill="#a9aecf" text-anchor="middle">close: the premium</text>
+    <text x="160" y="624" fill="#a9aecf" text-anchor="middle">is measured here</text>
+
+    <circle cx="460" cy="520" r="12" fill="#ede6d3"/>
+    <text x="460" y="480" fill="#ede6d3" text-anchor="middle" font-weight="700">Late October</text>
+    <text x="460" y="568" fill="#a9aecf" text-anchor="middle">Talks reported.</text>
+    <text x="460" y="596" fill="#a9aecf" text-anchor="middle">Both stocks slide</text>
+    <text x="460" y="624" fill="#a9aecf" text-anchor="middle">in a chip selloff</text>
+
+    <circle cx="780" cy="520" r="16" fill="#c59bff"/>
+    <text x="780" y="480" fill="#c59bff" text-anchor="middle" font-weight="700">2 Nov 2026</text>
+    <text x="780" y="568" fill="#a9aecf" text-anchor="middle">Announced. Both</text>
+    <text x="780" y="596" fill="#a9aecf" text-anchor="middle">boards approved</text>
+    <text x="780" y="624" fill="#a9aecf" text-anchor="middle">unanimously</text>
+
+    <circle cx="1080" cy="520" r="12" fill="#ede6d3"/>
+    <text x="1080" y="480" fill="#ede6d3" text-anchor="middle" font-weight="700">Next</text>
+    <text x="1080" y="568" fill="#a9aecf" text-anchor="middle">Form S-4 and joint</text>
+    <text x="1080" y="596" fill="#a9aecf" text-anchor="middle">proxy; shareholder</text>
+    <text x="1080" y="624" fill="#a9aecf" text-anchor="middle">votes and regulators</text>
+
+    <circle cx="1440" cy="520" r="12" fill="none" stroke="#c59bff" stroke-width="4"/>
+    <text x="1440" y="480" fill="#ede6d3" text-anchor="middle" font-weight="700">First half 2028</text>
+    <text x="1440" y="568" fill="#a9aecf" text-anchor="middle">Expected close.</text>
+    <text x="1440" y="596" fill="#a9aecf" text-anchor="middle">Until then, two</text>
+    <text x="1440" y="624" fill="#a9aecf" text-anchor="middle">separate companies</text>
+  </g>
+
+  <text x="80" y="730" fill="#ede6d3" font-size="24">Because the ratio is fixed, the dollar value moves with Marvell's share price every trading day until closing.</text>
+  <text x="80" y="770" fill="#a9aecf" font-size="22">Market moves: Reuters. Dashed line: the period still to come.</text>
+</svg>
